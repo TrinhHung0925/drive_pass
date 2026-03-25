@@ -179,3 +179,9 @@ class _MyAppState extends State<MyApp> {
   }
 }
 ```
+
+---
+
+## 6. Config Hệ Thống & Thiết Bị
+- **Giao diện:** Luôn cố định xoay dọc (Portrait Chỉ), được config Native qua file `Info.plist` (iOS) và `AndroidManifest.xml` (Android).
+- **iOS:** Minimum Deployment Target quy định bắt buộc từ bản **15.0** trở lên.

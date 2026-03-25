@@ -1,13 +1,14 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SettingController extends GetxController {
   @override
   void onInit() {
+    print("hungtv: onInit");
+
     super.onInit();
   }
 
-  onBack() {
+  void onBack() {
     Get.back();
   }
 }

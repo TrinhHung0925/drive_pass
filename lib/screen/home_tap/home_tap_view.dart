@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../../resource/app_colors.dart';
+import '../../resource/app_resource.dart';
 import 'home_tap_controller.dart';
 import '../home/home_view.dart';
 import '../exam/exam_view.dart';
-import '../history/history_view.dart';
+import '../traffic_sign/traffic_sign_view.dart';
 import '../setting/setting_view.dart';
 
 class HomeTapView extends StatefulWidget {
@@ -23,7 +26,7 @@ class _HomeTapViewState extends State<HomeTapView> {
   final List<Widget> _pages = [
     HomeView(),
     ExamView(),
-    HistoryView(),
+    TrafficSignView(),
     SettingView(),
   ];
 
@@ -40,35 +43,62 @@ class _HomeTapViewState extends State<HomeTapView> {
         index: controller.selectedIndex.value,
         children: _pages,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: controller.selectedIndex.value,
-        onTap: controller.changeTabIndex,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF1E88E5), // Optional: Make it look premium
-        unselectedItemColor: Colors.grey,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
-            label: 'Home',
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          border: Border(
+            top: BorderSide(color: AppColors.border, width: 1),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.assignment_outlined),
-            activeIcon: Icon(Icons.assignment),
-            label: 'Exam',
+        ),
+        child: SafeArea(
+          child: Container(
+            height: 60.h,
+            padding: EdgeInsets.only(top: 8.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                _buildNavItem(0, Img.icNavHome, 'Trang chủ'),
+                _buildNavItem(1, Img.icNavExam, 'Thi thử'),
+                _buildNavItem(2, Img.icNavSign, 'Biển báo'),
+                _buildNavItem(3, Img.icNavProfile, 'Cá nhân'),
+              ],
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history_outlined),
-            activeIcon: Icon(Icons.history),
-            label: 'History',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
-            activeIcon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
+        ),
       ),
     ));
+  }
+
+  Widget _buildNavItem(int index, String iconPath, String label) {
+    bool isActive = controller.selectedIndex.value == index;
+    Color color = isActive ? AppColors.primary : AppColors.textSecondary;
+
+    return GestureDetector(
+      onTap: () => controller.changeTabIndex(index),
+      behavior: HitTestBehavior.opaque,
+      child: SizedBox(
+        width: 83.w,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              iconPath,
+              width: 20.w,
+              height: 20.w,
+              color: color,
+            ),
+            SizedBox(height: 4.h),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w500,
+                color: color,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

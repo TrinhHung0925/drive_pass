@@ -24,5 +24,24 @@ class LocalService extends GetxService {
   Future<void> setFirstLaunch(bool isFirst) => box.write(keyFirstLaunch, isFirst);
   bool get isFirstLaunch => box.read<bool>(keyFirstLaunch) ?? true;
 
+  // Dark Mode
+  static const String keyDarkMode = 'DARK_MODE';
+  Future<void> setDarkMode(bool isDark) => box.write(keyDarkMode, isDark);
+  bool get isDarkMode => box.read<bool>(keyDarkMode) ?? false;
+
+  // User Profile
+  static const String keyUserName = 'USER_NAME';
+  static const String keyUserPhone = 'USER_PHONE';
+  static const String keyUserAvatar = 'USER_AVATAR';
+  
+  Future<void> setUserName(String name) => box.write(keyUserName, name);
+  String get userName => box.read<String>(keyUserName) ?? "Người dùng";
+  
+  Future<void> setUserPhone(String phone) => box.write(keyUserPhone, phone);
+  String get userPhone => box.read<String>(keyUserPhone) ?? "Chưa cập nhật SĐT";
+
+  Future<void> setUserAvatar(String path) => box.write(keyUserAvatar, path);
+  String get userAvatar => box.read<String>(keyUserAvatar) ?? "";
+
   Future<void> clearAll() => box.erase();
 }

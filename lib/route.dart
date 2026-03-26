@@ -6,6 +6,8 @@ import 'screen/setting/setting_view.dart';
 import 'screen/exam/exam_view.dart';
 import 'screen/history/history_view.dart';
 import 'screen/home_tap/home_tap_view.dart';
+import 'screen/traffic_sign/traffic_sign_view.dart';
+import 'screen/edit_profile/edit_profile_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(RouteSettings settings, Widget Function() genPage, [Bindings? bindings]) {
@@ -31,6 +33,10 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return page(settings, () => HistoryView());
     case "/home_tap":
       return page(settings, () => HomeTapView());
+    case "/traffic_sign":
+      return page(settings, () => TrafficSignView());
+    case "/edit_profile":
+      return page(settings, () => EditProfileView());
    
     default:
       return page(
@@ -54,6 +60,8 @@ enum AppPage {
   exam,
   history,
   homeTap,
+  trafficSign,
+  editProfile,
 }
 
 extension DrivingLessonPageExtension on AppPage {
@@ -71,6 +79,10 @@ extension DrivingLessonPageExtension on AppPage {
         return '/${AppPage.history.name}';
       case AppPage.homeTap:
         return '/home_tap';
+      case AppPage.trafficSign:
+        return '/traffic_sign';
+      case AppPage.editProfile:
+        return '/edit_profile';
     }
   }
 }

@@ -185,3 +185,27 @@ class _MyAppState extends State<MyApp> {
 ## 6. Config Hệ Thống & Thiết Bị
 - **Giao diện:** Luôn cố định xoay dọc (Portrait Chỉ), được config Native qua file `Info.plist` (iOS) và `AndroidManifest.xml` (Android).
 - **iOS:** Minimum Deployment Target quy định bắt buộc từ bản **15.0** trở lên.
+
+---
+
+## 7. Quy chuẩn Quản lý Assets
+Toàn bộ resource hình ảnh và icon phải được định nghĩa tập trung trong file `lib/resource/app_resource.dart`.
+
+- **Mục tiêu:** Quản lý đường dẫn tĩnh cho ứng dụng, tránh gõ sai chính tả (`Typo`).
+- **Phân loại thư mục:**
+  - `assets/images`: Chứa các ảnh (Image/Banner).
+  - `assets/icons`: Chứa các tiểu biểu tượng, Icon (vd: icon menu, icon button).
+- **Cấu trúc Class Template:**
+```dart
+const assetsImgPath = 'assets/images';
+const assetsIconPath = 'assets/icons';
+
+abstract class Img {
+  /// icons
+  static const String icMenuDiscoverSelect = '\$assetsIconPath/ic_menu_discover_select.png';
+  
+  /// images
+  static const String imgBannerUnlimited = '\$assetsImgPath/img_banner_unlimited.png';
+}
+```
+- **Sử dụng:** Thay vì dùng `Image.asset('assets/images/...')`, bắt buộc dùng `Image.asset(Img.imgBannerUnlimited)`.

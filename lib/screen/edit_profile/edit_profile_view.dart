@@ -81,8 +81,10 @@ class _EditProfileViewState extends State<EditProfileView> {
 
   Widget _buildAvatarSection() {
     return Center(
-      child: GestureDetector(
-        onTap: controller.pickImage,
+      child: CupertinoButton(
+        padding: EdgeInsets.zero,
+        minSize: null,
+        onPressed: controller.pickImage,
         child: Stack(
           children: [
             Obx(() => Container(

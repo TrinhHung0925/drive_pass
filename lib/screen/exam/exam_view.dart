@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
 import 'exam_controller.dart';
+import '../../model/exam_item.dart';
 
 class ExamView extends StatefulWidget {
   ExamView({super.key}) {
@@ -26,42 +27,46 @@ class _ExamViewState extends State<ExamView> {
   }
 
   // Mock exam data: 0=not started, 1=passed, 2=failed, 3=in progress
-  final List<Map<String, dynamic>> examData = [
-    {"id": 1, "status": 1, "score": "35/35"},
-    {"id": 2, "status": 2, "score": "28/35"},
-    {"id": 3, "status": 3, "score": "12/35"},
-    {"id": 4, "status": 0, "score": ""},
-    {"id": 5, "status": 0, "score": ""},
-    {"id": 6, "status": 1, "score": "35/35"},
-    {"id": 7, "status": 0, "score": ""},
-    {"id": 8, "status": 0, "score": ""},
+  final List<ExamItem> examData = [
+    ExamItem(id: 1, status: 1, score: "35/35"),
+    ExamItem(id: 2, status: 2, score: "28/35"),
+    ExamItem(id: 3, status: 3, score: "12/35"),
+    ExamItem(id: 4, status: 0, score: ""),
+    ExamItem(id: 5, status: 0, score: ""),
+    ExamItem(id: 6, status: 1, score: "35/35"),
+    ExamItem(id: 7, status: 0, score: ""),
+    ExamItem(id: 8, status: 0, score: ""),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.surface,
-      body: SafeArea(
-        child: Column(
-          children: [
-            _buildTopHeader(),
-            _buildQuickStats(),
-            Expanded(
-              child: ListView.separated(
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
-                physics: const BouncingScrollPhysics(),
-                itemCount: examData.length + 1,
-                separatorBuilder: (_, __) => SizedBox(height: 12.h),
-                itemBuilder: (context, index) {
-                  if (index == examData.length) {
-                    return _buildPlaceholder();
-                  }
-                  return _buildExamItem(examData[index]);
-                },
-              ),
+      backgroundColor: AppColors.background,
+      body: Column(
+        children: [
+          Container(
+            color: AppColors.surface,
+            child: SafeArea(
+              bottom: false,
+              child: _buildTopHeader(),
             ),
-          ],
-        ),
+          ),
+          _buildQuickStats(),
+          Expanded(
+            child: ListView.separated(
+              padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
+              physics: const BouncingScrollPhysics(),
+              itemCount: examData.length + 1,
+              separatorBuilder: (_, __) => SizedBox(height: 12.h),
+              itemBuilder: (context, index) {
+                if (index == examData.length) {
+                  return _buildPlaceholder();
+                }
+                return _buildExamItem(examData[index]);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -156,10 +161,10 @@ class _ExamViewState extends State<ExamView> {
     );
   }
 
-  Widget _buildExamItem(Map<String, dynamic> exam) {
-    int id = exam["id"];
-    int status = exam["status"]; // 0=none, 1=passed, 2=failed, 3=in progress
-    String score = exam["score"];
+  Widget _buildExamItem(ExamItem exam) {
+    int id = exam.id;
+    int status = exam.status; // 0=none, 1=passed, 2=failed, 3=in progress
+    String score = exam.score;
 
     // Colors based on status
     Color numberBg, numberColor;

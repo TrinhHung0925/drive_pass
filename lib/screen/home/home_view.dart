@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -28,25 +29,36 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.surface,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildHeader(),
-              SizedBox(height: 16.h),
-              _buildLicenseInfoCard(),
-              SizedBox(height: 16.h),
-              _buildProgressCard(),
-              SizedBox(height: 24.h),
-              _buildQuickAccessSection(),
-              SizedBox(height: 24.h),
-              _buildRecentActivitySection(),
-            ],
+      backgroundColor: AppColors.background,
+      body: Column(
+        children: [
+          Container(
+            color: AppColors.surface,
+            child: SafeArea(
+              bottom: false,
+              child: _buildHeader(),
+            ),
           ),
-        ),
+          Expanded(
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 16.h),
+                  _buildLicenseInfoCard(),
+                  SizedBox(height: 16.h),
+                  _buildProgressCard(),
+                  SizedBox(height: 24.h),
+                  _buildQuickAccessSection(),
+                  SizedBox(height: 24.h),
+                  _buildRecentActivitySection(),
+                  SizedBox(height: 20.h),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -279,17 +291,17 @@ class _HomeViewState extends State<HomeView> {
           SizedBox(height: 12.h),
           Row(
             children: [
-              Expanded(child: _buildQuickAccessCard("Thi thử", Img.icExam, AppColors.primary)),
+              Expanded(child: _buildQuickAccessCard("Thi thử", Img.icExam, AppColors.primary, onPressed: controller.goToExam)),
               SizedBox(width: 12.w),
-              Expanded(child: _buildQuickAccessCard("Câu điểm liệt", Img.icSign, AppColors.error)),
+              Expanded(child: _buildQuickAccessCard("Câu điểm liệt", Img.icSign, AppColors.error, onPressed: controller.goToSign)),
             ],
           ),
           SizedBox(height: 12.h),
           Row(
             children: [
-              Expanded(child: _buildQuickAccessCard("Lý thuyết", Img.icTheory, AppColors.success)),
+              Expanded(child: _buildQuickAccessCard("Lý thuyết", Img.icTheory, AppColors.success, onPressed: controller.goToTheory)),
               SizedBox(width: 12.w),
-              Expanded(child: _buildQuickAccessCard("Mẹo thi", Img.icTips, Colors.deepPurple)),
+              Expanded(child: _buildQuickAccessCard("Mẹo thi", Img.icTips, Colors.deepPurple, onPressed: controller.goToTips)),
             ],
           ),
         ],
@@ -297,46 +309,51 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 
-  Widget _buildQuickAccessCard(String title, String iconPath, Color color) {
-    return Container(
-      padding: EdgeInsets.all(16.w),
-      decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: AppColors.border),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 40.w,
-            height: 40.w,
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(10.r),
-            ),
-            child: Center(
-              child: Image.asset(
-                iconPath,
-                width: 20.w,
-                height: 20.w,
-                color: color,
+  Widget _buildQuickAccessCard(String title, String iconPath, Color color, {VoidCallback? onPressed}) {
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: 0,
+      onPressed: onPressed,
+      child: Container(
+        padding: EdgeInsets.all(16.w),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 40.w,
+              height: 40.w,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+              child: Center(
+                child: Image.asset(
+                  iconPath,
+                  width: 20.w,
+                  height: 20.w,
+                  color: color,
+                ),
               ),
             ),
-          ),
-          SizedBox(width: 12.w),
-          Expanded(
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w600,
-                color: AppColors.textPrimary,
+            SizedBox(width: 12.w),
+            Expanded(
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textPrimary,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -358,12 +375,17 @@ class _HomeViewState extends State<HomeView> {
                   color: AppColors.textPrimary,
                 ),
               ),
-              Text(
-                "Xem tất cả",
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.primary,
+              CupertinoButton(
+                padding: EdgeInsets.zero,
+                minSize: 0,
+                onPressed: controller.goToAllActivities,
+                child: Text(
+                  "Xem tất cả",
+                  style: TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.primary,
+                  ),
                 ),
               ),
             ],

@@ -40,4 +40,8 @@ class ExamResultController extends GetxController {
     // Go back to exam list screen
     Get.offAllNamed(AppPage.exam.routeName);
   }
+
+  void goBack() => Get.back();
+
+  void shareResult() {} // Sharing functionality to be implemented
 }

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -73,9 +74,10 @@ class _HomeTapViewState extends State<HomeTapView> {
     bool isActive = controller.selectedIndex.value == index;
     Color color = isActive ? AppColors.primary : AppColors.textSecondary;
 
-    return GestureDetector(
-      onTap: () => controller.changeTabIndex(index),
-      behavior: HitTestBehavior.opaque,
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: null,
+      onPressed: () => controller.changeTabIndex(index),
       child: SizedBox(
         width: 83.w,
         child: Column(

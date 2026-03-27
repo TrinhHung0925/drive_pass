@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
+import '../../route.dart';
 import 'setting_controller.dart';
 import 'dart:io';
 
@@ -52,6 +54,17 @@ class _SettingViewState extends State<SettingView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildProfileSection(),
+              SizedBox(height: 32.h),
+              _buildSectionTitle("Quá trình học tập"),
+              SizedBox(height: 12.h),
+              _buildSettingGroup([
+                _buildSettingItem(
+                  "Lịch sử thi",
+                  Icons.history_rounded,
+                  AppColors.primary,
+                  onTap: () => Get.toNamed(AppPage.history.routeName),
+                ),
+              ]),
               SizedBox(height: 32.h),
               _buildSectionTitle("Cài đặt ứng dụng"),
               SizedBox(height: 12.h),
@@ -189,9 +202,10 @@ class _SettingViewState extends State<SettingView> {
               ),
             ),
           ),
-          GestureDetector(
-            onTap: controller.goToEditProfile,
-            behavior: HitTestBehavior.opaque,
+          CupertinoButton(
+            padding: EdgeInsets.zero,
+            minSize: null,
+            onPressed: controller.goToEditProfile,
             child: Container(
               padding: EdgeInsets.all(8.w),
               decoration: BoxDecoration(
@@ -249,10 +263,15 @@ class _SettingViewState extends State<SettingView> {
     bool toggleValue = false,
     bool showArrow = true,
     ValueChanged<bool>? onToggleChanged,
+    VoidCallback? onTap,
   }) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
-      child: Row(
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: null,
+      onPressed: onTap,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+        child: Row(
         children: [
           Container(
             padding: EdgeInsets.all(8.w),
@@ -290,6 +309,7 @@ class _SettingViewState extends State<SettingView> {
             ),
         ],
       ),
+    ),
     );
   }
 
@@ -301,9 +321,15 @@ class _SettingViewState extends State<SettingView> {
   }
 
   Widget _buildLogoutButton() {
-    return GestureDetector(
-      onTap: () {},
-      child: Container(
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      child: CupertinoButton(
+        padding: EdgeInsets.zero,
+        minSize: null,
+        onPressed: () {
+          // Implement logout logic
+        },
+        child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 16.h),
         decoration: BoxDecoration(
@@ -324,6 +350,7 @@ class _SettingViewState extends State<SettingView> {
               ),
             ),
           ],
+        ),
         ),
       ),
     );

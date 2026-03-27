@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import '../../resource/app_colors.dart';
 import 'splash_controller.dart';
 
@@ -51,7 +52,7 @@ class _SplashViewState extends State<SplashView> {
                 
                 // Main Title
                 Text(
-                  "Driving License Prep",
+                  "GPLX B2",
                   style: TextStyle(
                     fontSize: 28.sp,
                     fontWeight: FontWeight.w800,
@@ -76,11 +77,11 @@ class _SplashViewState extends State<SplashView> {
                 
                 // Loading Indicator
                 SizedBox(
-                  width: 32.w,
-                  height: 32.w,
-                  child: const CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
-                    strokeWidth: 3,
+                  width: 80.w,
+                  height: 80.w,
+                  child: Lottie.asset(
+                    'assets/loading.json',
+                    fit: BoxFit.contain,
                   ),
                 )
               ],

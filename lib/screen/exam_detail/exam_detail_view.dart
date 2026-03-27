@@ -59,8 +59,10 @@ class _ExamDetailViewState extends State<ExamDetailView> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            GestureDetector(
-              onTap: controller.onBack,
+            CupertinoButton(
+              padding: EdgeInsets.zero,
+              minSize: null,
+              onPressed: controller.onBack,
               child: Container(
                 width: 32.w,
                 height: 32.w,
@@ -292,8 +294,10 @@ class _ExamDetailViewState extends State<ExamDetailView> {
     int index,
     bool isSelected,
   ) {
-    return GestureDetector(
-      onTap: () => controller.selectAnswer(index),
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: null,
+      onPressed: () => controller.selectAnswer(index),
       child: Container(
         margin: EdgeInsets.only(bottom: 10.h),
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
@@ -471,8 +475,10 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                         final isCurrent = controller.currentIndex.value == i;
                         final isAnswered = controller.selectedAnswers
                             .containsKey(i);
-                        return GestureDetector(
-                          onTap: () => controller.jumpToQuestion(i),
+                        return CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          minSize: null,
+                          onPressed: () => controller.jumpToQuestion(i),
                           child: Container(
                             width: 36.w,
                             height: 36.h,

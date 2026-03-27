@@ -10,6 +10,9 @@ import 'screen/home_tap/home_tap_view.dart';
 import 'screen/traffic_sign/traffic_sign_view.dart';
 import 'screen/edit_profile/edit_profile_view.dart';
 import 'screen/exam_detail/exam_detail_view.dart';
+import 'screen/exam_tips/exam_tips_view.dart';
+import 'screen/theory/theory_view.dart';
+import 'screen/critical_questions/critical_questions_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(
@@ -48,6 +51,12 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return page(settings, () => ExamDetailView());
     case "/examResult":
       return page(settings, () => ExamResultView());
+    case "/examTips":
+      return page(settings, () => ExamTipsView());
+    case "/theory":
+      return page(settings, () => TheoryView());
+    case "/criticalQuestions":
+      return page(settings, () => CriticalQuestionsView());
 
     default:
       return page(
@@ -71,6 +80,9 @@ enum AppPage {
   editProfile,
   examDetail,
   examResult,
+  examTips,
+  theory,
+  criticalQuestions,
 }
 
 extension DrivingLessonPageExtension on AppPage {
@@ -96,6 +108,12 @@ extension DrivingLessonPageExtension on AppPage {
         return '/${AppPage.examDetail.name}';
       case AppPage.examResult:
         return '/${AppPage.examResult.name}';
+      case AppPage.examTips:
+        return '/${AppPage.examTips.name}';
+      case AppPage.theory:
+        return '/${AppPage.theory.name}';
+      case AppPage.criticalQuestions:
+        return '/${AppPage.criticalQuestions.name}';
     }
   }
 }

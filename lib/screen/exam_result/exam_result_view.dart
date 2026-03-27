@@ -33,9 +33,10 @@ class ExamResultView extends StatelessWidget {
         scrolledUnderElevation: 0,
         elevation: 0,
         centerTitle: true,
-        leading: GestureDetector(
-          onTap: () => Get.back(),
-          behavior: HitTestBehavior.opaque,
+        leading: CupertinoButton(
+          padding: EdgeInsets.zero,
+          minSize: null,
+          onPressed: controller.goBack,
           child: Container(
             margin: EdgeInsets.only(left: 16.w),
             alignment: Alignment.centerLeft,
@@ -56,6 +57,7 @@ class ExamResultView extends StatelessWidget {
         ),
       ),
       body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
@@ -124,8 +126,8 @@ class ExamResultView extends StatelessWidget {
           ),
           SizedBox(height: 8.h),
           Text(
-            isPassed 
-                ? 'Chúc mừng! Bạn đã hoàn thành bài thi.' 
+            isPassed
+                ? 'Chúc mừng! Bạn đã hoàn thành bài thi.'
                 : 'Rất tiếc! Bạn chưa đạt yêu cầu bài thi.',
             style: TextStyle(
               fontSize: 14.sp,
@@ -170,9 +172,13 @@ class ExamResultView extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(6.r),
             child: LinearProgressIndicator(
-              value: controller.total == 0 ? 0 : controller.correct / controller.total,
+              value: controller.total == 0
+                  ? 0
+                  : controller.correct / controller.total,
               backgroundColor: AppColors.border,
-              valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
+              valueColor: const AlwaysStoppedAnimation<Color>(
+                AppColors.primary,
+              ),
               minHeight: 12.h,
             ),
           ),
@@ -213,7 +219,12 @@ class ExamResultView extends StatelessWidget {
     );
   }
 
-  Widget _buildStatCard(String title, String count, IconData icon, Color color) {
+  Widget _buildStatCard(
+    String title,
+    String count,
+    IconData icon,
+    Color color,
+  ) {
     return Expanded(
       child: Container(
         height: 110.h,
@@ -270,15 +281,35 @@ class ExamResultView extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
       child: Column(
         children: [
-          _buildDetailRow(Icons.description_outlined, 'Hạng bằng', 'B2 - Ô tô', showDivider: true),
-          _buildDetailRow(Icons.timer_outlined, 'Thời gian làm bài', '${controller.timeTaken} / 20:00', showDivider: true),
-          _buildDetailRow(Icons.calendar_today_outlined, 'Ngày thực hiện', controller.dateTaken, showDivider: false),
+          _buildDetailRow(
+            Icons.description_outlined,
+            'Hạng bằng',
+            'B2 - Ô tô',
+            showDivider: true,
+          ),
+          _buildDetailRow(
+            Icons.timer_outlined,
+            'Thời gian làm bài',
+            '${controller.timeTaken} / 20:00',
+            showDivider: true,
+          ),
+          _buildDetailRow(
+            Icons.calendar_today_outlined,
+            'Ngày thực hiện',
+            controller.dateTaken,
+            showDivider: false,
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildDetailRow(IconData icon, String title, String value, {bool showDivider = false}) {
+  Widget _buildDetailRow(
+    IconData icon,
+    String title,
+    String value, {
+    bool showDivider = false,
+  }) {
     return Column(
       children: [
         Padding(
@@ -323,6 +354,7 @@ class ExamResultView extends StatelessWidget {
           CupertinoButton(
             onPressed: controller.viewDetails,
             padding: EdgeInsets.zero,
+            minSize: null,
             child: Container(
               width: double.infinity,
               height: 56.h,
@@ -333,7 +365,11 @@ class ExamResultView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.menu_book_rounded, color: Colors.white, size: 20.w),
+                  Icon(
+                    Icons.menu_book_rounded,
+                    color: Colors.white,
+                    size: 20.w,
+                  ),
                   SizedBox(width: 8.w),
                   Text(
                     'Xem lời giải chi tiết',
@@ -351,6 +387,7 @@ class ExamResultView extends StatelessWidget {
           CupertinoButton(
             onPressed: controller.retakeExam,
             padding: EdgeInsets.zero,
+            minSize: null,
             child: Container(
               width: double.infinity,
               height: 56.h,
@@ -361,7 +398,11 @@ class ExamResultView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.refresh_rounded, color: AppColors.primary, size: 20.w),
+                  Icon(
+                    Icons.refresh_rounded,
+                    color: AppColors.primary,
+                    size: 20.w,
+                  ),
                   SizedBox(width: 8.w),
                   Text(
                     'Làm lại bài thi',
@@ -376,13 +417,18 @@ class ExamResultView extends StatelessWidget {
             ),
           ),
           SizedBox(height: 24.h),
-          GestureDetector(
-            onTap: () {},
-            behavior: HitTestBehavior.opaque,
+          CupertinoButton(
+            padding: EdgeInsets.zero,
+            minSize: null,
+            onPressed: controller.shareResult,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.share_rounded, color: AppColors.textSecondary, size: 18.w),
+                Icon(
+                  Icons.share_rounded,
+                  color: AppColors.textSecondary,
+                  size: 18.w,
+                ),
                 SizedBox(width: 6.w),
                 Text(
                   'Chia sẻ kết quả',

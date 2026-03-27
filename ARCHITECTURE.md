@@ -84,6 +84,7 @@ class _SplashViewState extends State<SplashView> {
 ## 4. Cấu Hình Routing (`lib/route.dart`)
 - Mọi màn hình mới **phải được khai báo** vào file `lib/route.dart`.
 - Các phần cần update: (1) Khai báo `enum AppPage`, (2) Thêm link vào `routeName`, (3) Khai báo case cho Switch Widget.
+- **Lưu ý quan trọng:** Mọi chuyển trang trong ứng dụng đều phải gọi qua `AppPage.xyz.routeName` thay vì sử dụng string hardcode trực tiếp (ví dụ: dùng `Get.toNamed(AppPage.examDetail.routeName)` thay cho `Get.toNamed('/exam_detail')`).
 
 ```dart
 import 'package:flutter/material.dart';

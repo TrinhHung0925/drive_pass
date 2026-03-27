@@ -38,7 +38,9 @@ class _TrafficSignViewState extends State<TrafficSignView> {
           ),
         ),
         backgroundColor: AppColors.surface,
+        surfaceTintColor: Colors.transparent,
         elevation: 0,
+        scrolledUnderElevation: 0,
         centerTitle: true,
       ),
       body: SafeArea(

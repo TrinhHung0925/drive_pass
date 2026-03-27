@@ -39,7 +39,9 @@ class _SettingViewState extends State<SettingView> {
           ),
         ),
         backgroundColor: AppColors.surface,
+        surfaceTintColor: Colors.transparent,
         elevation: 0,
+        scrolledUnderElevation: 0,
         centerTitle: true,
       ),
       body: SafeArea(
@@ -54,32 +56,38 @@ class _SettingViewState extends State<SettingView> {
               _buildSectionTitle("Cài đặt ứng dụng"),
               SizedBox(height: 12.h),
               _buildSettingGroup([
-                Obx(() => _buildSettingItem(
-                  "Thông báo",
-                  Icons.notifications_active_rounded,
-                  AppColors.primary,
-                  isToggle: true,
-                  toggleValue: controller.isNotificationEnabled.value,
-                  onToggleChanged: controller.toggleNotification,
-                )),
+                Obx(
+                  () => _buildSettingItem(
+                    "Thông báo",
+                    Icons.notifications_active_rounded,
+                    AppColors.primary,
+                    isToggle: true,
+                    toggleValue: controller.isNotificationEnabled.value,
+                    onToggleChanged: controller.toggleNotification,
+                  ),
+                ),
                 _buildDivider(),
-                Obx(() => _buildSettingItem(
-                  "Chế độ tối",
-                  Icons.dark_mode_rounded,
-                  Colors.indigo,
-                  isToggle: true,
-                  toggleValue: controller.isDarkMode.value,
-                  onToggleChanged: controller.toggleDarkMode,
-                )),
+                Obx(
+                  () => _buildSettingItem(
+                    "Chế độ tối",
+                    Icons.dark_mode_rounded,
+                    Colors.indigo,
+                    isToggle: true,
+                    toggleValue: controller.isDarkMode.value,
+                    onToggleChanged: controller.toggleDarkMode,
+                  ),
+                ),
                 _buildDivider(),
-                Obx(() => _buildSettingItem(
-                  "Nhắc nhở học tập",
-                  Icons.alarm_rounded,
-                  AppColors.accent,
-                  isToggle: true,
-                  toggleValue: controller.isReminderEnabled.value,
-                  onToggleChanged: controller.toggleReminder,
-                )),
+                Obx(
+                  () => _buildSettingItem(
+                    "Nhắc nhở học tập",
+                    Icons.alarm_rounded,
+                    AppColors.accent,
+                    isToggle: true,
+                    toggleValue: controller.isReminderEnabled.value,
+                    onToggleChanged: controller.toggleReminder,
+                  ),
+                ),
               ]),
               SizedBox(height: 32.h),
               _buildSectionTitle("Thông tin & Hỗ trợ"),
@@ -136,43 +144,50 @@ class _SettingViewState extends State<SettingView> {
       ),
       child: Row(
         children: [
-          Obx(() => Container(
-            width: 64.w,
-            height: 64.w,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: AppColors.primaryLight.withValues(alpha: 0.2),
-              image: DecorationImage(
-                image: controller.userAvatarPath.value.isNotEmpty
-                    ? FileImage(File(controller.userAvatarPath.value)) as ImageProvider
-                    : const NetworkImage("https://ui-avatars.com/api/?name=User&background=1E88E5&color=fff"),
-                fit: BoxFit.cover,
+          Obx(
+            () => Container(
+              width: 64.w,
+              height: 64.w,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: AppColors.primaryLight.withValues(alpha: 0.2),
+                image: DecorationImage(
+                  image: controller.userAvatarPath.value.isNotEmpty
+                      ? FileImage(File(controller.userAvatarPath.value))
+                            as ImageProvider
+                      : const NetworkImage(
+                          "https://ui-avatars.com/api/?name=User&background=1E88E5&color=fff",
+                        ),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          )),
+          ),
           SizedBox(width: 16.w),
           Expanded(
-            child: Obx(() => Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  controller.userName.value,
-                  style: TextStyle(
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.textPrimary,
+            child: Obx(
+              () => Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    controller.userName.value,
+                    style: TextStyle(
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.textPrimary,
+                    ),
                   ),
-                ),
-                SizedBox(height: 4.h),
-                Text(
-                  controller.userPhone.value,
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    color: AppColors.textSecondary,
+                  SizedBox(height: 4.h),
+                  Text(
+                    controller.userPhone.value,
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      color: AppColors.textSecondary,
+                    ),
                   ),
-                ),
-              ],
-            )),
+                ],
+              ),
+            ),
           ),
           GestureDetector(
             onTap: controller.goToEditProfile,
@@ -183,7 +198,11 @@ class _SettingViewState extends State<SettingView> {
                 color: AppColors.primary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.edit_rounded, color: AppColors.primary, size: 20.w),
+              child: Icon(
+                Icons.edit_rounded,
+                color: AppColors.primary,
+                size: 20.w,
+              ),
             ),
           ),
         ],
@@ -264,7 +283,11 @@ class _SettingViewState extends State<SettingView> {
               ),
             )
           else if (showArrow)
-            Icon(Icons.arrow_forward_ios_rounded, color: Colors.grey.shade400, size: 18.w),
+            Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Colors.grey.shade400,
+              size: 18.w,
+            ),
         ],
       ),
     );

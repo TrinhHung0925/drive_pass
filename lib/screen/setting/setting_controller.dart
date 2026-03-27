@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../service/local_service.dart';
 
+import '../../route.dart';
+
 class SettingController extends GetxController {
   final localService = Get.find<LocalService>();
   var isDarkMode = false.obs;
@@ -45,7 +47,7 @@ class SettingController extends GetxController {
   }
 
   void goToEditProfile() async {
-    final result = await Get.toNamed('/edit_profile');
+    final result = await Get.toNamed(AppPage.editProfile.routeName);
     if (result == true) {
       _loadProfile(); // Refresh profile after returning from edit
     }

@@ -281,7 +281,7 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Expanded(child: _buildQuickAccessCard("Thi thử", Img.icExam, AppColors.primary)),
               SizedBox(width: 12.w),
-              Expanded(child: _buildQuickAccessCard("Biển báo", Img.icSign, AppColors.accent)),
+              Expanded(child: _buildQuickAccessCard("Câu điểm liệt", Img.icSign, AppColors.error)),
             ],
           ),
           SizedBox(height: 12.h),
@@ -324,12 +324,16 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
           SizedBox(width: 12.w),
-          Text(
-            title,
-            style: TextStyle(
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w600,
-              color: AppColors.textPrimary,
+          Expanded(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w600,
+                color: AppColors.textPrimary,
+              ),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],

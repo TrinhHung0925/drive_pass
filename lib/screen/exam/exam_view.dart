@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
@@ -49,7 +50,7 @@ class _ExamViewState extends State<ExamView> {
               child: ListView.separated(
                 padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
                 physics: const BouncingScrollPhysics(),
-                itemCount: examData.length + 1, // +1 for placeholder
+                itemCount: examData.length + 1,
                 separatorBuilder: (_, __) => SizedBox(height: 12.h),
                 itemBuilder: (context, index) {
                   if (index == examData.length) {
@@ -89,22 +90,42 @@ class _ExamViewState extends State<ExamView> {
       child: Row(
         children: [
           Expanded(
-            child: _buildStatCard("Tổng đề", "18", AppColors.primary, AppColors.primary.withValues(alpha: 0.1)),
+            child: _buildStatCard(
+              "Tổng đề",
+              "18",
+              AppColors.primary,
+              AppColors.primary.withValues(alpha: 0.1),
+            ),
           ),
           SizedBox(width: 12.w),
           Expanded(
-            child: _buildStatCard("Đã đạt", "8", AppColors.success, AppColors.successBackground),
+            child: _buildStatCard(
+              "Đã đạt",
+              "8",
+              AppColors.success,
+              AppColors.successBackground,
+            ),
           ),
           SizedBox(width: 12.w),
           Expanded(
-            child: _buildStatCard("Chưa đạt", "2", AppColors.error, AppColors.errorBackground),
+            child: _buildStatCard(
+              "Chưa đạt",
+              "2",
+              AppColors.error,
+              AppColors.errorBackground,
+            ),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildStatCard(String label, String value, Color textColor, Color bgColor) {
+  Widget _buildStatCard(
+    String label,
+    String value,
+    Color textColor,
+    Color bgColor,
+  ) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w),
       decoration: BoxDecoration(
@@ -176,87 +197,94 @@ class _ExamViewState extends State<ExamView> {
         buttonText = "Bắt đầu";
     }
 
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-      decoration: BoxDecoration(
-        color: AppColors.surface,
-        borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(color: AppColors.border),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: 6,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Row(
-        children: [
-          // Circle number
-          Container(
-            width: 48.w,
-            height: 48.w,
-            decoration: BoxDecoration(
-              color: numberBg,
-              shape: BoxShape.circle,
+    return CupertinoButton(
+      onPressed: () {
+        controller.goToExamDetail();
+      },
+      padding: EdgeInsets.zero,
+      minSize: null,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(color: AppColors.border),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.03),
+              blurRadius: 6,
+              offset: const Offset(0, 2),
             ),
-            alignment: Alignment.center,
-            child: Text(
-              "$id",
-              style: TextStyle(
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w700,
-                color: numberColor,
+          ],
+        ),
+        child: Row(
+          children: [
+            // Circle number
+            Container(
+              width: 48.w,
+              height: 48.w,
+              decoration: BoxDecoration(
+                color: numberBg,
+                shape: BoxShape.circle,
+              ),
+              alignment: Alignment.center,
+              child: Text(
+                "$id",
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w700,
+                  color: numberColor,
+                ),
               ),
             ),
-          ),
-          SizedBox(width: 16.w),
-          // Title + Status
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Bộ đề số $id",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.textPrimary,
+            SizedBox(width: 16.w),
+            // Title + Status
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Bộ đề số $id",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textPrimary,
+                    ),
                   ),
-                ),
-                SizedBox(height: 4.h),
-                Text(
-                  statusText,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w500,
-                    color: statusTextColor,
+                  SizedBox(height: 4.h),
+                  Text(
+                    statusText,
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
+                      color: statusTextColor,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          // Button
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              backgroundColor: status == 1 ? Colors.transparent : AppColors.primary,
-              foregroundColor: status == 1 ? AppColors.primary : Colors.white,
+
+            // Button
+            Container(
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-              shape: RoundedRectangleBorder(
+              decoration: BoxDecoration(
+                color: status == 1 ? Colors.transparent : AppColors.primary,
                 borderRadius: BorderRadius.circular(8.r),
-                side: status == 1 ? const BorderSide(color: AppColors.primary) : BorderSide.none,
+                border: status == 1
+                    ? Border.all(color: AppColors.primary)
+                    : null,
+              ),
+              child: Text(
+                buttonText,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.w700,
+                  color: status == 1 ? AppColors.primary : Colors.white,
+                ),
               ),
             ),
-            child: Text(
-              buttonText,
-              style: TextStyle(
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

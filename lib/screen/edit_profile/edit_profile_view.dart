@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
@@ -171,21 +172,24 @@ class _EditProfileViewState extends State<EditProfileView> {
     return SizedBox(
       width: double.infinity,
       height: 56.h,
-      child: ElevatedButton(
+      child: CupertinoButton(
         onPressed: controller.saveProfile,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primary,
-          shape: RoundedRectangleBorder(
+        padding: EdgeInsets.zero,
+        minSize: 0,
+        child: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+          decoration: BoxDecoration(
+            color: AppColors.primary,
             borderRadius: BorderRadius.circular(16.r),
           ),
-          elevation: 0,
-        ),
-        child: Text(
-          "Lưu thay đổi",
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
+          child: Text(
+            "Lưu thay đổi",
+            style: TextStyle(
+              fontSize: 16.sp,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
           ),
         ),
       ),

@@ -1,0 +1,57 @@
+[
+  {
+    "code": 1,
+    "display": "Hiệu lệnh, chỉ dẫn",
+    "subTitle": ""
+  },
+  {
+    "code": 2,
+    "display": "Chuyển hướng, nhường đường",
+    "subTitle": ""
+  },
+  {
+    "code": 3,
+    "display": "Dừng xe, đỗ xe",
+    "subTitle": ""
+  },
+  {
+    "code": 4,
+    "display": "Thiết bị ưu tiên, còi",
+    "subTitle": ""
+  },
+  {
+    "code": 5,
+    "display": "Tốc độ, khoảng cách an toàn",
+    "subTitle": ""
+  },
+  {
+    "code": 6,
+    "display": "Vận chuyển người, hàng hóa",
+    "subTitle": ""
+  },
+  {
+    "code": 7,
+    "display": "Trang thiết bị phương tiện",
+    "subTitle": ""
+  },
+  {
+    "code": 8,
+    "display": "Đường cấm, đường một chiều",
+    "subTitle": ""
+  },
+  {
+    "code": 9,
+    "display": "Nồng độ cồn, chất kích thích",
+    "subTitle": ""
+  },
+  {
+    "code": 10,
+    "display": "Giấy tờ xe",
+    "subTitle": ""
+  },
+  {
+    "code": 11,
+    "display": "Khác",
+    "subTitle": ""
+  }
+]

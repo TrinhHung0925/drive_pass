@@ -30,4 +30,5 @@ flutter:
     - assets/fonts/
     - assets/icons/
     - assets/images/
-    - assets/loading.json
+    - assets/data/
+    - assets/icons/loading.json

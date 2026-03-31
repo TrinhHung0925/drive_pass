@@ -78,7 +78,7 @@ class ExamResultView extends StatelessWidget {
   Widget _buildScoreCircle(ExamResultController controller, bool isPassed) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: Colors.transparent,
       padding: EdgeInsets.symmetric(vertical: 32.h),
       child: Column(
         children: [
@@ -144,7 +144,7 @@ class ExamResultView extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
-      color: Colors.white,
+      color: Colors.transparent,
       child: Column(
         children: [
           Row(
@@ -191,7 +191,7 @@ class ExamResultView extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
-      color: Colors.white,
+      color: Colors.transparent,
       child: Row(
         children: [
           _buildStatCard(
@@ -230,11 +230,11 @@ class ExamResultView extends StatelessWidget {
         height: 110.h,
         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 16.h),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.surface,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.04),
+              color: AppColors.textPrimary.withValues(alpha: 0.04),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -277,7 +277,12 @@ class ExamResultView extends StatelessWidget {
   Widget _buildDetailsList(ExamResultController controller) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      margin: EdgeInsets.symmetric(horizontal: 16.w),
+      decoration: BoxDecoration(
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(16.r),
+        border: Border.all(color: AppColors.border.withValues(alpha: 0.5)),
+      ),
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 16.h),
       child: Column(
         children: [
@@ -347,7 +352,7 @@ class ExamResultView extends StatelessWidget {
   Widget _buildActionButtons(ExamResultController controller) {
     return Container(
       width: double.infinity,
-      color: Colors.white,
+      color: Colors.transparent,
       padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 24.h),
       child: Column(
         children: [

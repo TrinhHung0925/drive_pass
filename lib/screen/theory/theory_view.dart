@@ -30,7 +30,7 @@ class _TheoryViewState extends State<TheoryView> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.surface,
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
@@ -78,11 +78,11 @@ class _TheoryViewState extends State<TheoryView> {
     return Container(
       padding: EdgeInsets.all(20.w),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(16.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.02),
+            color: AppColors.textPrimary.withValues(alpha: 0.02),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -214,11 +214,11 @@ class _TheoryViewState extends State<TheoryView> {
           child: Container(
             padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
-              color: isCritical ? const Color(0xFFFFF0F0) : Colors.white,
+              color: isCritical ? const Color(0xFFFFF0F0) : AppColors.surface,
               borderRadius: BorderRadius.circular(16.r),
               boxShadow: isCritical ? null : [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.02),
+                  color: AppColors.textPrimary.withValues(alpha: 0.02),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 )

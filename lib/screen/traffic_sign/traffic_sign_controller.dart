@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import '../../route.dart';
 
 class TrafficSignController extends GetxController {
   @override
@@ -8,5 +9,9 @@ class TrafficSignController extends GetxController {
 
   void onBack() {
     Get.back();
+  }
+
+  void goToDetail(String categoryName) {
+    Get.toNamed(AppPage.trafficSignDetail.routeName, arguments: categoryName);
   }
 }

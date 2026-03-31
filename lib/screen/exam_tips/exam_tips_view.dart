@@ -89,11 +89,11 @@ class _ExamTipsViewState extends State<ExamTipsView> {
               icon: Icons.warning_amber_rounded,
               iconBgColor: Colors.transparent,
               iconColor: Colors.red,
-              bgColor: const Color(0xFFFFF0F0),
+              bgColor: AppColors.errorBackground,
               arrowColor: Colors.red.withValues(alpha: 0.5),
               content: Text(
                 "Phân tích sâu các lỗi phổ biến mà 90% thí sinh mắc phải khi làm bài thi",
-                style: TextStyle(fontSize: 13.sp, color: Colors.red.withValues(alpha: 0.7), height: 1.4, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 13.sp, color: AppColors.error.withValues(alpha: 0.7), height: 1.4, fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(height: 16.h),
@@ -169,7 +169,7 @@ class _ExamTipsViewState extends State<ExamTipsView> {
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.03),
+              color: AppColors.textPrimary.withValues(alpha: 0.03),
               blurRadius: 10,
               offset: const Offset(0, 4),
             )
@@ -289,7 +289,7 @@ class _ExamTipsViewState extends State<ExamTipsView> {
           color: bgColor,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: bgColor == AppColors.surface
-              ? [BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 10, offset: const Offset(0, 4))]
+              ? [BoxShadow(color: AppColors.textPrimary.withValues(alpha: 0.02), blurRadius: 10, offset: const Offset(0, 4))]
               : null,
         ),
         child: Column(
@@ -367,7 +367,7 @@ class _ExamTipsViewState extends State<ExamTipsView> {
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.02),
+              color: AppColors.textPrimary.withValues(alpha: 0.02),
               blurRadius: 10,
               offset: const Offset(0, 4),
             )

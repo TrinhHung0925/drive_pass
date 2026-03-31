@@ -30,7 +30,7 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.surface,
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
@@ -63,40 +63,16 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
             SizedBox(height: 16.h),
             _buildProgressCard(),
             SizedBox(height: 24.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Danh sách câu hỏi",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.textPrimary,
-                  ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Danh sách câu hỏi",
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.textPrimary,
                 ),
-                CupertinoButton(
-                  padding: EdgeInsets.zero,
-                  minSize: null,
-                  onPressed: controller.filterQuestions,
-                  child: Row(
-                    children: [
-                      Text(
-                        "Lọc",
-                        style: TextStyle(
-                          fontSize: 13.sp,
-                          fontWeight: FontWeight.w700,
-                          color: AppColors.primary,
-                        ),
-                      ),
-                      Icon(
-                        Icons.arrow_drop_down_rounded,
-                        color: AppColors.primary,
-                        size: 20.w,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
             SizedBox(height: 12.h),
             _buildQuestionList(),
@@ -165,11 +141,11 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
     return Container(
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(16.r),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.02),
+            color: AppColors.textPrimary.withValues(alpha: 0.02),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -295,14 +271,14 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
           child: Container(
             padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: AppColors.surface,
               borderRadius: BorderRadius.circular(16.r),
               border: Border.all(
                 color: AppColors.border.withValues(alpha: 0.5),
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.02),
+                  color: AppColors.textPrimary.withValues(alpha: 0.02),
                   blurRadius: 10,
                   offset: const Offset(0, 2),
                 ),

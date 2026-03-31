@@ -13,6 +13,7 @@ import 'screen/exam_detail/exam_detail_view.dart';
 import 'screen/exam_tips/exam_tips_view.dart';
 import 'screen/theory/theory_view.dart';
 import 'screen/critical_questions/critical_questions_view.dart';
+import 'screen/traffic_sign_detail/traffic_sign_detail_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(
@@ -57,6 +58,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return page(settings, () => TheoryView());
     case "/criticalQuestions":
       return page(settings, () => CriticalQuestionsView());
+    case "/trafficSignDetail":
+      return page(settings, () => TrafficSignDetailView());
 
     default:
       return page(
@@ -83,6 +86,7 @@ enum AppPage {
   examTips,
   theory,
   criticalQuestions,
+  trafficSignDetail,
 }
 
 extension DrivingLessonPageExtension on AppPage {
@@ -114,6 +118,8 @@ extension DrivingLessonPageExtension on AppPage {
         return '/${AppPage.theory.name}';
       case AppPage.criticalQuestions:
         return '/${AppPage.criticalQuestions.name}';
+      case AppPage.trafficSignDetail:
+        return '/${AppPage.trafficSignDetail.name}';
     }
   }
 }

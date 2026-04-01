@@ -1,0 +1,1969 @@
+[
+  {
+    "id": "10214",
+    "question": "Khi điều khiển xe mô tô tay ga xuống đường dốc dài, độ dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giữ tay ga ở mức độ phù hợp, sử dụng phanh trước và phanh sau để giảm tốc độ"
+      },
+      {
+        "key": "b",
+        "text": "Nhả hết tay ga, tắt động cơ, sử dụng phanh trước và phanh sau để giảm tốc độ"
+      },
+      {
+        "key": "c",
+        "text": "Sử dụng phanh trước để giảm tốc độ kết hợp với tắt chìa khóa điện của xe"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10215",
+    "question": "Khi vào số để khởi hành xe ô tô có số tự động, người lái xe phải thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đạp bàn đạp phanh chân hết hành trình, vào số và nhả phanh tay, kiểm tra lại xem có bị nhầm số không rồi mới cho xe lăn bánh"
+      },
+      {
+        "key": "b",
+        "text": "Đạp bàn đạp để tăng ga với mức độ phù hợp, vào số và kiểm tra lại xem có bị nhầm số không rồi mới cho xe lăn bánh"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10216",
+    "question": "Khi nhả hệ thống phanh dừng cơ khí điều khiển bằng tay (phanh tay), người lái xe cần phải thực hiện các thao tác nào?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng lực tay phải kéo cần phanh tay về phía sau hết hành trình; nếu khóa hãm bị kẹt cứng phải đẩy mạnh phanh tay về phía trước, sau đó bóp khóa hãm"
+      },
+      {
+        "key": "b",
+        "text": "Dùng lực tay phải bóp khóa hãm đẩy cần phanh tay về phía trước hết hành trình; nếu khóa hãm bị kẹt cứng phải kéo cần phanh tay về phía sau đồng thời bóp khóa hãm"
+      },
+      {
+        "key": "c",
+        "text": "Dùng lực tay phải đẩy cần phanh tay về phía trước hết hành trình; nếu khóa hãm bị kẹt cứng phải đẩy mạnh cần phanh tay về phía trước, sau đó bóp khóa hãm"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10217",
+    "question": "Khi khởi hành ô tô sử dụng hộp số cơ khí trên đường bằng, người lái xe cần thực hiện các thao tác nào theo trình tự dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Kiểm tra an toàn xung quanh xe ô tô; nhả từ từ đến 1/2 hành trình bàn đạp ly hợp (côn) và giữ trong khoảng 3 giây; vào số 1; nhả hết phanh tay, báo hiệu bằng còi, đèn trước khi xuất phát; tăng ga đủ để xuất phát, sau đó vừa tăng ga vừa nhả hết ly hợp để cho xe ô tô chuyển động"
+      },
+      {
+        "key": "b",
+        "text": "Kiểm tra an toàn xung quanh xe ô tô; đạp ly hợp (côn) hết hành trình; vào số 1; nhả hết phanh tay, báo hiệu bằng còi, đèn trước khi xuất phát; tăng ga đủ để xuất phát; nhả từ từ đến 1/2 hành trình bàn đạp ly hợp và giữ trong khoảng 3 giây, sau đó vừa tăng ga vừa nhả hết ly hợp (côn) để cho xe ô tô chuyển động"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10218",
+    "question": "Khi quay đầu xe, người lái xe cần phải quan sát và thực hiện các thao tác nào để đảm bảo an toàn giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe cho thích hợp; quay đầu xe với tốc độ thấp; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm đưa đuôi xe về phía an toàn"
+      },
+      {
+        "key": "b",
+        "text": "Quan sát biển báo hiệu để biết nơi được phép quay đầu; quan sát kỹ địa hình nơi chọn để quay đầu; lựa chọn quỹ đạo quay đầu xe; quay đầu xe với tốc độ tối đa; thường xuyên báo tín hiệu để người, các phương tiện xung quanh được biết; nếu quay đầu xe ở nơi nguy hiểm thì đưa đuôi xe về phía nguy hiểm và đầu xe về phía an toàn"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10219",
+    "question": "Khi tránh nhau trên đường hẹp, người lái xe cần phải chú ý những điểm nào để đảm bảo an toàn giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không nên đi cố vào đường hẹp; xe đi ở sườn núi nên dừng lại trước để nhường đường; khi dừng xe nhường đường phải đỗ ngay ngắn"
+      },
+      {
+        "key": "b",
+        "text": "Trong khi tránh nhau không nên đổi số; khi tránh nhau ban đêm, phải tắt đèn pha bật đèn cốt"
+      },
+      {
+        "key": "c",
+        "text": "Khi tránh nhau ban đêm, phải thường xuyên bật đèn pha tắt đèn cốt"
+      },
+      {
+        "key": "d",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10220",
+    "question": "Khi điều khiển ô tô lên dốc cao, người lái xe cần thực hiện các thao tác nào?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tăng lên số cao từ chân dốc, điều chỉnh ga cho xe nhanh lên dốc; đến gần đỉnh dốc phải tăng ga để xe nhanh chóng qua dốc; về số thấp, đi sát về phía bên phải đường, có tín hiệu (còi, đèn) để báo cho người lái xe đi ngược chiều biết"
+      },
+      {
+        "key": "b",
+        "text": "Về số thấp từ chân dốc, điều chỉnh ga cho xe từ từ lên dốc; đến gần đỉnh dốc phải đi chậm, đi sát về phía bên phải đường, có tín hiệu (còi, đèn) để báo cho người lái xe đi ngược chiều biết"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10221",
+    "question": "Khi điều khiển ô tô xuống dốc cao, người lái xe cần thực hiện các thao tác nào dưới đây để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tăng lên số cao, nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ"
+      },
+      {
+        "key": "b",
+        "text": "Về số thấp, nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ"
+      },
+      {
+        "key": "c",
+        "text": "Về số không (0), nhả bàn đạp ga ở mức độ phù hợp, kết hợp với phanh chân để khống chế tốc độ"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10222",
+    "question": "Khi xuống dốc, muốn dừng xe, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Có tín hiệu rẽ phải, điều khiển xe sát vào lề đường bên phải; đạp phanh sớm và mạnh hơn lúc dừng xe trên đường bằng để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được; về số 1, đạp nửa ly hợp (côn) cho xe đến chỗ dừng; khi xe đã dừng, về số không (N), đạp phanh chân và kéo phanh tay"
+      },
+      {
+        "key": "b",
+        "text": "Có tín hiệu rẽ phải, điều khiển xe sát vào lề đường bên trái; đạp hết hành trình ly hợp (côn) và nhả bàn đạp ga để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được tại chỗ dừng; khi xe đã dừng, đạp và giữ phanh chân"
+      },
+      {
+        "key": "c",
+        "text": "Có tín hiệu rẽ trái, điều khiển xe sát vào lề đường bên phải; đạp phanh sớm và mạnh hơn lúc dừng xe trên đường bằng để xe đi với tốc độ chậm đến mức dễ dàng dừng lại được; về số không (N) để xe đi đến chỗ dừng, khi xe đã dừng, kéo phanh tay"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10223",
+    "question": "Khi điều khiển xe trên đường vòng người lái xe cần phải làm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng còi, đèn; giảm tốc độ tới mức cần thiết, về số thấp và thực hiện quay vòng với tốc độ phù hợp với bán kính cong của đường vòng"
+      },
+      {
+        "key": "b",
+        "text": "Quan sát cẩn thận các chướng ngại vật và báo hiệu bằng còi, đèn; tăng tốc để nhanh chóng qua đường vòng, đạp ly hợp (côn) và giảm tốc độ sau khi qua đường vòng"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10224",
+    "question": "Khi điều khiển xe ô tô rẽ phải ở chỗ đường giao nhau, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Có tín hiệu rẽ phải; quan sát an toàn phía sau; điều khiển xe sang làn đường bên trái; giảm tốc độ và quan sát an toàn phía bên phải để điều khiển xe qua chỗ đường giao nhau"
+      },
+      {
+        "key": "b",
+        "text": "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ phải; quan sát an toàn phía sau; điều khiển xe bám sát vào phía phải đường; giảm tốc độ và quan sát an toàn phía bên phải để điều khiển xe qua chỗ đường giao nhau"
+      },
+      {
+        "key": "c",
+        "text": "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ phải; quan sát an toàn phía sau; điều khiển xe bám sát vào phía phải đường; tăng tốc độ và quan sát an toàn phía bên trái để điều khiển xe qua chỗ đường giao nhau"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10225",
+    "question": "Khi điều khiển xe ô tô rẽ trái ở chỗ đường giao nhau, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Cách chỗ rẽ một khoảng cách an toàn giảm tốc độ, có tín hiệu rẽ trái xin đổi làn đường; quan sát an toàn xung quanh đặc biệt là bên trái; đổi sang làn đường bên trái; cho xe chạy chậm tới phía trong của tâm đường giao nhau mới rẽ trái để điều khiển xe qua chỗ đường giao nhau"
+      },
+      {
+        "key": "b",
+        "text": "Cách chỗ rẽ một khoảng cách an toàn có tín hiệu rẽ trái, tăng tốc độ để xe nhanh chóng qua chỗ đường giao nhau; có tín hiệu xin đổi làn đường; quan sát an toàn xung quanh đặc biệt là bên trái; đổi làn đường sang phải để mở rộng vòng cua"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10226",
+    "question": "Khi điều khiển xe sử dụng hộp số cơ khí vượt qua rãnh lớn cắt ngang mặt đường, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Gài số một (1) và từ từ cho hai bánh xe trước xuống rãnh, tăng ga cho hai bánh xe trước vượt lên khỏi rãnh, tăng số, tăng tốc độ để bánh xe sau vượt qua rãnh"
+      },
+      {
+        "key": "b",
+        "text": "Tăng ga, tăng số để hai bánh xe trước và bánh xe sau vượt qua khỏi rãnh và chạy bình thường"
+      },
+      {
+        "key": "c",
+        "text": "Gài số một (1) và từ từ cho hai bánh xe trước xuống rãnh, tăng ga cho hai bánh xe trước vượt lên khỏi rãnh, tiếp tục để bánh xe sau từ từ xuống rãnh rồi tăng dần ga cho xe ô tô lên khỏi rãnh"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10227",
+    "question": "Khi điều khiển xe qua đường sắt, người lái xe cần phải thực hiện các thao tác nào dưới đây để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Khi có chuông báo hoặc thanh chắn đã hạ xuống, người lái xe phải dừng xe tạm thời đúng khoảng cách an toàn, kéo phanh tay nếu đường dốc hoặc phải chờ lâu"
+      },
+      {
+        "key": "b",
+        "text": "Khi không có chuông báo hoặc thanh chắn không hạ xuống, người lái xe phải quan sát nếu thấy đủ điều kiện an toàn thì về số thấp, tăng ga nhẹ và không thay đổi số trong quá trình vượt qua đường sắt để tránh động cơ chết máy cho xe vượt qua"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10228",
+    "question": "Khi điều khiển xe ô tô tự đổ, người lái xe cần chú ý những điểm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Khi chạy trên đường xấu, nhiều ổ gà nên chạy chậm để thùng xe không bị lắc mạnh, không gây hiện tượng lệch “ben”; khi chạy vào đường vòng, cần giảm tốc độ, không lấy lái gấp và không phanh gấp"
+      },
+      {
+        "key": "b",
+        "text": "Khi chạy trên đường quốc lộ, đường bằng phẳng không cần hạ hết thùng xe xuống"
+      },
+      {
+        "key": "c",
+        "text": "Khi đổ hàng phải chọn vị trí có nền đường cứng và phẳng, dừng hẳn xe, kéo chặt phanh tay; sau đó mới điều khiển cơ cấu nâng “ben” để đổ hàng, đổ xong hàng mới hạ thùng xuống"
+      },
+      {
+        "key": "d",
+        "text": "Cả ý a và ý c"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10229",
+    "question": "Khi điều khiển xe tăng số, người lái xe cần chú ý những điểm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không được nhìn xuống buồng lái, cần phải tăng thứ tự từ thấp đến cao, phối hợp các động tác phải nhịp nhàng, chính xác"
+      },
+      {
+        "key": "b",
+        "text": "Nhìn xuống buồng lái để biết chính xác vị trí các tay số, cần phải tăng thứ tự từ thấp đến cao, phối hợp các động tác phải nhịp nhàng, vù ga phải phù hợp với tốc độ"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10230",
+    "question": "Khi điều khiển xe giảm số, người lái xe cần chú ý những điểm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Nhìn xuống buồng lái để biết chính xác vị trí các tay số, cần phải giảm thứ tự từ cao đến thấp, phối hợp các động tác phải nhịp nhàng, chính xác"
+      },
+      {
+        "key": "b",
+        "text": "Không được nhìn xuống buồng lái, cần phải giảm thứ tự từ cao đến thấp, phối hợp các động tác phải nhịp nhàng chính xác, vù ga phải phù hợp với tốc độ"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10231",
+    "question": "Để giảm tốc độ khi ô tô đi xuống đường dốc dài, người lái xe phải thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Nhả bàn đạp ga, đạp ly hợp (côn) hết hành trình, đạp mạnh phanh chân để giảm tốc độ"
+      },
+      {
+        "key": "b",
+        "text": "Về số thấp phù hợp, nhả bàn đạp ga, kết hợp đạp phanh chân với mức độ phù hợp, để giảm tốc độ"
+      },
+      {
+        "key": "c",
+        "text": "Nhả bàn đạp ga, tăng lên số cao, đạp phanh chân với mức độ phù hợp để giảm tốc độ"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10232",
+    "question": "Khi điều khiển ô tô qua đoạn đường ngập nước, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tăng lên số cao, tăng ga và giảm ga liên tục để thay đổi tốc độ, giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước"
+      },
+      {
+        "key": "b",
+        "text": "Đạp ly hợp (côn) hết hành trình, tăng ga và giảm ga liên tục để thay đổi tốc độ, giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước"
+      },
+      {
+        "key": "c",
+        "text": "Quan sát, ước lượng độ ngập nước mà xe ôtô có thể vượt qua an toàn, về số thấp, giữ đều ga và giữ vững tay lái để ô tô vượt qua đoạn đường ngập nước"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10233",
+    "question": "Khi điều khiển ô tô tới gần xe chạy ngược chiều vào ban đêm, người lái xe cần thực hiện các thao tác nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Chuyển từ đèn chiếu xa sang đèn chiếu gần; không nhìn thẳng vào đèn của xe chạy ngược chiều mà nhìn chếch sang phía phải theo chiều chuyển động của xe mình"
+      },
+      {
+        "key": "b",
+        "text": "Chuyển từ đèn chiếu gần sang đèn chiếu xa; không nhìn thẳng vào đèn của xe chạy ngược chiều mà nhìn chếch sang phía phải theo chiều chuyển động của xe mình"
+      },
+      {
+        "key": "c",
+        "text": "Chuyển từ đèn chiếu xa sang đèn chiếu gần; nhìn thẳng vào đèn của xe chạy ngược chiều để tránh xe đảm bảo an toàn"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10234",
+    "question": "Khi điều khiển xe ô tô trên đường trơn cần chú ý những điểm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm, giữ đều ga, đánh lái ngoặt và phanh gấp khi cần thiết"
+      },
+      {
+        "key": "b",
+        "text": "Giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm (sử dụng số L hoặc 1, 2 đối với xe số tự động), gài cầu (nếu có), giữ đều ga, không lấy nhiều lái, không đánh lái ngoặt và phanh gấp"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10235",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Phanh tay đang hãm hoặc thiếu dầu phanh"
+      },
+      {
+        "key": "b",
+        "text": "Nhiệt độ nước làm mát quá mức cho phép"
+      },
+      {
+        "key": "c",
+        "text": "Cửa xe đang mở"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10235a.webp"
+    ]
+  },
+  {
+    "id": "10236",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Phanh tay đang hãm"
+      },
+      {
+        "key": "b",
+        "text": "Thiếu dầu phanh"
+      },
+      {
+        "key": "c",
+        "text": "Nhiệt độ nước làm mát tăng quá mức cho phép"
+      },
+      {
+        "key": "d",
+        "text": "Dầu bôi trơn bị thiếu"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10236a.webp"
+    ]
+  },
+  {
+    "id": "10237",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Cửa xe đóng chưa chặt, hoặc có cửa xe chưa đóng"
+      },
+      {
+        "key": "b",
+        "text": "Bộ nạp ắc quy gặp sự cố kỹ thuật"
+      },
+      {
+        "key": "c",
+        "text": "Dầu bôi trơn bị thiếu"
+      },
+      {
+        "key": "d",
+        "text": "Cả ý b và c"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10237a.webp"
+    ]
+  },
+  {
+    "id": "10238",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Thiếu dầu phanh, phanh tay đang hãm"
+      },
+      {
+        "key": "b",
+        "text": "Hệ thống túi khí an toàn gặp sự cố"
+      },
+      {
+        "key": "c",
+        "text": "Lái xe và người ngồi ghế trước chưa cài dây an toàn"
+      },
+      {
+        "key": "d",
+        "text": "Cửa đóng chưa chặt, có cửa chưa đóng"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10238a.webp"
+    ]
+  },
+  {
+    "id": "10239",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Báo hiệu thiếu dầu phanh"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Sắp hết nhiên liệu"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10239a.webp"
+    ]
+  },
+  {
+    "id": "10240",
+    "question": "Trong các loại nhiên liệu dưới đây, loại nhiên liệu nào giảm thiểu ô nhiễm môi trường?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Xăng và dầu diesel"
+      },
+      {
+        "key": "b",
+        "text": "Xăng sinh học và khí sinh học"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10241",
+    "question": "Các biện pháp tiết kiệm nhiên liệu khi chạy xe?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bảo dưỡng xe theo định kỳ và có kế hoạch lộ trình trước khi chạy xe"
+      },
+      {
+        "key": "b",
+        "text": "Kiểm tra áp suất lốp theo quy định và chạy xe với tốc độ phù hợp với tình trạng mặt đường và mật độ giao thông trên đường"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10242",
+    "question": "Khi đã đỗ xe ô tô sát lề đường bên phải, người lái xe phải thực hiện các thao tác nào dưới đây khi mở cửa xuống xe để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát tình hình giao thông phía trước và sau, mở hé cánh cửa, nếu đảm bảo an toàn thì mở cửa ở mức cần thiết để xuống xe ô tô"
+      },
+      {
+        "key": "b",
+        "text": "Mở cánh cửa và quan sát tình hình giao thông phía trước, nếu đảm bảo an toàn thì mở cửa ở mức cần thiết để xuống xe ô tô"
+      },
+      {
+        "key": "c",
+        "text": "Mở cánh cửa hết hành trình và nhanh chóng ra khỏi xe ô tô"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10243",
+    "question": "Khi lái xe ô tô qua đường sắt không có rào chắn, không có người điều khiển giao thông, người lái xe phải xử lý như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tạm dừng xe tại vị trí cách đường sắt tối thiểu 5 mét, hạ kính cửa, tắt các thiết bị âm thanh trên xe, quan sát, nếu không có tàu chạy qua, về số thấp, tăng ga nhẹ để tránh động cơ chết máy cho xe vượt qua"
+      },
+      {
+        "key": "b",
+        "text": "Tại vị trí cách đường sắt tối thiểu 5 mét quan sát phía trước, nếu tàu còn cách xa, tăng số cao, tăng ga để cho xe nhanh chóng vượt qua đường sắt"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10244",
+    "question": "Khi lái xe ô tô qua đường sắt không có rào chắn, không có người điều khiển giao thông, người lái xe thực hiện thao tác: tạm dừng xe tại vị trí cách đường sắt tối thiểu 5 mét, hạ kính cửa, tắt các thiết bị âm thanh trên xe, quan sát và nếu không có tàu chạy qua thì về số thấp, tăng ga nhẹ để tránh động cơ chết máy cho xe vượt qua để đảm bảo an toàn là đúng hay không?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không đúng"
+      },
+      {
+        "key": "b",
+        "text": "Đúng"
+      },
+      {
+        "key": "c",
+        "text": "Không cần thiết, vì nếu nhìn thấy tàu còn cách xa, người lái xe có thể tăng số cao, tăng ga để cho xe nhanh chóng vượt qua đường sắt"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10245",
+    "question": "Khi điều khiển ô tô có hộp số tự động đi trên đường trơn trượt, lầy lội hoặc xuống dốc cao và dài, người lái xe để cần số ở vị trí nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Về số thấp, kết hợp phanh chân để giảm tốc độ"
+      },
+      {
+        "key": "b",
+        "text": "Giữ nguyên tay số D, kết hợp phanh tay để giảm tốc độ"
+      },
+      {
+        "key": "c",
+        "text": "Về số N (số 0), kết hợp phanh chân để giảm tốc độ"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10246",
+    "question": "Khi động cơ ô tô đã khởi động, muốn điều chỉnh ghế của người lái, người lái xe phải để cần số ở vị trí nào?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Vị trí N hoặc vị trí P hoặc số 0"
+      },
+      {
+        "key": "b",
+        "text": "Vị trí D hoặc số 1"
+      },
+      {
+        "key": "c",
+        "text": "Vị trí R"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10247",
+    "question": "Khi điều khiển ô tô có hộp số tự động, người lái xe sử dụng chân như thế nào là đúng để bảo đản an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không sử dụng chân trái; chân phải điều khiển bàn đạp phanh và bàn đạp ga"
+      },
+      {
+        "key": "b",
+        "text": "Chân trái điều khiển bàn đạp phanh, chân phải điều khiển bàn đạp ga"
+      },
+      {
+        "key": "c",
+        "text": "Không sử dụng chân phải; chân trái điều khiển bàn đạp phanh và bàn đạp ga"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10248",
+    "question": "Khi tầm nhìn bị hạn chế bởi sương mù hoặc mưa to, người lái xe phải thực hiện các thao tác nào?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tăng tốc độ, chạy gần xe trước, nhìn đèn hậu để định hướng"
+      },
+      {
+        "key": "b",
+        "text": "Giảm tốc độ, chạy cách xa xe trước với khoảng cách an toàn, bật đèn sương mù và đèn chiếu gần"
+      },
+      {
+        "key": "c",
+        "text": "Tăng tốc độ, bật đèn pha vượt qua xe chạy trước"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10249",
+    "question": "Khi đèn pha của xe đi ngược chiều gây chói mắt, làm giảm khả năng quan sát trên đường, người lái xe xử lý như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ, nếu cần thiết có thể dừng xe lại"
+      },
+      {
+        "key": "b",
+        "text": "Bật đèn pha chiếu xa và giữ nguyên tốc độ"
+      },
+      {
+        "key": "c",
+        "text": "Tăng tốc độ, bật đèn pha đối diện xe phía trước"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10250",
+    "question": "Để đạt được hiệu quả phanh cao nhất, người lái xe mô tô phải sử dụng các kỹ năng như thế nào dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Sử dụng phanh trước"
+      },
+      {
+        "key": "b",
+        "text": "Sử dụng phanh sau"
+      },
+      {
+        "key": "c",
+        "text": "Giảm hết ga; sử dụng đồng thời cả phanh sau và phanh trước"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10251",
+    "question": "Khi lái xe ô tô trên mặt đường có nhiều “ổ gà”, người lái xe phải thực hiện thao tác như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ, về số thấp và giữ đều ga"
+      },
+      {
+        "key": "b",
+        "text": "Tăng tốc độ cho xe lướt qua nhanh"
+      },
+      {
+        "key": "c",
+        "text": "Tăng tốc độ, đánh lái liên tục để tránh “ổ gà”"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10252",
+    "question": "Khi điều khiển ô tô gặp mưa to hoặc sương mù, người lái xe phải làm gì để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bật đèn chiếu gần và đèn vàng, điều khiển gạt nước, điều khiển ô tô đi với tốc độ chậm để có thể quan sát được; tìm chỗ an toàn dừng xe, bật đèn dừng khẩn cấp báo hiệu cho các xe khác biết"
+      },
+      {
+        "key": "b",
+        "text": "Bật đèn chiếu xa và đèn vàng, điều khiển gạt nước, tăng tốc độ điều khiển ô tô qua khỏi khu vực mưa hoặc sương mù"
+      },
+      {
+        "key": "c",
+        "text": "Tăng tốc độ, bật đèn pha vượt qua xe chạy phía trướcTăng tốc độ, bật đèn pha vượt qua xe chạy phía trước"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10253",
+    "question": "Điều khiển xe ô tô trong trời mưa, người lái xe phải xử lý như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ, tăng cường quan sát, không nên phanh gấp, không nên tăng ga hay đánh vô lăng đột ngột, bật đèn pha gần, mở chế độ gạt nước ở chế độ phù hợp để đảm bảo quan sát"
+      },
+      {
+        "key": "b",
+        "text": "Phanh gấp khi xe đi vào vũng nước và tăng ga ngay sau khi ra khỏi vũng nước.\nBật đèn chiếu xa, tăng tốc độ điều khiển ô tô qua khỏi khu vực mưa"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10254",
+    "question": "Khi lùi xe, người lái xe phải xử lý như thế nào để bảo đảm an toàn giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát bên trái, bên phải, phía sau xe, có tín hiệu cần thiết và lùi xe với tốc độ phù hợp"
+      },
+      {
+        "key": "b",
+        "text": "Quan sát phía trước xe và lùi xe với tốc độ nhanh"
+      },
+      {
+        "key": "c",
+        "text": "Quan sát bên trái và phía trước của xe và lùi xe với tốc độ nhanh"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10255",
+    "question": "Điều khiển xe ô tô trong khu vực đông dân cư cần lưu ý điều gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ đến mức an toàn, quan sát, nhường đường cho người đi bộ; giữ khoảng cách an toàn với các xe phía trước"
+      },
+      {
+        "key": "b",
+        "text": "Đi đúng làn đường quy định; chỉ được chuyển làn đường ở nơi cho phép, nhưng phải quan sát"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10256",
+    "question": "Khi điều khiển xe ô tô nhập vào đường cao tốc người lái xe cần thực hiện như thế nào dưới đây để bảo đảm an toàn giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát, phát tín hiệu và lái xe nhập vào làn đường tăng tốc, nhường đường cho các xe đang chạy trên đường cao tốc, khi đủ điều kiện an toàn thì tăng tốc độ cho xe nhập vào làn đường cao tốc"
+      },
+      {
+        "key": "b",
+        "text": "Phát tín hiệu, quan sát các xe đang chạy phía trước, nếu đảm bảo các điều kiện an toàn thì tăng tốc độ cho xe nhập ngay vào làn đường cao tốc"
+      },
+      {
+        "key": "c",
+        "text": "Phát tín hiện và lái xe nhập vào làn đường tăng tốc, quan sát các xe phía sau đang chạy trên đường cao tốc, khi đủ điều kiện an toàn thì giảm tốc độ, từ từ cho xe nhập vào làn đường cao tốc"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10257",
+    "question": "Khi điều khiển xe ô tô ra khỏi đường cao tốc người lái xe cần thực hiện như thế nào dưới đây để bảo đảm an toàn giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát phía trước để tìm biển báo chỉ dẫn “Lối ra đường cao tốc”, kiểm tra tình trạng giao thông phía sau và bên phải, nếu đảm bảo điều kiện an toàn thì phát tín hiệu và điều khiển xe chuyển dần sang làn đường giảm tốc và ra khỏi đường cao tốc"
+      },
+      {
+        "key": "b",
+        "text": "Quan sát về phía trước để tìm biển báo chỉ dẫn “Lối ra đường cao tốc”, trường hợp vượt qua “Lối ra đường cao tốc” thì phát tín hiệu, di chuyển sang làn đường giảm tốc và lùi xe quay trở lại"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10258",
+    "question": "Người lái xe được dừng xe, đỗ xe trên làn dừng khẩn cấp của đường cao tốc trong trường hợp nào dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Xe gặp sự cố, tai nạn, hoặc trường hợp khẩn cấp không thể di chuyển bình thường"
+      },
+      {
+        "key": "b",
+        "text": "Để nghỉ ngơi, đi vệ sinh, chụp ảnh, làm việc riêng …"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10259",
+    "question": "Trong trường hợp bất khả kháng, khi dừng xe, đỗ xe trên làn dừng khẩn cấp của đường cao tốc người lái xe phải xử lý như thế nào dưới đây là đúng quy tắc giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bật đèn cảnh báo sự cố, di chuyển phương tiện đến vị trí sát lền đường"
+      },
+      {
+        "key": "b",
+        "text": "Sử dụng các thiết bị cảnh báo như chóp nón, biển báo, đèn chớp… đặt phía sau xe để cảnh báo các phương tiện"
+      },
+      {
+        "key": "c",
+        "text": "Gọi số điện thoại khẩn cấp của đường cao tốc để được hỗ trợ nếu xe gặp sự cố, tai nạn, hoặc các trường hợp khẩn cấp không thể di chuyển bình thường"
+      },
+      {
+        "key": "d",
+        "text": "Tất cả các ý nêu trên"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10260",
+    "question": "Khi điều khiển ô tô xuống đường dốc dài, độ dốc cao, người lái xe số tự động cần thực hiện các thao tác nào dưới đây để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Nhả bàn đạp ga, về số thấp (sử dụng số L hoặc 1, 2), đạp phanh chân với mức độ phù hợp để giảm tốc độ"
+      },
+      {
+        "key": "b",
+        "text": "Nhả bàn đạp ga, về số không (N) đạp phanh chân và kéo phanh tay để giảm tốc độ"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10261",
+    "question": "Khi đi từ đường nhánh ra đường chính, người lái xe phải xử lý như nào là đúng quy tắc giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ, nhường đường cho xe trên đường chính từ bất kì hướng nào tới"
+      },
+      {
+        "key": "b",
+        "text": "Nháy đèn, bấm còi để xe đi trên đường chính biết và tăng tốc độ cho xe đi ra đường chính"
+      },
+      {
+        "key": "c",
+        "text": "Quan sát xe đang đi trên đường chính, nếu là xe có kích thước lớn hơn thì nhường đường, xe có kích thước nhỏ hơn thì tăng tốc độ cho xe đi ra đường chính"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10262",
+    "question": "Khi đang lái xe mô tô và ô tô, nếu có nhu cầu sử dụng điện thoại để nhắn tin hoặc gọi điện, người lái xe phải thực hiện như thế nào trong các tình huống nêu dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giảm tốc độ để đảm bảo an toàn với xe phía trước và sử dụng điện thoại để liên lạc"
+      },
+      {
+        "key": "b",
+        "text": "Giảm tốc độ để dừng xe ở nơi cho phép dừng xe sau đó sử dụng điện thoại để liên lạc"
+      },
+      {
+        "key": "c",
+        "text": "Tăng tốc độ để cách xa xe phía sau và sử dụng điện thoại để liên lạc"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10263",
+    "question": "Những thói quen nào dưới đây khi điều khiển xe mô tô tay ga tham gia giao thông dễ gây tai nạn nguy hiểm?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Sử dụng còi"
+      },
+      {
+        "key": "b",
+        "text": "Phanh đồng thời cả phanh trước và phanh sau"
+      },
+      {
+        "key": "c",
+        "text": "Chỉ sử dụng phanh trước"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10264",
+    "question": "Người ngồi trên xe ô tô cần thực hiện những thao tác mở cửa như thế nào dưới đây để xuống xe một cách an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Quan sát gương chiếu hậu hoặc xoay người quan sát phía trước và phía sau để phát hiện các phương tiện đang di chuyển tới gần, khi đủ điều kiện an toàn, dùng tay cách xa cửa hơn mở hé cửa, sau đó mở ở mức cần thiết để xuống xe"
+      },
+      {
+        "key": "b",
+        "text": "Quan sát tình hình giao thông phía trước, không cần quan sát phía sau và bên mở cửa; mở cánh cửa hết hành trình và nhanh chóng ra khỏi xe ô tô"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10265",
+    "question": "Khi điều khiển xe mô tô quay đầu người lái xe cần thực hiện như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bật tín hiệu báo rẽ trước khi quay đầu, từ từ giảm tốc độ đến mức có thể dừng lại"
+      },
+      {
+        "key": "b",
+        "text": "Chỉ quay đầu xe tại những nơi được phép quay đầu"
+      },
+      {
+        "key": "c",
+        "text": "Quan sát an toàn các phương tiện tới từ phía trước, phía sau, hai bên đồng thời nhường đường cho xe từ bên phải và phía trước đi tới"
+      },
+      {
+        "key": "d",
+        "text": "Tất cả các ý nêu trên"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10266",
+    "question": "Khi điều khiển xe mô tô quay đầu người lái xe cần thực hiện như thế nào để đảm bảo an toàn?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bật tín hiệu báo rẽ trước khi quay đầu, từ từ giảm tốc độ đến mức có thể dừng lại"
+      },
+      {
+        "key": "b",
+        "text": "Chỉ quay đầu xe tại những nơi được phép quay đầu"
+      },
+      {
+        "key": "c",
+        "text": "Quan sát an toàn các phương tiện tới từ phía trước, phía sau, hai bên đồng thời nhường đường cho xe từ bên phải và phía trước đi tới"
+      },
+      {
+        "key": "d",
+        "text": "Tất cả các ý nêu trên"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10267",
+    "question": "Gương chiếu hậu của xe mô tô hai bánh, có tác dụng gì trong các trường hợp dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Để quan sát an toàn phía bên trái khi chuẩn bị rẽ trái"
+      },
+      {
+        "key": "b",
+        "text": "Để quan sát an toàn phía bên phải khi chuẩn bị rẽ phải"
+      },
+      {
+        "key": "c",
+        "text": "Để quan sát an toàn phía sau cả bên trái và bên phải trước khi chuyển hướng"
+      },
+      {
+        "key": "d",
+        "text": "Để quan sát an toàn phía trước cả bên trái và bên phải trước khi chuyển hướng"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10268",
+    "question": "Để đảm bảo an toàn khi tham gia giao thông, người lái xe lái xe mô tô hai bánh cần điều khiển tay ga như thế nào trong các trường hợp dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Tăng ga thật nhanh, giảm ga từ từ"
+      },
+      {
+        "key": "b",
+        "text": "Tăng ga thật nhanh, giảm ga thật nhanh"
+      },
+      {
+        "key": "c",
+        "text": "Tăng ga từ từ, giảm ga thật nhanh"
+      },
+      {
+        "key": "d",
+        "text": "Tăng ga từ từ, giảm ga từ từ"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10269",
+    "question": "Kỹ thuật cơ bản để giữ thăng bằng khi điều khiển xe mô tô đi trên đường gồ ghề như thế nào trong các trường hợp dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đứng thẳng trên giá gác chân lái sau đó hơi gập đầu gối và khuỷu tay, đi chậm để không nẩy quá mạnh"
+      },
+      {
+        "key": "b",
+        "text": "Ngồi lùi lại phía sau, tăng ga vượt nhanh qua đoạn đường xóc"
+      },
+      {
+        "key": "c",
+        "text": "Ngồi lệch sang bên trái hoặc bên phải để lấy thăng bằng qua đoạn đường gồ ghề"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10270",
+    "question": "Chủ phương tiện cơ giới đường bộ có được tự ý thay đổi màu sơn, nhãn hiệu hoặc các đặc tính kỹ thuật của phương tiện so với chứng nhận đăng ký xe hay không?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Được phép thay đổi bằng cách dán đề can với màu sắc phù hợp"
+      },
+      {
+        "key": "b",
+        "text": "Không được phép thay đổi"
+      },
+      {
+        "key": "c",
+        "text": "Tùy từng loại phương tiện cơ giới đường bộ"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10271",
+    "question": "Xe ô tô tham gia giao thông đường bộ phải bảo đảm các quy định về chất lượng, an toàn kỹ thuật và bảo vệ môi trường nào ghi dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Kính chắn gió, kính cửa phải là loại kính an toàn, bảo đảm tầm nhìn cho người điều khiển; có đủ hệ thống hãm và hệ thống chuyển hướng có hiệu lực, tay lái của xe ô tô ở bên trái của xe, có còi với âm lượng đúng quy chuẩn kỹ thuật"
+      },
+      {
+        "key": "b",
+        "text": "Có đủ đèn chiếu sáng gần và xa, đèn soi biển số, đèn báo hãm, đèn tín hiệu; có đủ bộ phận giảm thanh, giảm khói, các kết cấu phải đủ độ bền và bảo đảm tính năng vận hành ổn định"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10272",
+    "question": "Xe mô tô và xe ô tô tham gia giao thông trên đường bộ phải bắt buộc có đủ bộ phận giảm thanh không?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không bắt buộc"
+      },
+      {
+        "key": "b",
+        "text": "Bắt buộc"
+      },
+      {
+        "key": "c",
+        "text": "Tùy từng trường hợp"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10273",
+    "question": "Xe ô tô tham gia giao thông trên đường bộ phải có đủ các loại đèn gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đèn chiếu sáng gần và xa"
+      },
+      {
+        "key": "b",
+        "text": "Đèn soi biển số; đèn báo hãm và đèn tín hiệu"
+      },
+      {
+        "key": "c",
+        "text": "Dàn đèn pha trên nóc xe"
+      },
+      {
+        "key": "d",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10274",
+    "question": "Kính chắn gió của xe ô tô phải đảm bảo yêu cầu nào dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Là loại kính an toàn, kính nhiều lớp, đúng quy cách, không rạn nứt, đảm bảo hình ảnh quan sát rõ ràng, không bị méo mó"
+      },
+      {
+        "key": "b",
+        "text": "Là loại kính trong suốt, không rạn nứt, đảm bảo tầm nhìn cho người điều khiển về phía trước mặt và hai bên"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10275",
+    "question": "Bánh xe lắp cho xe ô tô phải đảm bảo an toàn kỹ thuật như thế nào dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đủ số lượng, đủ áp suất, đúng cỡ lốp của nhà sản xuất hoặc tài liệu kỹ thuật quy định; lốp bánh dẫn hướng hai bên cùng kiểu hoa lốp, chiều cao hoa lốp đồng đều; không sử dụng lốp đắp; lốp không mòn đến dấu chỉ báo độ mòn của nhà sản xuất, không nứt, vỡ, phồng rộp làm hở lớp sợi mành"
+      },
+      {
+        "key": "b",
+        "text": "Vành, đĩa vành đúng kiểu loại, không rạn, nứt, cong vênh; bánh xe quay trơn, không bị bó kẹt hoặc cọ sát vào phần khác; moay ơ không bị rơ; lắp đặt chắc chắn, đủ các chi tiết kẹp chặt và phòng lỏng"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10276",
+    "question": "Âm lượng của còi điện lắp trên ô tô (đo ở độ cao 1,2 mét với khoảng cách 2 mét tính từ đầu xe) là bao nhiêu?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Không nhỏ hơn 90 dB (A), không lớn hơn 115 dB (A)"
+      },
+      {
+        "key": "b",
+        "text": "Không nhỏ hơn 80 dB (A), không lớn hơn 105 dB (A)"
+      },
+      {
+        "key": "c",
+        "text": "Không nhỏ hơn 70 dB (A), không lớn hơn 90 dB (A)"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10277",
+    "question": "Mục đích của bảo dưỡng thường xuyên đối với xe ô tô có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Bảo dưỡng ô tô thường xuyên làm cho ô tô luôn luôn có tính năng kỹ thuật tốt, giảm cường độ hao mòn của các chi tiết, kéo dài tuổi thọ của xe"
+      },
+      {
+        "key": "b",
+        "text": "Ngăn ngừa và phát hiện kịp thời các hư hỏng và sai lệch kỹ thuật để khắc phục, giữ gìn được hình thức bên ngoài"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10278",
+    "question": "Trong các nguyên nhân nêu dưới đây, nguyên nhân nào làm động cơ điezen không nổ?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí, tạp chất"
+      },
+      {
+        "key": "b",
+        "text": "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí, không có tia lửa điện"
+      },
+      {
+        "key": "c",
+        "text": "Hết nhiên liệu, lõi lọc nhiên liệu bị tắc, lọc khí bị tắc, nhiên liệu lẫn không khí và nước, không có tia lửa điện"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10279",
+    "question": "Gạt nước lắp trên ô tô phải đảm bảo yêu cầu an toàn kỹ thuật nào dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đầy đủ số lượng, lắp đặt chắc chắn, hoạt động bình thường"
+      },
+      {
+        "key": "b",
+        "text": "Lưỡi gạt không quá mòn, diện tích quét đảm bảo tầm nhìn của người lái"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10280",
+    "question": "Dây đai an toàn lắp trên ô tô phải đảm bảo yêu cầu an toàn kỹ thuật dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Đủ số lượng, lắp đặt chắc chắn không bị rách, đứt, khóa cài đóng, mở nhẹ nhàng, không tự mở, không bị kẹt; kéo ra thu vào dễ dàng, cơ cấu hãm giữ chặt dây khi giật dây đột ngột"
+      },
+      {
+        "key": "b",
+        "text": "Đủ số lượng, lắp đặt chắc chắn không bị rách, đứt, khóa cài đóng, mở nhẹ nhàng, không tự mở, không bị kẹt; kéo ra thu vào dễ dàng, cơ cấu hãm mở ra khi giật dây đột ngột"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10281",
+    "question": "Thế nào là động cơ 4 kỳ?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Là loại động cơ: Để hoàn thành một chu trình công tác của động cơ, pít tông thực hiện 2 (hai) hành trình, trong đó có một lần sinh công"
+      },
+      {
+        "key": "b",
+        "text": "Là loại động cơ: Để hoàn thành một chu trình công tác của động cơ, pít tông thực hiện 4 (bốn) hành trình, trong đó có một lần sinh công"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10282",
+    "question": "Công dụng của hệ thống bôi trơn đối với động cơ ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Cung cấp một lượng dầu bôi trơn đủ và sạch dưới áp suất nhất định đi bôi trơn cho các chi tiết của động cơ để giảm ma sát, giảm mài mòn, làm kín, làm sạch, làm mát và chống gỉ"
+      },
+      {
+        "key": "b",
+        "text": "Cung cấp một lượng nhiên liệu đầy đủ và sạch để cho động cơ ô tô hoạt động"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10283",
+    "question": "Niên hạn sử dụng của xe ô tô tải (tính bắt đầu từ năm sản xuất) là bao nhiêu năm?",
+    "options": [
+      {
+        "key": "a",
+        "text": "15 năm"
+      },
+      {
+        "key": "b",
+        "text": "20 năm"
+      },
+      {
+        "key": "c",
+        "text": "25 năm"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10284",
+    "question": "Niên hạn sử dụng của xe ô tô chở người trên 9 chỗ ngồi (tính bắt đầu từ năm sản xuất) là bao nhiêu năm?",
+    "options": [
+      {
+        "key": "a",
+        "text": "5 năm"
+      },
+      {
+        "key": "b",
+        "text": "20 năm"
+      },
+      {
+        "key": "c",
+        "text": "25 năm"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10285",
+    "question": "Hãy nêu công dụng của động cơ xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Khi làm việc, nhiệt năng được biến đổi thành cơ năng làm trục khuỷu động cơ quay, truyền lực đến các bánh xe chủ động tạo ra chuyển động tịnh tiến cho xe ô tô"
+      },
+      {
+        "key": "b",
+        "text": "Khi làm việc, cơ năng được biến đổi thành nhiệt năng và truyền đến các bánh xe chủ động tạo ra chuyển động tịnh tiến cho xe ô tô"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10286",
+    "question": "Hãy nêu công dụng hệ thống truyền lực của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng để truyền mô men quay từ động cơ tới các bánh xe chủ động của xe ô tô"
+      },
+      {
+        "key": "b",
+        "text": "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định"
+      },
+      {
+        "key": "c",
+        "text": "Dùng để làm giảm tốc độ, dừng chuyển động của xe ô tô"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10287",
+    "question": "Hãy nêu công dụng ly hợp (côn) của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng để truyền mô men xoắn giữa các trục không cùng nằm trên một đường thẳng và góc lệch trục luôn thay đổi trong quá trình xe ô tô chuyển động"
+      },
+      {
+        "key": "b",
+        "text": "Dùng để truyền hoặc ngắt truyền động từ động cơ đến hộp số của xe ô tô"
+      },
+      {
+        "key": "c",
+        "text": "Dùng để truyền truyền động từ hộp số đến bánh xe chủ động của ô tô"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10288",
+    "question": "Hãy nêu công dụng hộp số của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Truyền và tăng mô men xoắn giữa các trục vuông góc nhau, đảm bảo cho các bánh xe chủ động quay với tốc độ khác nhau khi sức cản chuyển động ở bánh xe hai bên không bằng nhau"
+      },
+      {
+        "key": "b",
+        "text": "Truyền và thay đổi mô men xoắn giữa các trục không cùng nằm trên một đường thẳng và góc lệch trục luôn thay đổi trong quá trình ô tô chuyển động, chuyển số êm dịu, dễ điều khiển"
+      },
+      {
+        "key": "c",
+        "text": "Truyền và thay đổi mô men từ động cơ đến bánh xe chủ động, cắt truyền động từ động cơ đến bánh xe chủ động, đảm bảo cho xe ô tô chuyển động lùi"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10289",
+    "question": "Hãy nêu công dụng hệ thống lái của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng để thay đổi mô men từ động cơ tới các bánh xe chủ động khi xe ô tô chuyển động theo hướng xác định"
+      },
+      {
+        "key": "b",
+        "text": "Dùng để thay đổi mô men giữa các trục vuông góc nhau khi xe ô tô chuyển động theo hướng xác định"
+      },
+      {
+        "key": "c",
+        "text": "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10290",
+    "question": "Hãy nêu công dụng hệ thống phanh của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng để giảm tốc độ, dừng chuyển động của xe ô tô và giữ cho xe ô tô đứng yên trên dốc"
+      },
+      {
+        "key": "b",
+        "text": "Dùng để thay đổi hướng chuyển động hoặc giữ cho xe ô tô chuyển động ổn định theo hướng xác định"
+      },
+      {
+        "key": "c",
+        "text": "Dùng để truyền hoặc ngắt truyền động từ động cơ đến bánh xe chủ động của xe ô tô"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10291",
+    "question": "Đèn phanh trên xe mô tô có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Có tác dụng cảnh báo cho các xe phía sau biết xe đang giảm tốc để chủ động tránh hoặc giảm tốc để tránh va chạm"
+      },
+      {
+        "key": "b",
+        "text": "Có tác dụng định vị vào ban đêm với các xe từ phía sau tới để tránh va chạm"
+      },
+      {
+        "key": "c",
+        "text": "Cả ý a và ý b"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10292",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Nhiệt độ nước làm mát động cơ quá ngưỡng cho phép"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Cần kiểm tra động cơ"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10292a.webp"
+    ]
+  },
+  {
+    "id": "10293",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Báo hiệu hệ thống chống bó cứng khi phanh bị lỗi"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Cần kiểm tra động cơ"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10293a.webp"
+    ]
+  },
+  {
+    "id": "10294",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Báo hiệu thiếu dầu phanh"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Sắp hết nhiên liệu"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10294a.webp"
+    ]
+  },
+  {
+    "id": "10295",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Báo hiệu hệ thống chống bó cứng khi phanh bị lỗi"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Sắp hết nhiên liệu"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10295a.webp"
+    ]
+  },
+  {
+    "id": "10296",
+    "question": "Khi động cơ xe số tự động có trang bị chìa khóa thông minh có cần đạp hết hành trình bàn đạp của phanh?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Phải đạp hết hành trình bàn đạp chân phanh."
+      },
+      {
+        "key": "b",
+        "text": "Không cần đạp phanh"
+      },
+      {
+        "key": "c",
+        "text": "Tùy từng trường hợp"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10296a.webp"
+    ]
+  },
+  {
+    "id": "10297",
+    "question": "Ắc quy được trang bị trên xe ô tô có tác dụng gì?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giúp người lái xe kịp thời tạo xung lực tối đa lên hệ thống phanh trong khoảnh khắc đầu tiên của tình huống khẩn cấp"
+      },
+      {
+        "key": "b",
+        "text": "Ổn định chuyển động của xe ô tô khi đi vào đường vòng"
+      },
+      {
+        "key": "c",
+        "text": "Hỗ trợ người lái xe khởi hành ngang dốc"
+      },
+      {
+        "key": "d",
+        "text": "Để tích trữ điện năng, cung cấp cho các phụ tải khi máy phát chưa làm việc"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10298",
+    "question": "Máy phát điện được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Để phát điện năng cung cấp cho các phụ tải làm việc và nạp điện cho ắc quy"
+      },
+      {
+        "key": "b",
+        "text": "Ổn định chuyển động của xe ô tô khi đi vào đường vòng"
+      },
+      {
+        "key": "c",
+        "text": "Hỗ trợ người lái xe khởi hành ngang dốc"
+      },
+      {
+        "key": "d",
+        "text": "Để tích trữ điện năng và cung cấp điện cho các phụ tải làm việc"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10299",
+    "question": "Dây đai an toàn được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Ổn định chuyển động của xe ô tô khi đi vào đường vòng"
+      },
+      {
+        "key": "b",
+        "text": "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại"
+      },
+      {
+        "key": "c",
+        "text": "Để tích trữ điện năng và cung cấp điện cho các phụ tải làm việc"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10300",
+    "question": "Túi khí được trang bị trên xe ô tô có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại"
+      },
+      {
+        "key": "b",
+        "text": "Giảm khả năng va đập của một số bộ phận cơ thể quan trọng với các vật thể trong xe"
+      },
+      {
+        "key": "c",
+        "text": "Hấp thụ một phần lực va đập lên người lái và hành khách"
+      },
+      {
+        "key": "d",
+        "text": "Cả ý b và ý c"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": []
+  },
+  {
+    "id": "10301",
+    "question": "Khi động cơ ô tô đã khởi động, bảng đồng hồ xuất hiện ký hiệu như hình vẽ dưới đây không tắt trong thời gian dài, báo hiệu tình trạng như thế nào của xe ô tô?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Nhiệt độ nước làm mát động cơ quá ngưỡng cho phép"
+      },
+      {
+        "key": "b",
+        "text": "Áp suất lốp không đủ"
+      },
+      {
+        "key": "c",
+        "text": "Đang hãm phanh tay"
+      },
+      {
+        "key": "d",
+        "text": "Hệ thống lái gặp trục trặc"
+      }
+    ],
+    "answer": "d",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10301a.webp"
+    ]
+  },
+  {
+    "id": "10302",
+    "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ có tác dụng gì dưới đây?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Dùng để kích (hay nâng) xe ô tô"
+      },
+      {
+        "key": "b",
+        "text": "Vặn ốc lắp bánh xe"
+      },
+      {
+        "key": "c",
+        "text": "Ổn định chuyển động của xe ô tô khi đi vào đường vòng"
+      },
+      {
+        "key": "d",
+        "text": "Giữ chặt người lái và hành khách trên ghế ngồi khi xe ô tô đột ngột dừng lại"
+      }
+    ],
+    "answer": "a",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10302a.webp"
+    ]
+  },
+  {
+    "id": "10303",
+    "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ, dùng để làm gì?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Thay lốp xe"
+      },
+      {
+        "key": "b",
+        "text": "Chữa cháy"
+      },
+      {
+        "key": "c",
+        "text": "Phá cửa kính xe ô tô trong các trường hợp khẩn cấp"
+      },
+      {
+        "key": "d",
+        "text": "Vặn ốc để tháo lắp bánh xe"
+      }
+    ],
+    "answer": "c",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10303a.webp"
+    ]
+  },
+  {
+    "id": "10304",
+    "question": "Trên xe ô tô có trang bị thiết bị như hình vẽ, dùng để làm gì?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Thay lốp xe"
+      },
+      {
+        "key": "b",
+        "text": "Chữa cháy trong các trường hợp hỏa hoạn"
+      },
+      {
+        "key": "c",
+        "text": "Phá cửa kính xe ô tô trong các trường hợp khẩn cấp"
+      },
+      {
+        "key": "d",
+        "text": "Cầm máu cho người bị nạn"
+      }
+    ],
+    "answer": "b",
+    "suggest": null,
+    "images": [
+      "https://thantrieu.com/resources/driver/images/10304a.webp"
+    ]
+  }
+]

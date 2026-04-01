@@ -26,7 +26,7 @@ class _ExamViewState extends State<ExamView> {
     super.dispose();
   }
 
-  // Mock exam data: 0=not started, 1=passed, 2=failed, 3=in progress
+  // Mock exam data_cache: 0=not started, 1=passed, 2=failed, 3=in progress
   final List<ExamItem> examData = [
     ExamItem(id: 1, status: 1, score: "35/35"),
     ExamItem(id: 2, status: 2, score: "28/35"),

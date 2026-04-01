@@ -30,5 +30,7 @@ flutter:
     - assets/fonts/
     - assets/icons/
     - assets/images/
-    - assets/data/
+    - assets/data_cache/
+    - assets/data_cache/option1/
+    - assets/data_cache/option2/
     - assets/icons/loading.json

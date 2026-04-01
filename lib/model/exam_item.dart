@@ -1,11 +1,31 @@
 class ExamItem {
-  final int id;
-  final int status; // 0=not started, 1=passed, 2=failed, 3=in progress
-  final String score;
+  final String licenseCode;
+  final List<String> licenseCodes;
+  final int examNo;
+  final List<int> questionNos;
 
   ExamItem({
-    required this.id,
-    required this.status,
-    required this.score,
+    required this.licenseCode,
+    required this.licenseCodes,
+    required this.examNo,
+    required this.questionNos,
   });
+
+  factory ExamItem.fromJson(Map<String, dynamic> json) {
+    return ExamItem(
+      licenseCode: json['licenseCode'] ?? '',
+      licenseCodes: List<String>.from(json['licenseCodes'] ?? []),
+      examNo: json['examNo'] ?? 0,
+      questionNos: List<int>.from(json['questionNos'] ?? []),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      "licenseCode": licenseCode,
+      "licenseCodes": licenseCodes,
+      "examNo": examNo,
+      "questionNos": questionNos,
+    };
+  }
 }

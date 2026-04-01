@@ -892,6 +892,90 @@
     }
   ],
   "Biển hiệu lệnh": [
-
+    {
+      "id": "301a",
+      "name": "Hướng đi thẳng phải theo",
+      "des": "Các xe chỉ được đi thẳng."
+    },
+    {
+      "id": "301b",
+      "name": "Hướng rẽ phải phải theo",
+      "des": "Các xe chỉ được rẽ phải."
+    },
+    {
+      "id": "301c",
+      "name": "Hướng rẽ trái phải theo",
+      "des": "Các xe chỉ được rẽ trái."
+    },
+    {
+      "id": "301d",
+      "name": "Hướng rẽ phải phải theo",
+      "des": "Các xe chỉ được rẽ phải."
+    },
+    {
+      "id": "301e",
+      "name": "Hướng đi thẳng và rẽ trái phải theo",
+      "des": "Các xe chỉ được đi thẳng hoặc rẽ trái."
+    },
+    {
+      "id": "301f",
+      "name": "Hướng đi thẳng và rẽ phải phải theo",
+      "des": "Các xe chỉ được đi thẳng hoặc rẽ phải."
+    },
+    {
+      "id": "301h",
+      "name": "Hướng rẽ trái và rẽ phải phải theo",
+      "des": "Các xe chỉ được rẽ trái hoặc rẽ phải."
+    },
+    {
+      "id": "302a",
+      "name": "Hướng đi vòng chướng ngại vật sang phải",
+      "des": "Xe phải vòng sang phải để tránh chướng ngại vật."
+    },
+    {
+      "id": "302b",
+      "name": "Hướng đi vòng chướng ngại vật sang trái",
+      "des": "Xe phải vòng sang trái để tránh chướng ngại vật."
+    },
+    {
+      "id": "303",
+      "name": "Nơi giao nhau chạy theo vòng xuyến",
+      "des": "Xe đi vòng xuyến phải đi theo hướng mũi tên."
+    },
+    {
+      "id": "304",
+      "name": "Đường dành cho xe thô sơ",
+      "des": "Chỉ dành cho xe thô sơ, xe máy/ô tô không được đi vào."
+    },
+    {
+      "id": "305",
+      "name": "Đường dành cho người đi bộ",
+      "des": "Xe cơ giới/thô sơ không được phép đi vào."
+    },
+    {
+      "id": "306",
+      "name": "Tốc độ tối thiểu cho phép",
+      "des": "Xe cơ giới không được chạy chậm hơn trị số ghi trên biển."
+    },
+    {
+      "id": "307",
+      "name": "Hết hạn chế tốc độ tối thiểu",
+      "des": "Hết đoạn đường quy định tốc độ tối thiểu."
+    },
+    {
+      "id": "308",
+      "name": "Tuyến đường cầu vượt cắt qua",
+      "des": "Báo hiệu cầu vượt, xe đi theo hướng hiệu lệnh."
+    },
+    {
+      "id": "309",
+      "name": "Ấn còi",
+      "des": "Xe cộ đến vị trí này phải ấn còi."
+    },
+    {
+      "id": "310a",
+      "name": "Hướng đi phải theo cho xe chở hàng nguy hiểm",
+      "des": "Xe chở hàng nguy hiểm rẽ phải."
+    }
   ]
 }

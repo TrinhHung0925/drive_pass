@@ -1,3 +1,5 @@
+import 'package:drive_pass/model/questions.dart';
+import 'package:drive_pass/service/data_local.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -233,41 +235,25 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
     );
   }
 
-  IconData _getIcon(String name) {
-    switch (name) {
-      case "warning":
-        return Icons.star_rounded;
-      case "local_bar":
-        return Icons.local_bar_rounded;
-      case "speed":
-        return Icons.speed_rounded;
-      case "train":
-        return Icons.train_rounded;
-      default:
-        return Icons.info_outline_rounded;
-    }
-  }
+
 
   Widget _buildQuestionList() {
     return ListView.separated(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: controller.questions.length,
+      itemCount: DataLocal.listQuestionsCritical.length,
       separatorBuilder: (_, __) => SizedBox(height: 12.h),
       itemBuilder: (context, index) {
-        final item = controller.questions[index];
-        final id = item.id;
-        final text = item.text;
-        final status = item.status;
-        final tag = item.tag;
-        final iconName = item.icon;
+        Question itemQuestions = DataLocal.listQuestionsCritical[index];
 
-        final isDone = status == "ĐÃ THUỘC";
+
 
         return CupertinoButton(
           padding: EdgeInsets.zero,
           minSize: null,
-          onPressed: () => controller.openQuestion(id),
+          onPressed: () {
+            controller.openQuestion(itemQuestions);
+          },
           child: Container(
             padding: EdgeInsets.all(16.w),
             decoration: BoxDecoration(
@@ -300,7 +286,7 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
                         borderRadius: BorderRadius.circular(6.r),
                       ),
                       child: Text(
-                        "Câu $id",
+                        "Câu ${index+1}",
                         style: TextStyle(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w800,
@@ -314,17 +300,17 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
                         vertical: 4.h,
                       ),
                       decoration: BoxDecoration(
-                        color: isDone
+                        color: index %2==0
                             ? AppColors.primary.withValues(alpha: 0.1)
                             : Colors.grey.shade100,
                         borderRadius: BorderRadius.circular(4.r),
                       ),
                       child: Text(
-                        status,
+                        index %2==0?"Đã làm":"Chưa làm",
                         style: TextStyle(
                           fontSize: 10.sp,
                           fontWeight: FontWeight.w800,
-                          color: isDone
+                          color: index %2==0
                               ? AppColors.primary
                               : Colors.grey.shade600,
                         ),
@@ -334,7 +320,7 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
                 ),
                 SizedBox(height: 12.h),
                 Text(
-                  text,
+                  itemQuestions.question,
                   style: TextStyle(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w600,
@@ -345,21 +331,19 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
                 SizedBox(height: 16.h),
                 Row(
                   children: [
-                    Icon(
-                      _getIcon(iconName),
-                      size: 14.w,
-                      color: AppColors.textSecondary,
-                    ),
-                    SizedBox(width: 6.w),
-                    Text(
-                      tag,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.textSecondary,
+                    Expanded(
+                      child: Text(
+                        itemQuestions.suggest,
+                        style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.textSecondary,
+                        ),
+                        maxLines: 1,
                       ),
                     ),
                     const Spacer(),
+                    SizedBox(width: 10),
                     Icon(
                       Icons.chevron_right_rounded,
                       size: 16.w,

@@ -14,6 +14,7 @@ import 'screen/exam_tips/exam_tips_view.dart';
 import 'screen/theory/theory_view.dart';
 import 'screen/critical_questions/critical_questions_view.dart';
 import 'screen/traffic_sign_detail/traffic_sign_detail_view.dart';
+import 'screen/intro/intro_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(
@@ -34,6 +35,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case "/splash":
       return page(settings, () => SplashView());
+    case "/intro":
+      return page(settings, () => IntroView());
     case "/home":
       return page(settings, () => HomeView());
     case "/setting":
@@ -74,6 +77,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
 enum AppPage {
   splash,
+  intro,
   home,
   setting,
   exam,
@@ -94,6 +98,8 @@ extension DrivingLessonPageExtension on AppPage {
     switch (this) {
       case AppPage.splash:
         return '/${AppPage.splash.name}';
+      case AppPage.intro:
+        return '/${AppPage.intro.name}';
       case AppPage.home:
         return '/${AppPage.home.name}';
       case AppPage.setting:

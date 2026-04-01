@@ -195,7 +195,7 @@ class _TheoryViewState extends State<TheoryView> {
     return GridView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: controller.categories.length,
+      itemCount: controller.listCategories.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: 12.w,
@@ -203,7 +203,7 @@ class _TheoryViewState extends State<TheoryView> {
         childAspectRatio: 1.3,
       ),
       itemBuilder: (context, index) {
-        final item = controller.categories[index];
+        final item = controller.listCategories[index];
         final bool isCritical = item.isCritical;
         final double progress = item.progress;
 

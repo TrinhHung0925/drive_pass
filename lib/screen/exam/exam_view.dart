@@ -1,3 +1,4 @@
+import 'package:drive_pass/service/data_local.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,17 +27,7 @@ class _ExamViewState extends State<ExamView> {
     super.dispose();
   }
 
-  // Mock exam data_cache: 0=not started, 1=passed, 2=failed, 3=in progress
-  final List<ExamItem> examData = [
-    ExamItem(id: 1, status: 1, score: "35/35"),
-    ExamItem(id: 2, status: 2, score: "28/35"),
-    ExamItem(id: 3, status: 3, score: "12/35"),
-    ExamItem(id: 4, status: 0, score: ""),
-    ExamItem(id: 5, status: 0, score: ""),
-    ExamItem(id: 6, status: 1, score: "35/35"),
-    ExamItem(id: 7, status: 0, score: ""),
-    ExamItem(id: 8, status: 0, score: ""),
-  ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +47,10 @@ class _ExamViewState extends State<ExamView> {
             child: ListView.separated(
               padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
               physics: const BouncingScrollPhysics(),
-              itemCount: examData.length + 1,
+              itemCount: DataLocal.listExam.length,
               separatorBuilder: (_, __) => SizedBox(height: 12.h),
               itemBuilder: (context, index) {
-                if (index == examData.length) {
-                  return _buildPlaceholder();
-                }
-                return _buildExamItem(examData[index]);
+                return _buildExamItem(DataLocal.listExam[index]);
               },
             ),
           ),
@@ -162,35 +150,33 @@ class _ExamViewState extends State<ExamView> {
   }
 
   Widget _buildExamItem(ExamItem exam) {
-    int id = exam.id;
-    int status = exam.status; // 0=none, 1=passed, 2=failed, 3=in progress
-    String score = exam.score;
 
-    // Colors based on status
+
     Color numberBg, numberColor;
     String statusText;
     Color statusTextColor;
     String buttonText;
+    int status = exam.examNo;
 
     switch (status) {
       case 1: // Passed
         numberBg = AppColors.successBackground;
         numberColor = AppColors.success;
-        statusText = "Đã đạt • $score";
+        statusText = "Đã đạt • 10/30";
         statusTextColor = AppColors.success;
         buttonText = "Làm lại";
         break;
       case 2: // Failed
         numberBg = AppColors.errorBackground;
         numberColor = AppColors.error;
-        statusText = "Chưa đạt • $score";
+        statusText = "Chưa đạt • 10/30";
         statusTextColor = AppColors.error;
         buttonText = "Làm lại";
         break;
-      case 3: // In Progress
-        numberBg = const Color(0xFFFFF7ED); // light orange
-        numberColor = const Color(0xFFEA580C); // orange
-        statusText = "Đang làm • $score";
+      case 3:
+        numberBg = const Color(0xFFFFF7ED);
+        numberColor = const Color(0xFFEA580C);
+        statusText = "Đang làm • 10/30";
         statusTextColor = const Color(0xFFEA580C);
         buttonText = "Tiếp tục";
         break;
@@ -234,7 +220,7 @@ class _ExamViewState extends State<ExamView> {
               ),
               alignment: Alignment.center,
               child: Text(
-                "$id",
+                "${exam.examNo}",
                 style: TextStyle(
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w700,
@@ -249,7 +235,7 @@ class _ExamViewState extends State<ExamView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Bộ đề số $id",
+                    "Bộ đề số ${exam.examNo}",
                     style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,

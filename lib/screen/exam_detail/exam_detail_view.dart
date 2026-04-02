@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../../resource/app_colors.dart';
 import 'exam_detail_controller.dart';
 
@@ -246,26 +247,42 @@ class _ExamDetailViewState extends State<ExamDetailView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image placeholder
-            Container(
-              width: double.infinity,
-              height: 160.h,
-              decoration: BoxDecoration(
-                color: AppColors.border,
+            // Show image only when question has images
+            if (q.images.isNotEmpty) ...[
+              ClipRRect(
                 borderRadius: BorderRadius.circular(12.r),
-              ),
-              child: Center(
-                child: Icon(
-                  Icons.image_outlined,
-                  size: 48.w,
-                  color: AppColors.textLight,
+                child: CachedNetworkImage(
+                  imageUrl: q.images.first,
+                  width: double.infinity,
+                  height: 160.h,
+                  fit: BoxFit.cover,
+                  placeholder: (_, __) => Container(
+                    height: 160.h,
+                    color: AppColors.border,
+                    child: Center(
+                      child: SizedBox(
+                        width: 24.w,
+                        height: 24.w,
+                        child: const CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                    ),
+                  ),
+                  errorWidget: (_, __, ___) => Container(
+                    height: 160.h,
+                    color: AppColors.border,
+                    child: Icon(
+                      Icons.broken_image_outlined,
+                      size: 40.w,
+                      color: AppColors.textLight,
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 16.h),
+              SizedBox(height: 16.h),
+            ],
             // Question text
             Text(
-              q.text,
+              q.question,
               style: TextStyle(
                 fontSize: 15.sp,
                 fontWeight: FontWeight.w600,
@@ -274,13 +291,12 @@ class _ExamDetailViewState extends State<ExamDetailView> {
               ),
             ),
             SizedBox(height: 16.h),
-            // Answer options
+            // Answer options – use real option text
             ...List.generate(q.options.length, (i) {
               final label = String.fromCharCode(65 + i); // A, B, C, D
-              final isSelected =
-                  controller.selectedAnswers[controller.currentIndex.value] ==
-                  i;
-              return _buildAnswerOption(label, q.options[i], i, isSelected);
+              final state = controller.optionVisualState(
+                  controller.currentIndex.value, i);
+              return _buildAnswerOption(label, q.options[i].text, i, state);
             }),
           ],
         ),
@@ -292,8 +308,39 @@ class _ExamDetailViewState extends State<ExamDetailView> {
     String label,
     String text,
     int index,
-    bool isSelected,
+    int state, // 0=neutral 1=selected(blue) 2=correct(green) 3=wrong(red)
   ) {
+    final Color bgColor;
+    final Color borderColor;
+    final Color textColor;
+    final Color labelBg;
+
+    switch (state) {
+      case 1: // selected before submit
+        bgColor = AppColors.primary;
+        borderColor = AppColors.primary;
+        textColor = Colors.white;
+        labelBg = Colors.white.withValues(alpha: 0.2);
+        break;
+      case 2: // correct after submit
+        bgColor = AppColors.success;
+        borderColor = AppColors.success;
+        textColor = Colors.white;
+        labelBg = Colors.white.withValues(alpha: 0.2);
+        break;
+      case 3: // wrong after submit
+        bgColor = AppColors.error;
+        borderColor = AppColors.error;
+        textColor = Colors.white;
+        labelBg = Colors.white.withValues(alpha: 0.2);
+        break;
+      default: // neutral
+        bgColor = AppColors.surface;
+        borderColor = AppColors.border;
+        textColor = AppColors.textPrimary;
+        labelBg = AppColors.background;
+    }
+
     return CupertinoButton(
       padding: EdgeInsets.zero,
       minSize: null,
@@ -302,12 +349,9 @@ class _ExamDetailViewState extends State<ExamDetailView> {
         margin: EdgeInsets.only(bottom: 10.h),
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.primary : AppColors.surface,
+          color: bgColor,
           borderRadius: BorderRadius.circular(10.r),
-          border: Border.all(
-            color: isSelected ? AppColors.primary : AppColors.border,
-            width: 1.5,
-          ),
+          border: Border.all(color: borderColor, width: 1.5),
         ),
         child: Row(
           children: [
@@ -315,9 +359,7 @@ class _ExamDetailViewState extends State<ExamDetailView> {
               width: 32.w,
               height: 32.w,
               decoration: BoxDecoration(
-                color: isSelected
-                    ? Colors.white.withValues(alpha: 0.2)
-                    : AppColors.background,
+                color: labelBg,
                 borderRadius: BorderRadius.circular(8.r),
               ),
               alignment: Alignment.center,
@@ -326,7 +368,7 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                 style: TextStyle(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w700,
-                  color: isSelected ? Colors.white : AppColors.textPrimary,
+                  color: textColor,
                 ),
               ),
             ),
@@ -337,7 +379,7 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                 style: TextStyle(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w500,
-                  color: isSelected ? Colors.white : AppColors.textPrimary,
+                  color: textColor,
                 ),
               ),
             ),
@@ -473,8 +515,43 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                     itemBuilder: (context, i) {
                       return Obx(() {
                         final isCurrent = controller.currentIndex.value == i;
-                        final isAnswered = controller.selectedAnswers
-                            .containsKey(i);
+                        final answerState = controller.getAnswerState(i);
+                        final isAnswered =
+                            controller.selectedAnswers.containsKey(i);
+
+                        Color dotBg;
+                        Color dotBorder;
+                        Color dotText;
+
+                        if (isCurrent) {
+                          dotBg = AppColors.primary;
+                          dotBorder = AppColors.primary;
+                          dotText = Colors.white;
+                        } else if (controller.isSubmitted.value) {
+                          if (answerState == 0) {
+                            dotBg = AppColors.successBackground;
+                            dotBorder = AppColors.success;
+                            dotText = AppColors.success;
+                          } else if (answerState == 1) {
+                            dotBg = AppColors.errorBackground;
+                            dotBorder = AppColors.error;
+                            dotText = AppColors.error;
+                          } else {
+                            // skipped
+                            dotBg = AppColors.background;
+                            dotBorder = AppColors.border;
+                            dotText = AppColors.textSecondary;
+                          }
+                        } else if (isAnswered) {
+                          dotBg = AppColors.primary.withValues(alpha: 0.1);
+                          dotBorder = AppColors.border;
+                          dotText = AppColors.primary;
+                        } else {
+                          dotBg = AppColors.background;
+                          dotBorder = AppColors.border;
+                          dotText = AppColors.textSecondary;
+                        }
+
                         return CupertinoButton(
                           padding: EdgeInsets.zero,
                           minSize: null,
@@ -483,17 +560,9 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                             width: 36.w,
                             height: 36.h,
                             decoration: BoxDecoration(
-                              color: isCurrent
-                                  ? AppColors.primary
-                                  : isAnswered
-                                  ? AppColors.primary.withValues(alpha: 0.1)
-                                  : AppColors.background,
+                              color: dotBg,
                               borderRadius: BorderRadius.circular(8.r),
-                              border: Border.all(
-                                color: isCurrent
-                                    ? AppColors.primary
-                                    : AppColors.border,
-                              ),
+                              border: Border.all(color: dotBorder),
                             ),
                             alignment: Alignment.center,
                             child: Text(
@@ -501,11 +570,7 @@ class _ExamDetailViewState extends State<ExamDetailView> {
                               style: TextStyle(
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w600,
-                                color: isCurrent
-                                    ? Colors.white
-                                    : isAnswered
-                                    ? AppColors.primary
-                                    : AppColors.textSecondary,
+                                color: dotText,
                               ),
                             ),
                           ),

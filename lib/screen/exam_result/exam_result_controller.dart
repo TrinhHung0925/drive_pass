@@ -1,11 +1,15 @@
+import 'package:drive_pass/screen/exam_detail/exam_detail_controller.dart';
 import 'package:get/get.dart';
 import 'package:drive_pass/route.dart';
+import 'package:flutter/material.dart';
+import '../../service/local_service.dart';
+import '../exam/exam_controller.dart';
 
 class ExamResultController extends GetxController {
-  // Arguments passed from ExamDetailView after submission
+  late final int examNo;
   late final int correct;
   late final int total;
-  late final int score; // could be percentage or raw
+  late final int score;
   late final int incorrect;
   late final int skipped;
   late final String timeTaken;
@@ -14,34 +18,52 @@ class ExamResultController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    final args = Get.arguments ?? {};
-    correct = args['correct'] ?? 0;
-    total = args['total'] ?? 0;
-    incorrect = args['incorrect'] ?? 0;
-    skipped = args['skipped'] ?? 0;
-    timeTaken = args['timeTaken'] ?? "00:00";
-    
+    final args = Get.arguments as Map? ?? {};
+    examNo   = args['examNo']    ?? 0;
+    correct  = args['correct']   ?? 0;
+    total    = args['total']     ?? 0;
+    incorrect= args['incorrect'] ?? 0;
+    skipped  = args['skipped']   ?? 0;
+    timeTaken= args['timeTaken'] ?? '00:00';
+
     final now = DateTime.now();
-    dateTaken = '${now.day.toString().padLeft(2, '0')}/${now.month.toString().padLeft(2, '0')}/${now.year}';
-    
-    if (total == 0) {
-      score = 0;
-    } else {
-      score = ((correct / total) * 100).round();
+    dateTaken =
+        '${now.day.toString().padLeft(2, '0')}/'
+        '${now.month.toString().padLeft(2, '0')}/'
+        '${now.year}';
+
+    score = total == 0 ? 0 : ((correct / total) * 100).round();
+
+    // ── Persist result ────────────────────────────────────────────────────
+    if (examNo > 0) _saveResult();
+  }
+
+  Future<void> _saveResult() async {
+    final localService = Get.find<LocalService>();
+    await localService.saveExamResult(
+      examNo:    examNo,
+      correct:   correct,
+      total:     total,
+      timeTaken: timeTaken,
+      dateTaken: dateTaken,
+    );
+    if (Get.isRegistered<ExamController>()) {
+      Get.find<ExamController>().loadHistory();
     }
   }
 
   void viewDetails() {
-    // Navigate to detailed result view (could reuse ExamDetailView with arguments)
-    Get.toNamed(AppPage.examDetail.routeName, arguments: Get.arguments);
+    Get.snackbar('Thông báo', 'Tính năng xem lời giải chi tiết sẽ cập nhật sau.');
   }
 
   void retakeExam() {
-    // Go back to exam list screen
-    Get.offAllNamed(AppPage.exam.routeName);
+    Get.back();
+    Get.find<ExamDetailController>().refreshExams();
   }
 
-  void goBack() => Get.back();
+  void goBack(){
+    Get.close(2);
+  }
 
-  void shareResult() {} // Sharing functionality to be implemented
+  void shareResult() {}
 }

@@ -23,6 +23,7 @@ import 'screen/statistics/statistics_view.dart';
 import 'screen/violations/violations_view.dart';
 import 'screen/random_practice/random_practice_view.dart';
 import 'screen/search_questions/search_questions_view.dart';
+import 'screen/ai_chat/ai_chat_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(
@@ -87,6 +88,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return page(settings, () => RandomPracticeView());
     case "/searchQuestions":
       return page(settings, () => SearchQuestionsView());
+    case "/aiChat":
+      return page(settings, () => AiChatView());
 
     default:
       return page(
@@ -123,6 +126,7 @@ enum AppPage {
   violations,
   randomPractice,
   searchQuestions,
+  aiChat,
 }
 
 extension DrivingLessonPageExtension on AppPage {
@@ -174,6 +178,8 @@ extension DrivingLessonPageExtension on AppPage {
         return '/${AppPage.randomPractice.name}';
       case AppPage.searchQuestions:
         return '/${AppPage.searchQuestions.name}';
+      case AppPage.aiChat:
+        return '/${AppPage.aiChat.name}';
     }
   }
 }

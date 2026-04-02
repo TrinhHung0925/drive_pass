@@ -61,5 +61,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Cho phép truy cập camera để chụp ảnh biển báo, câu hỏi gửi cho AI nhận diện</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cho phép truy cập thư viện ảnh để chọn ảnh biển báo, câu hỏi gửi cho AI nhận diện</string>
 </dict>
 </plist>

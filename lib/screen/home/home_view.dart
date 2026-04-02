@@ -264,6 +264,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           SizedBox(height: 12.h),
 
+
           _buildWrongQuestionsCard(),
         ],
       ),

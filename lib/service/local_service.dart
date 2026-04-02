@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../model/exam_history.dart';
+import '../model/chat_message.dart';
 
 class LocalService extends GetxService {
   late GetStorage box;
@@ -254,4 +255,23 @@ class LocalService extends GetxService {
   }
 
   int get bookmarkedCount => getBookmarkedIds().length;
+
+  // ── AI Chat History ─────────────────────────────────────────────────────────
+  static const String keyChatHistory = 'CHAT_HISTORY';
+
+  Future<void> saveChatHistory(List<ChatMessage> messages) async {
+    final list = messages.map((m) => m.toJson()).toList();
+    await box.write(keyChatHistory, list);
+  }
+
+  List<ChatMessage> getChatHistory() {
+    final raw = box.read<List>(keyChatHistory) ?? [];
+    return raw
+        .map((e) => ChatMessage.fromJson(Map<String, dynamic>.from(e)))
+        .toList();
+  }
+
+  Future<void> clearChatHistory() async {
+    await box.remove(keyChatHistory);
+  }
 }

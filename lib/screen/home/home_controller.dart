@@ -56,6 +56,7 @@ class HomeController extends GetxController {
   }
 
   void goToExam() {
+
     Get.find<HomeTapController>().changeTabIndex(1);
   }
 
@@ -68,4 +69,5 @@ class HomeController extends GetxController {
   void goToViolations() => Get.toNamed(AppPage.violations.routeName);
   void goToRandomPractice() => Get.toNamed(AppPage.randomPractice.routeName);
   void goToSearchQuestions() => Get.toNamed(AppPage.searchQuestions.routeName);
+  void goToAiChat() => Get.toNamed(AppPage.aiChat.routeName);
 }

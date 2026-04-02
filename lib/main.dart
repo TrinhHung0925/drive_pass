@@ -3,12 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'route.dart';
 import 'service/local_service.dart';
+import 'service/gemini_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Get.putAsync(() => LocalService().init());
+  await Get.putAsync(() => GeminiService().init());
   runApp(const MyApp());
 }
+///
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

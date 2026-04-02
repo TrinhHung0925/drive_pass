@@ -10,6 +10,7 @@ class TheoryController extends GetxController {
 
   final completedQuestions = 0.obs;
   final totalQuestions = 0.obs;
+  final bookmarkedCount = 0.obs;
 
   double get totalProgress => totalQuestions.value > 0 
       ? completedQuestions.value / totalQuestions.value 
@@ -74,6 +75,9 @@ class TheoryController extends GetxController {
     // Overall: unique question IDs across all categories
     final uniqueIds = localService.getTheoryAllUniqueIds();
     completedQuestions.value = uniqueIds.length;
+
+    // Bookmarked count
+    bookmarkedCount.value = localService.bookmarkedCount;
   }
 
   List<Question> _questionsForCategory(int index) {
@@ -90,6 +94,10 @@ class TheoryController extends GetxController {
 
   void goBack() => Get.back();
   void viewAll() {}
+
+  void openBookmarked() {
+    Get.toNamed(AppPage.bookmarkedQuestions.routeName);
+  }
 
   void openCategory(int index) {
     final category = listCategories[index];

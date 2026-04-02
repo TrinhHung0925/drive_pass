@@ -164,4 +164,94 @@ class LocalService extends GetxService {
   Future<void> clearTheoryProgress() async {
     await box.remove(keyTheoryProgress);
   }
+
+  // ── Wrong Questions ─────────────────────────────────────────────────────────
+  // Stores: { "questionId": true, ... }
+  static const String keyWrongQuestions = 'WRONG_QUESTIONS';
+  // Stores: { "questionId": true, ... } — đã ôn lại
+  static const String keyReviewedWrongQuestions = 'REVIEWED_WRONG_QUESTIONS';
+
+  /// Add a wrong question ID
+  Future<void> addWrongQuestion(String questionId) async {
+    final raw = box.read<Map>(keyWrongQuestions) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    if (!map.containsKey(questionId)) {
+      map[questionId] = true;
+      await box.write(keyWrongQuestions, map);
+    }
+  }
+
+  /// Remove a wrong question (e.g. user answered correctly in review mode)
+  Future<void> removeWrongQuestion(String questionId) async {
+    final raw = box.read<Map>(keyWrongQuestions) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    map.remove(questionId);
+    await box.write(keyWrongQuestions, map);
+    // Also remove from reviewed
+    final rawR = box.read<Map>(keyReviewedWrongQuestions) ?? {};
+    final mapR = Map<String, dynamic>.from(rawR);
+    mapR.remove(questionId);
+    await box.write(keyReviewedWrongQuestions, mapR);
+  }
+
+  /// Mark a wrong question as reviewed
+  Future<void> markWrongQuestionReviewed(String questionId) async {
+    final raw = box.read<Map>(keyReviewedWrongQuestions) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    map[questionId] = true;
+    await box.write(keyReviewedWrongQuestions, map);
+  }
+
+  /// Get all wrong question IDs
+  Set<String> getWrongQuestionIds() {
+    final raw = box.read<Map>(keyWrongQuestions) ?? {};
+    return Set<String>.from(raw.keys);
+  }
+
+  /// Get reviewed wrong question IDs
+  Set<String> getReviewedWrongQuestionIds() {
+    final raw = box.read<Map>(keyReviewedWrongQuestions) ?? {};
+    return Set<String>.from(raw.keys);
+  }
+
+  /// Number of wrong questions not yet reviewed
+  int get unreviewedWrongCount {
+    final all = getWrongQuestionIds();
+    final reviewed = getReviewedWrongQuestionIds();
+    return all.difference(reviewed).length;
+  }
+
+  /// Total wrong questions count
+  int get wrongQuestionCount => getWrongQuestionIds().length;
+
+  Future<void> clearWrongQuestions() async {
+    await box.remove(keyWrongQuestions);
+    await box.remove(keyReviewedWrongQuestions);
+  }
+
+  // ── Bookmarked Questions ────────────────────────────────────────────────────
+  static const String keyBookmarkedQuestions = 'BOOKMARKED_QUESTIONS';
+
+  Future<void> toggleBookmark(String questionId) async {
+    final raw = box.read<Map>(keyBookmarkedQuestions) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    if (map.containsKey(questionId)) {
+      map.remove(questionId);
+    } else {
+      map[questionId] = true;
+    }
+    await box.write(keyBookmarkedQuestions, map);
+  }
+
+  bool isBookmarked(String questionId) {
+    final raw = box.read<Map>(keyBookmarkedQuestions) ?? {};
+    return raw.containsKey(questionId);
+  }
+
+  Set<String> getBookmarkedIds() {
+    final raw = box.read<Map>(keyBookmarkedQuestions) ?? {};
+    return Set<String>.from(raw.keys);
+  }
+
+  int get bookmarkedCount => getBookmarkedIds().length;
 }

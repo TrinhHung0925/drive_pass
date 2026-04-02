@@ -4,25 +4,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../resource/app_colors.dart';
-import 'theory_detail_controller.dart';
+import 'bookmarked_questions_controller.dart';
 
-class TheoryDetailView extends StatefulWidget {
-  TheoryDetailView({super.key}) {
-    if (!Get.isRegistered<TheoryDetailController>()) {
-      Get.put(TheoryDetailController());
+class BookmarkedQuestionsView extends StatefulWidget {
+  BookmarkedQuestionsView({super.key}) {
+    if (!Get.isRegistered<BookmarkedQuestionsController>()) {
+      Get.put(BookmarkedQuestionsController());
     }
   }
 
   @override
-  State<TheoryDetailView> createState() => _TheoryDetailViewState();
+  State<BookmarkedQuestionsView> createState() =>
+      _BookmarkedQuestionsViewState();
 }
 
-class _TheoryDetailViewState extends State<TheoryDetailView> {
-  var controller = Get.find<TheoryDetailController>();
+class _BookmarkedQuestionsViewState extends State<BookmarkedQuestionsView> {
+  var controller = Get.find<BookmarkedQuestionsController>();
 
   @override
   void dispose() {
-    Get.delete<TheoryDetailController>();
+    Get.delete<BookmarkedQuestionsController>();
     super.dispose();
   }
 
@@ -33,17 +34,53 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
       appBar: _buildAppBar(),
       body: SafeArea(
         bottom: false,
-        child: Column(
-          children: [
-            Expanded(child: _buildQuestionCard()),
-            _buildBottomSection(),
-          ],
-        ),
+        child: controller.questions.isEmpty
+            ? _buildEmptyState()
+            : Column(
+                children: [
+                  Expanded(child: _buildQuestionCard()),
+                  _buildBottomSection(),
+                ],
+              ),
       ),
     );
   }
 
-  // ─────────────────── APP BAR ────────────────────────────────────────────
+  Widget _buildEmptyState() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.bookmark_border_rounded,
+            size: 80.w,
+            color: AppColors.textLight.withValues(alpha: 0.5),
+          ),
+          SizedBox(height: 16.h),
+          Text(
+            "Chưa có câu nào",
+            style: TextStyle(
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w700,
+              color: AppColors.textPrimary,
+            ),
+          ),
+          SizedBox(height: 8.h),
+          Text(
+            "Đánh dấu câu khó bằng icon 📌\nđể ôn tập lại sau nhé!",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w500,
+              color: AppColors.textSecondary,
+              height: 1.5,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
       backgroundColor: AppColors.surface,
@@ -59,7 +96,7 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
           children: [
             CupertinoButton(
               padding: EdgeInsets.zero,
-              minSize: null,
+              minSize: 0,
               onPressed: controller.onBack,
               child: Container(
                 width: 32.w,
@@ -76,57 +113,69 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               ),
             ),
             Expanded(
-              child: Obx(
-                () => Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      controller.categoryTitle,
+              child: controller.questions.isEmpty
+                  ? Text(
+                      "Câu đã đánh dấu",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColors.textPrimary,
                       ),
-                    ),
-                    SizedBox(height: 2.h),
-                    Text(
-                      'Câu ${controller.currentIndex.value + 1}/${controller.questions.length}',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.textSecondary,
+                    )
+                  : Obx(
+                      () => Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Câu đã đánh dấu",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.textPrimary,
+                            ),
+                          ),
+                          SizedBox(height: 2.h),
+                          Text(
+                            'Câu ${controller.currentIndex.value + 1}/${controller.questions.length}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.textSecondary,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
             ),
-            Obx(() => CupertinoButton(
-              padding: EdgeInsets.zero,
-              minSize: 0,
-              onPressed: controller.toggleBookmark,
-              child: Container(
-                width: 32.w,
-                height: 32.w,
-                decoration: BoxDecoration(
-                  color: controller.isCurrentBookmarked.value
-                      ? AppColors.accent.withValues(alpha: 0.15)
-                      : AppColors.background,
-                  borderRadius: BorderRadius.circular(8.r),
-                ),
-                child: Icon(
-                  controller.isCurrentBookmarked.value
-                      ? Icons.bookmark_rounded
-                      : Icons.bookmark_border_rounded,
-                  size: 18.w,
-                  color: controller.isCurrentBookmarked.value
-                      ? AppColors.accent
-                      : AppColors.textSecondary,
-                ),
-              ),
-            )),
+            controller.questions.isEmpty
+                ? SizedBox(width: 32.w)
+                : Obx(() => CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    minSize: 0,
+                    onPressed: controller.toggleBookmark,
+                    child: Container(
+                      width: 32.w,
+                      height: 32.w,
+                      decoration: BoxDecoration(
+                        color: controller.isCurrentBookmarked.value
+                            ? AppColors.accent.withValues(alpha: 0.15)
+                            : AppColors.background,
+                        borderRadius: BorderRadius.circular(8.r),
+                      ),
+                      child: Icon(
+                        controller.isCurrentBookmarked.value
+                            ? Icons.bookmark_rounded
+                            : Icons.bookmark_border_rounded,
+                        size: 18.w,
+                        color: controller.isCurrentBookmarked.value
+                            ? AppColors.accent
+                            : AppColors.textSecondary,
+                      ),
+                    ),
+                  )),
           ],
         ),
       ),
@@ -137,7 +186,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
     );
   }
 
-  // ─────────────────── QUESTION CARD ──────────────────────────────────────
   Widget _buildQuestionCard() {
     return Obx(() {
       final q = controller.questions[controller.currentIndex.value];
@@ -147,8 +195,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
-            // Image
             if (q.images.isNotEmpty) ...[
               ClipRRect(
                 borderRadius: BorderRadius.circular(12.r),
@@ -181,8 +227,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               ),
               SizedBox(height: 16.h),
             ],
-
-            // Question text
             Text(
               q.question,
               style: TextStyle(
@@ -193,22 +237,17 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               ),
             ),
             SizedBox(height: 16.h),
-
-            // Answer options
             ...List.generate(q.options.length, (i) {
               final label = String.fromCharCode(65 + i);
               final state = controller.optionVisualState(i);
               return _buildAnswerOption(label, q.options[i].text, i, state);
             }),
-
-            // Suggest box — smooth animation
             AnimatedSize(
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeOutCubic,
               alignment: Alignment.topCenter,
               child: controller.showAnswer.value
                   ? AnimatedOpacity(
-
                       duration: const Duration(milliseconds: 200),
                       opacity: 1.0,
                       child: Padding(
@@ -252,7 +291,7 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
 
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      minSize: null,
+      minSize: 0,
       onPressed: () => controller.selectAnswer(index),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
@@ -308,20 +347,14 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
       decoration: BoxDecoration(
         color: AppColors.primary.withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(12.r),
-        border: Border.all(
-          color: AppColors.primary.withValues(alpha: 0.2),
-        ),
+        border: Border.all(color: AppColors.primary.withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Icon(
-                Icons.lightbulb_rounded,
-                color: AppColors.primary,
-                size: 18.w,
-              ),
+              Icon(Icons.lightbulb_rounded, color: AppColors.primary, size: 18.w),
               SizedBox(width: 6.w),
               Text(
                 'Giải thích',
@@ -348,7 +381,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
     );
   }
 
-  // ─────────────────── BOTTOM SECTION ─────────────────────────────────────
   Widget _buildBottomSection() {
     return Container(
       decoration: BoxDecoration(
@@ -366,7 +398,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Nav buttons row
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 12.h),
             child: Obx(
@@ -440,7 +471,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               ),
             ),
           ),
-          // Question number grid
           Padding(
             padding: EdgeInsets.fromLTRB(16.w, 0, 16.w, 12.h),
             child: Column(
@@ -466,32 +496,23 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
                     itemBuilder: (context, i) {
                       return Obx(() {
                         final isCurrent = controller.currentIndex.value == i;
-
-                        Color dotBg;
-                        Color dotBorder;
-                        Color dotText;
-
-                        if (isCurrent) {
-                          dotBg = AppColors.primary;
-                          dotBorder = AppColors.primary;
-                          dotText = Colors.white;
-                        } else {
-                          dotBg = AppColors.background;
-                          dotBorder = AppColors.border;
-                          dotText = AppColors.textSecondary;
-                        }
-
                         return CupertinoButton(
                           padding: EdgeInsets.zero,
-                          minSize: null,
+                          minSize: 0,
                           onPressed: () => controller.jumpToQuestion(i),
                           child: Container(
                             width: 36.w,
                             height: 36.h,
                             decoration: BoxDecoration(
-                              color: dotBg,
+                              color: isCurrent
+                                  ? AppColors.primary
+                                  : AppColors.background,
                               borderRadius: BorderRadius.circular(8.r),
-                              border: Border.all(color: dotBorder),
+                              border: Border.all(
+                                color: isCurrent
+                                    ? AppColors.primary
+                                    : AppColors.border,
+                              ),
                             ),
                             alignment: Alignment.center,
                             child: Text(
@@ -499,7 +520,9 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
                               style: TextStyle(
                                 fontSize: 12.sp,
                                 fontWeight: FontWeight.w600,
-                                color: dotText,
+                                color: isCurrent
+                                    ? Colors.white
+                                    : AppColors.textSecondary,
                               ),
                             ),
                           ),

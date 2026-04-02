@@ -37,10 +37,7 @@ class _HomeViewState extends State<HomeView> {
           children: [
             Container(
               color: AppColors.surface,
-              child: SafeArea(
-                bottom: false,
-                child: _buildHeader(),
-              ),
+              child: SafeArea(bottom: false, child: _buildHeader()),
             ),
             Expanded(
               child: SingleChildScrollView(
@@ -49,7 +46,7 @@ class _HomeViewState extends State<HomeView> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 16.h),
-                    _buildLicenseInfoCard(),
+                    _buildSearchCard(),
                     SizedBox(height: 16.h),
                     _buildProgressCard(),
                     SizedBox(height: 24.h),
@@ -80,107 +77,26 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Text(
                 "Xin chào 👋",
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w500,
-                  color: AppColors.textSecondary,
-                ),
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary),
               ),
               SizedBox(height: 4.h),
-              Obx(() => Text(
-                controller.userName.value,
-                style: TextStyle(
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.textPrimary,
+              Obx(
+                () => Text(
+                  controller.userName.value,
+                  style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
                 ),
-              )),
+              ),
             ],
           ),
           Container(
             width: 40.w,
             height: 40.w,
-            decoration: BoxDecoration(
-              color: AppColors.background,
-              borderRadius: BorderRadius.circular(12.r),
-            ),
+            decoration: BoxDecoration(color: AppColors.background, borderRadius: BorderRadius.circular(12.r)),
             child: Center(
-              child: Image.asset(
-                Img.icNotification,
-                width: 20.w,
-                height: 20.w,
-                color: AppColors.textPrimary,
-              ),
+              child: Image.asset(Img.icNotification, width: 20.w, height: 20.w, color: AppColors.textPrimary),
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  /// Current License Info (Blue tinted card)
-  Widget _buildLicenseInfoCard() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(16.w),
-        decoration: BoxDecoration(
-          color: AppColors.primary.withValues(alpha: 0.1),
-          borderRadius: BorderRadius.circular(12.r),
-          border: Border.all(color: AppColors.primary.withValues(alpha: 0.2)),
-        ),
-        child: Row(
-          children: [
-            Container(
-              width: 48.w,
-              height: 48.w,
-              decoration: BoxDecoration(
-                color: AppColors.primary.withValues(alpha: 0.15),
-                borderRadius: BorderRadius.circular(12.r),
-              ),
-              child: Center(
-                child: Image.asset(
-                  Img.icExam,
-                  width: 24.w,
-                  height: 24.w,
-                  color: AppColors.primary,
-                ),
-              ),
-            ),
-            SizedBox(width: 12.w),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Bằng lái xe B2",
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.textPrimary,
-                    ),
-                  ),
-                  SizedBox(height: 4.h),
-                  Text(
-                    "Đang ôn tập",
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.primary,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Image.asset(
-              Img.icArrowRight,
-              width: 16.w,
-              height: 16.w,
-              color: AppColors.textLight,
-            ),
-          ],
-        ),
       ),
     );
   }
@@ -189,73 +105,73 @@ class _HomeViewState extends State<HomeView> {
   Widget _buildProgressCard() {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.all(16.w),
-        decoration: BoxDecoration(
-          color: AppColors.surface,
-          borderRadius: BorderRadius.circular(12.r),
-          border: Border.all(color: AppColors.border),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.04),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Obx(() {
-          final progress = controller.learningProgress;
-          final percent = (progress * 100).toInt();
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Tiến độ học tập",
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.textPrimary,
-                    ),
-                  ),
-                  Text(
-                    "$percent%",
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.primary,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 12.h),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(4.r),
-                child: LinearProgressIndicator(
-                  value: progress,
-                  backgroundColor: AppColors.background,
-                  valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
-                  minHeight: 8.h,
-                ),
-              ),
-              SizedBox(height: 12.h),
-              Row(
-
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _buildStatChip("Đã học", "${controller.completedQuestions}/${controller.totalQuestions}", AppColors.primary),
-                  _buildStatChip("Đã đạt", "${controller.passedExams}/${controller.totalExams}", AppColors.success),
-                  _buildStatChip("Chưa đạt", "${controller.failedExams}/${controller.totalExams}", AppColors.error),
-                ],
-              ),
+      child: CupertinoButton(
+        padding: EdgeInsets.zero,
+        minSize: 0,
+        onPressed: controller.goToStatistics,
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.all(16.w),
+          decoration: BoxDecoration(
+            color: AppColors.surface,
+            borderRadius: BorderRadius.circular(12.r),
+            border: Border.all(color: AppColors.border),
+            boxShadow: [
+              BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2)),
             ],
-          );
-        }),
-
-
+          ),
+          child: Obx(() {
+            final progress = controller.learningProgress;
+            final percent = (progress * 100).toInt();
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Tiến độ học tập",
+                      style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "$percent%",
+                          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.primary),
+                        ),
+                        SizedBox(width: 4.w),
+                        Icon(Icons.arrow_forward_ios_rounded, size: 12.w, color: AppColors.textLight),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(height: 12.h),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(4.r),
+                  child: LinearProgressIndicator(
+                    value: progress,
+                    backgroundColor: AppColors.background,
+                    valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
+                    minHeight: 8.h,
+                  ),
+                ),
+                SizedBox(height: 12.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _buildStatChip(
+                      "Đã học",
+                      "${controller.completedQuestions}/${controller.totalQuestions}",
+                      AppColors.primary,
+                    ),
+                    _buildStatChip("Đã đạt", "${controller.passedExams}/${controller.totalExams}", AppColors.success),
+                    _buildStatChip("Chưa đạt", "${controller.failedExams}/${controller.totalExams}", AppColors.error),
+                  ],
+                ),
+              ],
+            );
+          }),
+        ),
       ),
     );
   }
@@ -265,20 +181,12 @@ class _HomeViewState extends State<HomeView> {
       children: [
         Text(
           value,
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-            color: color,
-          ),
+          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: color),
         ),
         SizedBox(height: 2.h),
         Text(
           label,
-          style: TextStyle(
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w500,
-            color: AppColors.textSecondary,
-          ),
+          style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary),
         ),
       ],
     );
@@ -293,28 +201,70 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Text(
             "Truy cập nhanh",
-            style: TextStyle(
-              fontSize: 16.sp,
-              fontWeight: FontWeight.w700,
-              color: AppColors.textPrimary,
-            ),
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
           ),
           SizedBox(height: 12.h),
+          // ── Ôn tập chính ──
           Row(
             children: [
-              Expanded(child: _buildQuickAccessCard("Thi thử", Img.icExam, AppColors.primary, onPressed: controller.goToExam)),
+              Expanded(
+                child: _buildQuickAccessCard(
+                  "Lý thuyết",
+                  Img.icTheory,
+                  AppColors.success,
+                  onPressed: controller.goToTheory,
+                ),
+              ),
               SizedBox(width: 12.w),
-              Expanded(child: _buildQuickAccessCard("Câu điểm liệt", Img.icSign, AppColors.error, onPressed: controller.goToSign)),
+              Expanded(
+                child: _buildQuickAccessCard("Thi thử", Img.icExam, AppColors.primary, onPressed: controller.goToExam),
+              ),
             ],
           ),
           SizedBox(height: 12.h),
+          // ── Luyện tập ──
           Row(
             children: [
-              Expanded(child: _buildQuickAccessCard("Lý thuyết", Img.icTheory, AppColors.success, onPressed: controller.goToTheory)),
+              Expanded(
+                child: _buildQuickAccessCard(
+                  "Câu điểm liệt",
+                  Img.icSign,
+                  AppColors.error,
+                  onPressed: controller.goToSign,
+                ),
+              ),
               SizedBox(width: 12.w),
-              Expanded(child: _buildQuickAccessCard("Mẹo thi", Img.icTips, Colors.deepPurple, onPressed: controller.goToTips)),
+              Expanded(
+                child: _buildQuickAccessIconCard(
+                  "Ôn ngẫu nhiên",
+                  Icons.shuffle_rounded,
+                  Colors.teal,
+                  onPressed: controller.goToRandomPractice,
+                ),
+              ),
             ],
           ),
+          SizedBox(height: 12.h),
+          // ── Tra cứu ──
+          Row(
+            children: [
+              Expanded(
+                child: _buildQuickAccessIconCard(
+                  "Mức phạt",
+                  Icons.gavel_rounded,
+                  Colors.orange,
+                  onPressed: controller.goToViolations,
+                ),
+              ),
+              SizedBox(width: 12.w),
+              Expanded(
+                child: _buildQuickAccessCard("Mẹo thi", Img.icTips, Colors.deepPurple, onPressed: controller.goToTips),
+              ),
+            ],
+          ),
+          SizedBox(height: 12.h),
+
+          _buildWrongQuestionsCard(),
         ],
       ),
     );
@@ -337,32 +287,150 @@ class _HomeViewState extends State<HomeView> {
             Container(
               width: 40.w,
               height: 40.w,
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(10.r),
-              ),
+              decoration: BoxDecoration(color: color.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(10.r)),
               child: Center(
-                child: Image.asset(
-                  iconPath,
-                  width: 20.w,
-                  height: 20.w,
-                  color: color,
-                ),
+                child: Image.asset(iconPath, width: 20.w, height: 20.w, color: color),
               ),
             ),
             SizedBox(width: 12.w),
             Expanded(
               child: Text(
                 title,
-                style: TextStyle(
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.textPrimary,
-                ),
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimary),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildQuickAccessIconCard(String title, IconData icon, Color color, {VoidCallback? onPressed}) {
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: 0,
+      onPressed: onPressed,
+      child: Container(
+        padding: EdgeInsets.all(16.w),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 40.w,
+              height: 40.w,
+              decoration: BoxDecoration(color: color.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(10.r)),
+              child: Center(
+                child: Icon(icon, size: 20.w, color: color),
+              ),
+            ),
+            SizedBox(width: 12.w),
+            Expanded(
+              child: Text(
+                title,
+                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimary),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSearchCard() {
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: 0,
+      onPressed: controller.goToSearchQuestions,
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 16.w),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 14.h),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12.r),
+
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Row(
+          children: [
+
+            Icon(Icons.search_rounded, size: 20.w, color: AppColors.textLight),
+            SizedBox(width: 10.w),
+            Text(
+              "Tìm câu hỏi theo từ khoá...",
+              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.textLight),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildWrongQuestionsCard() {
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: 0,
+      onPressed: controller.goToWrongQuestions,
+      child: Container(
+        padding: EdgeInsets.all(16.w),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(color: AppColors.error.withValues(alpha: 0.3)),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 40.w,
+              height: 40.w,
+              decoration: BoxDecoration(
+                color: AppColors.error.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(10.r),
+              ),
+              child: Center(
+                child: Icon(Icons.replay_rounded, size: 22.w, color: AppColors.error),
+              ),
+            ),
+            SizedBox(width: 12.w),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Câu hay sai",
+                    style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimary),
+                  ),
+                  SizedBox(height: 2.h),
+                  Obx(
+                    () => Text(
+                      controller.wrongQuestionCount.value > 0
+                          ? "Ôn lại ${controller.wrongQuestionCount.value} câu đã sai"
+                          : "Chưa có câu nào sai",
+                      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Obx(() {
+              final count = controller.wrongQuestionCount.value;
+              if (count == 0) return const SizedBox.shrink();
+              return Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
+                decoration: BoxDecoration(color: AppColors.error, borderRadius: BorderRadius.circular(12.r)),
+                child: Text(
+                  '$count',
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: Colors.white),
+                ),
+              );
+            }),
           ],
         ),
       ),
@@ -380,11 +448,7 @@ class _HomeViewState extends State<HomeView> {
             children: [
               Text(
                 "Hoạt động gần đây",
-                style: TextStyle(
-                  fontSize: 16.sp,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.textPrimary,
-                ),
+                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
               ),
               CupertinoButton(
                 padding: EdgeInsets.zero,
@@ -392,11 +456,7 @@ class _HomeViewState extends State<HomeView> {
                 onPressed: controller.goToAllActivities,
                 child: Text(
                   "Xem tất cả",
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.primary,
-                  ),
+                  style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.primary),
                 ),
               ),
             ],
@@ -414,18 +474,11 @@ class _HomeViewState extends State<HomeView> {
                 ),
                 child: Column(
                   children: [
-                    Icon(
-                      Icons.history_rounded,
-                      size: 36.w,
-                      color: AppColors.textLight,
-                    ),
+                    Icon(Icons.history_rounded, size: 36.w, color: AppColors.textLight),
                     SizedBox(height: 8.h),
                     Text(
                       'Chưa có hoạt động nào',
-                      style: TextStyle(
-                        fontSize: 14.sp,
-                        color: AppColors.textSecondary,
-                      ),
+                      style: TextStyle(fontSize: 14.sp, color: AppColors.textSecondary),
                     ),
                   ],
                 ),
@@ -441,9 +494,7 @@ class _HomeViewState extends State<HomeView> {
                     "${h.correct}/${h.total} câu đúng • ${h.timeTaken}",
                     isPassed ? "Đạt" : "Trượt",
                     isPassed ? AppColors.success : AppColors.error,
-                    isPassed
-                        ? AppColors.successBackground
-                        : AppColors.errorBackground,
+                    isPassed ? AppColors.successBackground : AppColors.errorBackground,
                   ),
                 );
               }).toList(),
@@ -468,17 +519,9 @@ class _HomeViewState extends State<HomeView> {
           Container(
             width: 40.w,
             height: 40.w,
-            decoration: BoxDecoration(
-              color: statusBg,
-              borderRadius: BorderRadius.circular(10.r),
-            ),
+            decoration: BoxDecoration(color: statusBg, borderRadius: BorderRadius.circular(10.r)),
             child: Center(
-              child: Image.asset(
-                Img.icActivity,
-                width: 20.w,
-                height: 20.w,
-                color: statusColor,
-              ),
+              child: Image.asset(Img.icActivity, width: 20.w, height: 20.w, color: statusColor),
             ),
           ),
           SizedBox(width: 12.w),
@@ -488,37 +531,22 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.textPrimary,
-                  ),
+                  style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimary),
                 ),
                 SizedBox(height: 2.h),
                 Text(
                   subtitle,
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.textSecondary,
-                  ),
+                  style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary),
                 ),
               ],
             ),
           ),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
-            decoration: BoxDecoration(
-              color: statusBg,
-              borderRadius: BorderRadius.circular(6.r),
-            ),
+            decoration: BoxDecoration(color: statusBg, borderRadius: BorderRadius.circular(6.r)),
             child: Text(
               status,
-              style: TextStyle(
-                fontSize: 12.sp,
-                fontWeight: FontWeight.w600,
-                color: statusColor,
-              ),
+              style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w600, color: statusColor),
             ),
           ),
         ],

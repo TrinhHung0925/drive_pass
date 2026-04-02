@@ -16,6 +16,7 @@ class HomeController extends GetxController {
   final passedExams = 0.obs;
   final failedExams = 0.obs;
   final totalExams = 0.obs;
+  final wrongQuestionCount = 0.obs;
 
   double get learningProgress =>
       totalQuestions.value > 0 ? completedQuestions.value / totalQuestions.value : 0.0;
@@ -49,6 +50,9 @@ class HomeController extends GetxController {
     totalExams.value = DataLocal.listExam.length;
     passedExams.value = localService.passedExamCount;
     failedExams.value = localService.failedExamCount;
+
+    // Wrong questions
+    wrongQuestionCount.value = localService.wrongQuestionCount;
   }
 
   void goToExam() {
@@ -58,5 +62,10 @@ class HomeController extends GetxController {
   void goToSign() => Get.toNamed(AppPage.criticalQuestions.routeName);
   void goToTheory() => Get.toNamed(AppPage.theory.routeName);
   void goToTips() => Get.toNamed(AppPage.examTips.routeName);
+  void goToWrongQuestions() => Get.toNamed(AppPage.wrongQuestions.routeName);
+  void goToStatistics() => Get.toNamed(AppPage.statistics.routeName);
   void goToAllActivities() => Get.toNamed(AppPage.history.routeName);
+  void goToViolations() => Get.toNamed(AppPage.violations.routeName);
+  void goToRandomPractice() => Get.toNamed(AppPage.randomPractice.routeName);
+  void goToSearchQuestions() => Get.toNamed(AppPage.searchQuestions.routeName);
 }

@@ -4,25 +4,25 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../../resource/app_colors.dart';
-import 'theory_detail_controller.dart';
+import 'wrong_questions_controller.dart';
 
-class TheoryDetailView extends StatefulWidget {
-  TheoryDetailView({super.key}) {
-    if (!Get.isRegistered<TheoryDetailController>()) {
-      Get.put(TheoryDetailController());
+class WrongQuestionsView extends StatefulWidget {
+  WrongQuestionsView({super.key}) {
+    if (!Get.isRegistered<WrongQuestionsController>()) {
+      Get.put(WrongQuestionsController());
     }
   }
 
   @override
-  State<TheoryDetailView> createState() => _TheoryDetailViewState();
+  State<WrongQuestionsView> createState() => _WrongQuestionsViewState();
 }
 
-class _TheoryDetailViewState extends State<TheoryDetailView> {
-  var controller = Get.find<TheoryDetailController>();
+class _WrongQuestionsViewState extends State<WrongQuestionsView> {
+  var controller = Get.find<WrongQuestionsController>();
 
   @override
   void dispose() {
-    Get.delete<TheoryDetailController>();
+    Get.delete<WrongQuestionsController>();
     super.dispose();
   }
 
@@ -33,12 +33,49 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
       appBar: _buildAppBar(),
       body: SafeArea(
         bottom: false,
-        child: Column(
-          children: [
-            Expanded(child: _buildQuestionCard()),
-            _buildBottomSection(),
-          ],
-        ),
+        child: controller.questions.isEmpty
+            ? _buildEmptyState()
+            : Column(
+                children: [
+                  Expanded(child: _buildQuestionCard()),
+                  _buildBottomSection(),
+                ],
+              ),
+      ),
+    );
+  }
+
+  Widget _buildEmptyState() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.check_circle_outline_rounded,
+            size: 80.w,
+            color: AppColors.success.withValues(alpha: 0.5),
+          ),
+          SizedBox(height: 16.h),
+          Text(
+            "Tuyệt vời! 🎉",
+            style: TextStyle(
+              fontSize: 20.sp,
+              fontWeight: FontWeight.w700,
+              color: AppColors.textPrimary,
+            ),
+          ),
+          SizedBox(height: 8.h),
+          Text(
+            "Bạn chưa có câu nào sai.\nHãy tiếp tục ôn tập nhé!",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w500,
+              color: AppColors.textSecondary,
+              height: 1.5,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -59,7 +96,7 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
           children: [
             CupertinoButton(
               padding: EdgeInsets.zero,
-              minSize: null,
+              minSize: 0,
               onPressed: controller.onBack,
               child: Container(
                 width: 32.w,
@@ -76,57 +113,69 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               ),
             ),
             Expanded(
-              child: Obx(
-                () => Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      controller.categoryTitle,
+              child: controller.questions.isEmpty
+                  ? Text(
+                      "Câu hay sai",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16.sp,
                         fontWeight: FontWeight.w700,
                         color: AppColors.textPrimary,
                       ),
-                    ),
-                    SizedBox(height: 2.h),
-                    Text(
-                      'Câu ${controller.currentIndex.value + 1}/${controller.questions.length}',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.textSecondary,
+                    )
+                  : Obx(
+                      () => Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            "Câu hay sai",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.textPrimary,
+                            ),
+                          ),
+                          SizedBox(height: 2.h),
+                          Text(
+                            'Câu ${controller.currentIndex.value + 1}/${controller.questions.length}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 12.sp,
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.textSecondary,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
-              ),
             ),
-            Obx(() => CupertinoButton(
-              padding: EdgeInsets.zero,
-              minSize: 0,
-              onPressed: controller.toggleBookmark,
-              child: Container(
-                width: 32.w,
-                height: 32.w,
-                decoration: BoxDecoration(
-                  color: controller.isCurrentBookmarked.value
-                      ? AppColors.accent.withValues(alpha: 0.15)
-                      : AppColors.background,
-                  borderRadius: BorderRadius.circular(8.r),
-                ),
-                child: Icon(
-                  controller.isCurrentBookmarked.value
-                      ? Icons.bookmark_rounded
-                      : Icons.bookmark_border_rounded,
-                  size: 18.w,
-                  color: controller.isCurrentBookmarked.value
-                      ? AppColors.accent
-                      : AppColors.textSecondary,
-                ),
-              ),
-            )),
+            controller.questions.isEmpty
+                ? SizedBox(width: 32.w)
+                : Obx(() => CupertinoButton(
+                    padding: EdgeInsets.zero,
+                    minSize: 0,
+                    onPressed: controller.toggleBookmark,
+                    child: Container(
+                      width: 32.w,
+                      height: 32.w,
+                      decoration: BoxDecoration(
+                        color: controller.isCurrentBookmarked.value
+                            ? AppColors.accent.withValues(alpha: 0.15)
+                            : AppColors.background,
+                        borderRadius: BorderRadius.circular(8.r),
+                      ),
+                      child: Icon(
+                        controller.isCurrentBookmarked.value
+                            ? Icons.bookmark_rounded
+                            : Icons.bookmark_border_rounded,
+                        size: 18.w,
+                        color: controller.isCurrentBookmarked.value
+                            ? AppColors.accent
+                            : AppColors.textSecondary,
+                      ),
+                    ),
+                  )),
           ],
         ),
       ),
@@ -147,7 +196,6 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             // Image
             if (q.images.isNotEmpty) ...[
               ClipRRect(
@@ -164,7 +212,8 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
                       child: SizedBox(
                         width: 24.w,
                         height: 24.w,
-                        child: const CircularProgressIndicator(strokeWidth: 2),
+                        child:
+                            const CircularProgressIndicator(strokeWidth: 2),
                       ),
                     ),
                   ),
@@ -201,14 +250,13 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
               return _buildAnswerOption(label, q.options[i].text, i, state);
             }),
 
-            // Suggest box — smooth animation
+            // Suggest box
             AnimatedSize(
               duration: const Duration(milliseconds: 300),
               curve: Curves.easeOutCubic,
               alignment: Alignment.topCenter,
               child: controller.showAnswer.value
                   ? AnimatedOpacity(
-
                       duration: const Duration(milliseconds: 200),
                       opacity: 1.0,
                       child: Padding(
@@ -224,7 +272,8 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
     });
   }
 
-  Widget _buildAnswerOption(String label, String text, int index, int state) {
+  Widget _buildAnswerOption(
+      String label, String text, int index, int state) {
     final Color bgColor;
     final Color borderColor;
     final Color textColor;
@@ -252,7 +301,7 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
 
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      minSize: null,
+      minSize: 0,
       onPressed: () => controller.selectAnswer(index),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
@@ -317,11 +366,8 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
         children: [
           Row(
             children: [
-              Icon(
-                Icons.lightbulb_rounded,
-                color: AppColors.primary,
-                size: 18.w,
-              ),
+              Icon(Icons.lightbulb_rounded,
+                  color: AppColors.primary, size: 18.w),
               SizedBox(width: 6.w),
               Text(
                 'Giải thích',
@@ -339,7 +385,9 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
             style: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w400,
-              color: hasContent ? AppColors.textPrimary : AppColors.textSecondary,
+              color: hasContent
+                  ? AppColors.textPrimary
+                  : AppColors.textSecondary,
               height: 1.5,
             ),
           ),
@@ -465,7 +513,8 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
                     separatorBuilder: (_, __) => SizedBox(width: 6.w),
                     itemBuilder: (context, i) {
                       return Obx(() {
-                        final isCurrent = controller.currentIndex.value == i;
+                        final isCurrent =
+                            controller.currentIndex.value == i;
 
                         Color dotBg;
                         Color dotBorder;
@@ -483,15 +532,18 @@ class _TheoryDetailViewState extends State<TheoryDetailView> {
 
                         return CupertinoButton(
                           padding: EdgeInsets.zero,
-                          minSize: null,
-                          onPressed: () => controller.jumpToQuestion(i),
+                          minSize: 0,
+                          onPressed: () =>
+                              controller.jumpToQuestion(i),
                           child: Container(
                             width: 36.w,
                             height: 36.h,
                             decoration: BoxDecoration(
                               color: dotBg,
-                              borderRadius: BorderRadius.circular(8.r),
-                              border: Border.all(color: dotBorder),
+                              borderRadius:
+                                  BorderRadius.circular(8.r),
+                              border:
+                                  Border.all(color: dotBorder),
                             ),
                             alignment: Alignment.center,
                             child: Text(

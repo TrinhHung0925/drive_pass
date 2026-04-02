@@ -63,6 +63,8 @@ class _TheoryViewState extends State<TheoryView> {
         child: Column(
           children: [
             _buildOverallProgress(),
+            SizedBox(height: 16.h),
+            _buildBookmarkedCard(),
             SizedBox(height: 24.h),
             Align(
               alignment: Alignment.centerLeft,
@@ -178,6 +180,100 @@ class _TheoryViewState extends State<TheoryView> {
         fontSize: 16.sp,
         fontWeight: FontWeight.w800,
         color: AppColors.textPrimary,
+      ),
+    );
+  }
+
+  Widget _buildBookmarkedCard() {
+    return CupertinoButton(
+      padding: EdgeInsets.zero,
+      minSize: 0,
+      onPressed: controller.openBookmarked,
+      child: Container(
+        padding: EdgeInsets.all(16.w),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(16.r),
+          border: Border.all(color: AppColors.accent.withValues(alpha: 0.3)),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.accent.withValues(alpha: 0.06),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 44.w,
+              height: 44.w,
+              decoration: BoxDecoration(
+                color: AppColors.accent.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(12.r),
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.bookmark_rounded,
+                  size: 22.w,
+                  color: AppColors.accent,
+                ),
+              ),
+            ),
+            SizedBox(width: 14.w),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Câu đã đánh dấu",
+                    style: TextStyle(
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textPrimary,
+                    ),
+                  ),
+                  SizedBox(height: 2.h),
+                  Obx(() => Text(
+                    controller.bookmarkedCount.value > 0
+                        ? "${controller.bookmarkedCount.value} câu đã lưu"
+                        : "Chưa đánh dấu câu nào",
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.textSecondary,
+                    ),
+                  )),
+                ],
+              ),
+            ),
+            Obx(() {
+              final count = controller.bookmarkedCount.value;
+              if (count == 0) {
+                return Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  size: 16.w,
+                  color: AppColors.textLight,
+                );
+              }
+              return Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 4.h),
+                decoration: BoxDecoration(
+                  color: AppColors.accent,
+                  borderRadius: BorderRadius.circular(12.r),
+                ),
+                child: Text(
+                  '$count',
+                  style: TextStyle(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
+                ),
+              );
+            }),
+          ],
+        ),
       ),
     );
   }

@@ -1,21 +1,22 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:drive_pass/model/questions.dart';
+import 'package:drive_pass/service/data_local.dart';
 import 'package:drive_pass/service/local_service.dart';
 
-class TheoryDetailController extends GetxController {
-  late final String categoryTitle;
-  late final String categoryKey;
-  late final List<Question> questions;
+class RandomPracticeController extends GetxController {
+  final localService = Get.find<LocalService>();
 
   var currentIndex = 0.obs;
   var showAnswer = false.obs;
   var selectedOption = (-1).obs;
   var isCurrentBookmarked = false.obs;
+  var correctCount = 0.obs;
+  var answeredCount = 0.obs;
 
-  /// Track which question indices have been answered in this session + loaded from local
-  final answeredIndices = <int>{}.obs;
+  List<Question> questions = [];
 
   final ScrollController scrollController = ScrollController();
   Worker? _worker;
@@ -23,12 +24,7 @@ class TheoryDetailController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    final args = Get.arguments as Map? ?? {};
-    categoryTitle = args['title'] ?? '';
-    categoryKey = args['categoryKey'] ?? '';
-    questions = args['questions'] as List<Question>? ?? [];
-
-    _loadAnswered();
+    _generateRandomQuestions();
     _updateBookmarkState();
 
     _worker = ever(currentIndex, (_) {
@@ -40,26 +36,20 @@ class TheoryDetailController extends GetxController {
     });
   }
 
-  void _loadAnswered() {
-    final localService = Get.find<LocalService>();
-    final doneIds = localService.getTheoryDoneIds(categoryKey);
-    for (int i = 0; i < questions.length; i++) {
-      if (doneIds.contains(questions[i].id)) {
-        answeredIndices.add(i);
-      }
-    }
+  void _generateRandomQuestions() {
+    final all = List<Question>.from(DataLocal.listQuestionsAll);
+    all.shuffle(Random());
+    questions = all.take(20).toList();
   }
 
   void _updateBookmarkState() {
     if (questions.isEmpty) return;
-    final localService = Get.find<LocalService>();
     isCurrentBookmarked.value =
         localService.isBookmarked(questions[currentIndex.value].id);
   }
 
   void toggleBookmark() {
     if (questions.isEmpty) return;
-    final localService = Get.find<LocalService>();
     localService.toggleBookmark(questions[currentIndex.value].id);
     _updateBookmarkState();
   }
@@ -74,27 +64,24 @@ class TheoryDetailController extends GetxController {
     if (showAnswer.value) return;
     selectedOption.value = optionIndex;
     showAnswer.value = true;
+    answeredCount.value++;
 
-    // Mark as done
-    answeredIndices.add(currentIndex.value);
-    final localService = Get.find<LocalService>();
-    localService.markTheoryQuestionDone(categoryKey, questions[currentIndex.value].id);
-
-    // If wrong → save to wrong questions list
     final correct = correctAnswerIndex(currentIndex.value);
-    if (optionIndex != correct) {
+    if (optionIndex == correct) {
+      correctCount.value++;
+    } else {
+      // Save wrong question
       localService.addWrongQuestion(questions[currentIndex.value].id);
     }
   }
 
-  // ...existing code...
-  /// 0 = neutral, 1 = selected (before reveal — not used here), 
-  /// 2 = correct (green), 3 = wrong selected (red)
   int optionVisualState(int optionIndex) {
     if (!showAnswer.value) return 0;
     final correct = correctAnswerIndex(currentIndex.value);
     if (optionIndex == correct) return 2;
-    if (optionIndex == selectedOption.value && selectedOption.value != correct) return 3;
+    if (optionIndex == selectedOption.value && selectedOption.value != correct) {
+      return 3;
+    }
     return 0;
   }
 

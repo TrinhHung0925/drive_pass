@@ -17,6 +17,12 @@ import 'screen/traffic_sign_detail/traffic_sign_detail_view.dart';
 import 'screen/intro/intro_view.dart';
 import 'screen/exam_explanation/exam_explanation_view.dart';
 import 'screen/theory_detail/theory_detail_view.dart';
+import 'screen/wrong_questions/wrong_questions_view.dart';
+import 'screen/bookmarked_questions/bookmarked_questions_view.dart';
+import 'screen/statistics/statistics_view.dart';
+import 'screen/violations/violations_view.dart';
+import 'screen/random_practice/random_practice_view.dart';
+import 'screen/search_questions/search_questions_view.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   GetPageRoute page(
@@ -69,6 +75,18 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return page(settings, () => ExamExplanationView());
     case "/theoryDetail":
       return page(settings, () => TheoryDetailView());
+    case "/wrongQuestions":
+      return page(settings, () => WrongQuestionsView());
+    case "/bookmarkedQuestions":
+      return page(settings, () => BookmarkedQuestionsView());
+    case "/statistics":
+      return page(settings, () => StatisticsView());
+    case "/violations":
+      return page(settings, () => ViolationsView());
+    case "/randomPractice":
+      return page(settings, () => RandomPracticeView());
+    case "/searchQuestions":
+      return page(settings, () => SearchQuestionsView());
 
     default:
       return page(
@@ -99,6 +117,12 @@ enum AppPage {
   trafficSignDetail,
   examExplanation,
   theoryDetail,
+  wrongQuestions,
+  bookmarkedQuestions,
+  statistics,
+  violations,
+  randomPractice,
+  searchQuestions,
 }
 
 extension DrivingLessonPageExtension on AppPage {
@@ -138,6 +162,18 @@ extension DrivingLessonPageExtension on AppPage {
         return '/${AppPage.examExplanation.name}';
       case AppPage.theoryDetail:
         return '/${AppPage.theoryDetail.name}';
+      case AppPage.wrongQuestions:
+        return '/${AppPage.wrongQuestions.name}';
+      case AppPage.bookmarkedQuestions:
+        return '/${AppPage.bookmarkedQuestions.name}';
+      case AppPage.statistics:
+        return '/${AppPage.statistics.name}';
+      case AppPage.violations:
+        return '/${AppPage.violations.name}';
+      case AppPage.randomPractice:
+        return '/${AppPage.randomPractice.name}';
+      case AppPage.searchQuestions:
+        return '/${AppPage.searchQuestions.name}';
     }
   }
 }

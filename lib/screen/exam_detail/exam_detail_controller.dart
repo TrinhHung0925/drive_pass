@@ -6,6 +6,7 @@ import 'package:drive_pass/route.dart';
 import 'package:drive_pass/model/questions.dart';
 import 'package:drive_pass/model/exam_item.dart';
 import 'package:drive_pass/service/data_local.dart';
+import 'package:drive_pass/service/local_service.dart';
 
 class ExamDetailController extends GetxController {
   late final int examNo;
@@ -160,6 +161,9 @@ class ExamDetailController extends GetxController {
         '${(secondsUsed ~/ 60).toString().padLeft(2, '0')}:'
         '${(secondsUsed % 60).toString().padLeft(2, '0')}';
 
+    // Save wrong questions
+    _saveWrongQuestions();
+
     Get.toNamed(
       AppPage.examResult.routeName,
       arguments: {
@@ -172,6 +176,17 @@ class ExamDetailController extends GetxController {
         'selectedAnswers': Map<int, int>.from(selectedAnswers),
       },
     );
+  }
+
+  void _saveWrongQuestions() {
+    final localService = Get.find<LocalService>();
+    for (int i = 0; i < questions.length; i++) {
+      final chosen = selectedAnswers[i];
+      if (chosen == null) continue; // skipped
+      if (chosen != correctAnswerIndex(i)) {
+        localService.addWrongQuestion(questions[i].id);
+      }
+    }
   }
 
   void onBack() => Get.back();

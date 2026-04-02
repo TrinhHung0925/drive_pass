@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:drive_pass/model/exam_item.dart';
 import 'package:drive_pass/model/questions.dart';
 import 'package:drive_pass/model/traffic_sign_item.dart';
+import 'package:drive_pass/model/violation_item.dart';
 import 'package:flutter/services.dart';
 
 class DataLocal {
@@ -14,6 +15,8 @@ class DataLocal {
   static List<Question> listQuestionsTechnique = [];// Danh sách 56 câu hỏi kỹ thuật lái xe
   static List<Question> listQuestionsCulture = [];// Danh sách 21 câu hỏi văn hóa & đạo đức
   static List<ExamItem> listExam = [];// Danh sách 20 đề thi thử
+
+  static List<ViolationItem> listViolations = []; // Danh sách mức phạt vi phạm
 
   /// Traffic signs grouped by category name
   static Map<String, List<TrafficSignItem>> trafficSignCategories = {};
@@ -70,6 +73,13 @@ class DataLocal {
     final List<dynamic> jsonList = jsonDecode(jsonString);
     listExam = jsonList.map((e) => ExamItem.fromJson(e)).toList();
     print("listExam: ${listExam.length}");
+  }
+
+  static Future<void> getListViolations() async {
+    final jsonString = await rootBundle.loadString("assets/data/violations.json");
+    final List<dynamic> jsonList = jsonDecode(jsonString);
+    listViolations = jsonList.map((e) => ViolationItem.fromJson(Map<String, dynamic>.from(e))).toList();
+    print("listViolations: ${listViolations.length}");
   }
 
   static Future<void> getListTrafficSigns() async {

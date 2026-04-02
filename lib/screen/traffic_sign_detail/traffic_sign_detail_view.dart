@@ -90,26 +90,14 @@ class _TrafficSignDetailViewState extends State<TrafficSignDetailView> {
                       borderRadius: BorderRadius.circular(12.r),
                       border: Border.all(color: AppColors.border),
                     ),
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.traffic_rounded,
-                          color: AppColors.textLight.withValues(alpha: 0.5),
-                          size: 32.w,
-                        ),
-                        SizedBox(height: 4.h),
-                        Text(
-                          sign.id,
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.textSecondary,
-                          ),
-                        ),
-                      ],
-                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: sign.image != null && sign.image!.isNotEmpty
+                        ? Image.network(
+                            sign.image!,
+                            fit: BoxFit.contain,
+                            errorBuilder: (_, __, ___) => _buildSignPlaceholder(sign.id),
+                          )
+                        : _buildSignPlaceholder(sign.id),
                   ),
                   SizedBox(width: 16.w),
                   Expanded(
@@ -144,6 +132,31 @@ class _TrafficSignDetailViewState extends State<TrafficSignDetailView> {
           },
         );
       }),
+    );
+  }
+
+  Widget _buildSignPlaceholder(String id) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.traffic_rounded,
+            color: AppColors.textLight.withValues(alpha: 0.5),
+            size: 32.w,
+          ),
+          SizedBox(height: 4.h),
+          Text(
+            id,
+            style: TextStyle(
+              fontSize: 10.sp,
+              fontWeight: FontWeight.w700,
+              color: AppColors.textSecondary,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 }

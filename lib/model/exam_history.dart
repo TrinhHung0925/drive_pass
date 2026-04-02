@@ -4,6 +4,7 @@ class ExamHistory {
   final int total;
   final String timeTaken;
   final String dateTaken;
+  final int timestamp; // millisecondsSinceEpoch — unique per attempt
 
   ExamHistory({
     required this.examNo,
@@ -11,6 +12,7 @@ class ExamHistory {
     required this.total,
     required this.timeTaken,
     required this.dateTaken,
+    required this.timestamp,
   });
 
   /// Passed = correct / total >= 80%
@@ -25,6 +27,7 @@ class ExamHistory {
       total: json['total'] ?? 0,
       timeTaken: json['timeTaken'] ?? '00:00',
       dateTaken: json['dateTaken'] ?? '',
+      timestamp: json['timestamp'] ?? 0,
     );
   }
 
@@ -34,6 +37,7 @@ class ExamHistory {
         'total': total,
         'timeTaken': timeTaken,
         'dateTaken': dateTaken,
+        'timestamp': timestamp,
       };
 }
 

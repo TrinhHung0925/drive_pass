@@ -45,50 +45,38 @@ class _TrafficSignViewState extends State<TrafficSignView> {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: ListView(
+        child: ListView.builder(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
           physics: const BouncingScrollPhysics(),
-          children: [
-            _buildTrafficSignCategory(
-              "Biển báo nguy hiểm",
-              "112 biển",
-              Icons.warning_amber_rounded,
-              AppColors.warning,
-            ),
-            _buildTrafficSignCategory(
-              "Biển báo cấm",
-              "63 biển",
-              Icons.do_not_disturb_alt_rounded,
-              AppColors.error,
-            ),
-            _buildTrafficSignCategory(
-              "Biển hiệu lệnh",
-              "24 biển",
-              Icons.assistant_direction_rounded,
-              AppColors.primary,
-            ),
-            _buildTrafficSignCategory(
-              "Biển chỉ dẫn",
-              "101 biển",
-              Icons.info_outline_rounded,
-              AppColors.secondary,
-            ),
-            _buildTrafficSignCategory(
-              "Biển phụ",
-              "25 biển",
-              Icons.list_alt_rounded,
-              Colors.blueGrey,
-            ),
-            _buildTrafficSignCategory(
-              "Vạch kẻ đường",
-              "20 vạch",
-              Icons.edit_road_rounded,
-              Colors.brown,
-            ),
-          ],
+          itemCount: controller.categoryNames.length,
+          itemBuilder: (context, index) {
+            final name = controller.categoryNames[index];
+            final count = controller.signCount(name);
+            final iconData = _iconForCategory(name);
+            final color = _colorForCategory(name);
+            return _buildTrafficSignCategory(name, "$count biển", iconData, color);
+          },
         ),
       ),
     );
+  }
+
+  IconData _iconForCategory(String name) {
+    if (name.contains("cấm")) return Icons.do_not_disturb_alt_rounded;
+    if (name.contains("nguy hiểm")) return Icons.warning_amber_rounded;
+    if (name.contains("hiệu lệnh")) return Icons.assistant_direction_rounded;
+    if (name.contains("chỉ dẫn")) return Icons.info_outline_rounded;
+    if (name.contains("phụ")) return Icons.list_alt_rounded;
+    return Icons.traffic_rounded;
+  }
+
+  Color _colorForCategory(String name) {
+    if (name.contains("cấm")) return AppColors.error;
+    if (name.contains("nguy hiểm")) return AppColors.warning;
+    if (name.contains("hiệu lệnh")) return AppColors.primary;
+    if (name.contains("chỉ dẫn")) return AppColors.secondary;
+    if (name.contains("phụ")) return Colors.blueGrey;
+    return Colors.teal;
   }
 
   Widget _buildTrafficSignCategory(String title, String count, IconData icon, Color color) {

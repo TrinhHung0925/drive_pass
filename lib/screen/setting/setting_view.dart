@@ -131,8 +131,7 @@ class _SettingViewState extends State<SettingView> {
                   showArrow: false,
                 ),
               ]),
-              SizedBox(height: 48.h),
-              _buildLogoutButton(),
+
               SizedBox(height: 24.h),
             ],
           ),
@@ -320,39 +319,5 @@ class _SettingViewState extends State<SettingView> {
     );
   }
 
-  Widget _buildLogoutButton() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: CupertinoButton(
-        padding: EdgeInsets.zero,
-        minSize: null,
-        onPressed: () {
-          // Implement logout logic
-        },
-        child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 16.h),
-        decoration: BoxDecoration(
-          color: AppColors.error.withOpacity(0.1),
-          borderRadius: BorderRadius.circular(16.r),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(Icons.logout_rounded, color: AppColors.error, size: 24.w),
-            SizedBox(width: 8.w),
-            Text(
-              "Đăng xuất",
-              style: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w700,
-                color: AppColors.error,
-              ),
-            ),
-          ],
-        ),
-        ),
-      ),
-    );
-  }
+
 }

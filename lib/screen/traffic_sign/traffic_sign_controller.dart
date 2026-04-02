@@ -1,11 +1,13 @@
 import 'package:get/get.dart';
 import '../../route.dart';
+import '../../service/data_local.dart';
 
 class TrafficSignController extends GetxController {
-  @override
-  void onInit() {
-    super.onInit();
-  }
+
+  List<String> get categoryNames => DataLocal.trafficSignCategories.keys.toList();
+
+  int signCount(String category) =>
+      DataLocal.trafficSignCategories[category]?.length ?? 0;
 
   void onBack() {
     Get.back();

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:drive_pass/model/exam_item.dart';
 import 'package:drive_pass/model/questions.dart';
+import 'package:drive_pass/model/traffic_sign_item.dart';
 import 'package:flutter/services.dart';
 
 class DataLocal {
@@ -13,6 +14,9 @@ class DataLocal {
   static List<Question> listQuestionsTechnique = [];// Danh sách 56 câu hỏi kỹ thuật lái xe
   static List<Question> listQuestionsCulture = [];// Danh sách 21 câu hỏi văn hóa & đạo đức
   static List<ExamItem> listExam = [];// Danh sách 20 đề thi thử
+
+  /// Traffic signs grouped by category name
+  static Map<String, List<TrafficSignItem>> trafficSignCategories = {};
 
   static Future<void> getListQuestionsAll() async {
     final jsonString = await rootBundle.loadString("assets/data/questions.json");
@@ -65,6 +69,18 @@ class DataLocal {
     final jsonString = await rootBundle.loadString("assets/data/exams.json");
     final List<dynamic> jsonList = jsonDecode(jsonString);
     listExam = jsonList.map((e) => ExamItem.fromJson(e)).toList();
-    print("listQuestionsCulture: ${listExam.length}");
+    print("listExam: ${listExam.length}");
+  }
+
+  static Future<void> getListTrafficSigns() async {
+    final jsonString = await rootBundle.loadString("assets/data/traffic.json");
+    final Map<String, dynamic> jsonMap = jsonDecode(jsonString);
+    trafficSignCategories = {};
+    for (final entry in jsonMap.entries) {
+      final List<dynamic> items = entry.value;
+      trafficSignCategories[entry.key] =
+          items.map((e) => TrafficSignItem.fromJson(Map<String, dynamic>.from(e))).toList();
+    }
+    print("trafficSignCategories: ${trafficSignCategories.keys.toList()}, total: ${trafficSignCategories.values.fold(0, (sum, list) => sum + list.length)}");
   }
 }

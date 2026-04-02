@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:focus_detector_v2/focus_detector_v2.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
 import '../../resource/app_resource.dart';
@@ -28,37 +29,40 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      body: Column(
-        children: [
-          Container(
-            color: AppColors.surface,
-            child: SafeArea(
-              bottom: false,
-              child: _buildHeader(),
-            ),
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 16.h),
-                  _buildLicenseInfoCard(),
-                  SizedBox(height: 16.h),
-                  _buildProgressCard(),
-                  SizedBox(height: 24.h),
-                  _buildQuickAccessSection(),
-                  SizedBox(height: 24.h),
-                  _buildRecentActivitySection(),
-                  SizedBox(height: 20.h),
-                ],
+    return FocusDetector(
+      onFocusGained: controller.loadRecentHistory,
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        body: Column(
+          children: [
+            Container(
+              color: AppColors.surface,
+              child: SafeArea(
+                bottom: false,
+                child: _buildHeader(),
               ),
             ),
-          ),
-        ],
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 16.h),
+                    _buildLicenseInfoCard(),
+                    SizedBox(height: 16.h),
+                    _buildProgressCard(),
+                    SizedBox(height: 24.h),
+                    _buildQuickAccessSection(),
+                    SizedBox(height: 24.h),
+                    _buildRecentActivitySection(),
+                    SizedBox(height: 20.h),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -200,51 +204,58 @@ class _HomeViewState extends State<HomeView> {
             ),
           ],
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Tiến độ học tập",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.textPrimary,
+        child: Obx(() {
+          final progress = controller.learningProgress;
+          final percent = (progress * 100).toInt();
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Tiến độ học tập",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.textPrimary,
+                    ),
                   ),
-                ),
-                Text(
-                  "85%",
-                  style: TextStyle(
-                    fontSize: 16.sp,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.primary,
+                  Text(
+                    "$percent%",
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.primary,
+                    ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 12.h),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(4.r),
-              child: LinearProgressIndicator(
-                value: 0.85,
-                backgroundColor: AppColors.background,
-                valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
-                minHeight: 8.h,
+                ],
               ),
-            ),
-            SizedBox(height: 12.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _buildStatChip("Đã học", "510/600", AppColors.primary),
-                _buildStatChip("Đã đạt", "8/18", AppColors.success),
-                _buildStatChip("Chưa đạt", "2/18", AppColors.error),
-              ],
-            ),
-          ],
-        ),
+              SizedBox(height: 12.h),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(4.r),
+                child: LinearProgressIndicator(
+                  value: progress,
+                  backgroundColor: AppColors.background,
+                  valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primary),
+                  minHeight: 8.h,
+                ),
+              ),
+              SizedBox(height: 12.h),
+              Row(
+
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _buildStatChip("Đã học", "${controller.completedQuestions}/${controller.totalQuestions}", AppColors.primary),
+                  _buildStatChip("Đã đạt", "${controller.passedExams}/${controller.totalExams}", AppColors.success),
+                  _buildStatChip("Chưa đạt", "${controller.failedExams}/${controller.totalExams}", AppColors.error),
+                ],
+              ),
+            ],
+          );
+        }),
+
+
       ),
     );
   }
@@ -391,9 +402,53 @@ class _HomeViewState extends State<HomeView> {
             ],
           ),
           SizedBox(height: 12.h),
-          _buildRecentItem("Bộ đề số 1", "35/35 câu đúng", "Đạt", AppColors.success, AppColors.successBackground),
-          SizedBox(height: 8.h),
-          _buildRecentItem("Bộ đề số 2", "28/35 câu đúng", "Trượt", AppColors.error, AppColors.errorBackground),
+          Obx(() {
+            if (controller.recentHistory.isEmpty) {
+              return Container(
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(vertical: 32.h),
+                decoration: BoxDecoration(
+                  color: AppColors.surface,
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(color: AppColors.border),
+                ),
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.history_rounded,
+                      size: 36.w,
+                      color: AppColors.textLight,
+                    ),
+                    SizedBox(height: 8.h),
+                    Text(
+                      'Chưa có hoạt động nào',
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        color: AppColors.textSecondary,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }
+            return Column(
+              children: controller.recentHistory.map((h) {
+                final isPassed = h.passed;
+                return Padding(
+                  padding: EdgeInsets.only(bottom: 8.h),
+                  child: _buildRecentItem(
+                    "Bộ đề số ${h.examNo}",
+                    "${h.correct}/${h.total} câu đúng • ${h.timeTaken}",
+                    isPassed ? "Đạt" : "Trượt",
+                    isPassed ? AppColors.success : AppColors.error,
+                    isPassed
+                        ? AppColors.successBackground
+                        : AppColors.errorBackground,
+                  ),
+                );
+              }).toList(),
+            );
+          }),
           SizedBox(height: 16.h),
         ],
       ),

@@ -47,6 +47,8 @@ class LocalService extends GetxService {
 
   // ── Exam History ───────────────────────────────────────────────────────────
 
+  static const String keyExamHistoryAll = 'EXAM_HISTORY_ALL';
+
   Future<void> saveExamResult({
     required int examNo,
     required int correct,
@@ -54,16 +56,27 @@ class LocalService extends GetxService {
     required String timeTaken,
     required String dateTaken,
   }) async {
-    final raw = box.read<Map>(keyExamHistory) ?? {};
-    final map = Map<String, dynamic>.from(raw);
-    map['$examNo'] = {
+    final ts = DateTime.now().millisecondsSinceEpoch;
+    final record = {
       'examNo': examNo,
       'correct': correct,
       'total': total,
       'timeTaken': timeTaken,
       'dateTaken': dateTaken,
+      'timestamp': ts,
     };
+
+    // ── 1. Per-exam latest (for exam list screen) ──
+    final raw = box.read<Map>(keyExamHistory) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    map['$examNo'] = record;
     await box.write(keyExamHistory, map);
+
+    // ── 2. Full history list (append, never overwrite) ──
+    final rawList = box.read<List>(keyExamHistoryAll) ?? [];
+    final list = List<dynamic>.from(rawList);
+    list.add(record);
+    await box.write(keyExamHistoryAll, list);
   }
 
   ExamHistory? getExamHistory(int examNo) {
@@ -73,6 +86,7 @@ class LocalService extends GetxService {
     return ExamHistory.fromJson(Map<String, dynamic>.from(data));
   }
 
+  /// Latest result per exam (used by ExamController / exam list)
   Map<int, ExamHistory> getAllExamHistory() {
     final raw = box.read<Map>(keyExamHistory) ?? {};
     final result = <int, ExamHistory>{};
@@ -86,6 +100,16 @@ class LocalService extends GetxService {
     return result;
   }
 
+  /// All attempts ever (used by History screen), newest first
+  List<ExamHistory> getAllExamHistoryRecords() {
+    final rawList = box.read<List>(keyExamHistoryAll) ?? [];
+    final records = rawList
+        .map((e) => ExamHistory.fromJson(Map<String, dynamic>.from(e)))
+        .toList();
+    records.sort((a, b) => b.timestamp.compareTo(a.timestamp));
+    return records;
+  }
+
   int get passedExamCount =>
       getAllExamHistory().values.where((h) => h.passed).length;
 
@@ -94,7 +118,50 @@ class LocalService extends GetxService {
 
   int get attemptedExamCount => getAllExamHistory().length;
 
-  Future<void> clearExamHistory() => box.remove(keyExamHistory);
+  Future<void> clearExamHistory() async {
+    await box.remove(keyExamHistory);
+    await box.remove(keyExamHistoryAll);
+  }
 
   Future<void> clearAll() => box.erase();
+
+  // ── Theory Progress ────────────────────────────────────────────────────────
+  // Stores per-category: { "categoryKey": ["qId1", "qId2", ...] }
+  static const String keyTheoryProgress = 'THEORY_PROGRESS';
+
+  /// Mark a question as done for a specific category
+  Future<void> markTheoryQuestionDone(String categoryKey, String questionId) async {
+    final raw = box.read<Map>(keyTheoryProgress) ?? {};
+    final map = Map<String, dynamic>.from(raw);
+    final List<dynamic> ids = List<dynamic>.from(map[categoryKey] ?? []);
+    if (!ids.contains(questionId)) {
+      ids.add(questionId);
+      map[categoryKey] = ids;
+      await box.write(keyTheoryProgress, map);
+    }
+  }
+
+  /// Get set of question IDs done for a category
+  Set<String> getTheoryDoneIds(String categoryKey) {
+    final raw = box.read<Map>(keyTheoryProgress) ?? {};
+    final ids = raw[categoryKey];
+    if (ids == null) return {};
+    return Set<String>.from(ids);
+  }
+
+  /// Get unique question IDs across ALL categories (for overall progress)
+  Set<String> getTheoryAllUniqueIds() {
+    final raw = box.read<Map>(keyTheoryProgress) ?? {};
+    final all = <String>{};
+    for (final entry in raw.values) {
+      if (entry is List) {
+        all.addAll(entry.cast<String>());
+      }
+    }
+    return all;
+  }
+
+  Future<void> clearTheoryProgress() async {
+    await box.remove(keyTheoryProgress);
+  }
 }

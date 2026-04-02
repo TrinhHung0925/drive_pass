@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:focus_detector_v2/focus_detector_v2.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
 import 'theory_controller.dart';
@@ -27,7 +28,9 @@ class _TheoryViewState extends State<TheoryView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return FocusDetector(
+      onFocusGained: controller.refreshProgress,
+      child: Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
         backgroundColor: AppColors.surface,
@@ -66,18 +69,21 @@ class _TheoryViewState extends State<TheoryView> {
               child: _buildHeader("Danh mục lý thuyết"),
             ),
             SizedBox(height: 12.h),
-            _buildGrid(),
+            Obx(() => _buildGrid()),
             SizedBox(height: 40.h),
           ],
         ),
       ),
-    );
+      ), // Scaffold
+    ); // FocusDetector
   }
 
   Widget _buildOverallProgress() {
+
     return Container(
       padding: EdgeInsets.all(20.w),
       decoration: BoxDecoration(
+
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(16.r),
         boxShadow: [

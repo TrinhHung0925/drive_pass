@@ -1,9 +1,8 @@
-import 'package:drive_pass/screen/exam_detail/exam_detail_controller.dart';
 import 'package:get/get.dart';
 import 'package:drive_pass/route.dart';
-import 'package:flutter/material.dart';
 import '../../service/local_service.dart';
 import '../exam/exam_controller.dart';
+import '../exam_detail/exam_detail_controller.dart';
 
 class ExamResultController extends GetxController {
   late final int examNo;
@@ -14,6 +13,7 @@ class ExamResultController extends GetxController {
   late final int skipped;
   late final String timeTaken;
   late final String dateTaken;
+  late final Map<int, int> selectedAnswers;
 
   @override
   void onInit() {
@@ -25,6 +25,14 @@ class ExamResultController extends GetxController {
     incorrect= args['incorrect'] ?? 0;
     skipped  = args['skipped']   ?? 0;
     timeTaken= args['timeTaken'] ?? '00:00';
+
+    // Store selectedAnswers for explanation screen
+    final raw = args['selectedAnswers'];
+    if (raw is Map) {
+      selectedAnswers = raw.map((k, v) => MapEntry(k as int, v as int));
+    } else {
+      selectedAnswers = {};
+    }
 
     final now = DateTime.now();
     dateTaken =
@@ -53,7 +61,13 @@ class ExamResultController extends GetxController {
   }
 
   void viewDetails() {
-    Get.snackbar('Thông báo', 'Tính năng xem lời giải chi tiết sẽ cập nhật sau.');
+    Get.toNamed(
+      AppPage.examExplanation.routeName,
+      arguments: {
+        'examNo': examNo,
+        'selectedAnswers': Map<int, int>.from(selectedAnswers),
+      },
+    );
   }
 
   void retakeExam() {

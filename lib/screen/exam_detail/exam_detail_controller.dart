@@ -169,6 +169,7 @@ class ExamDetailController extends GetxController {
         'incorrect': incorrect,
         'skipped': skipped,
         'timeTaken': timeTaken,
+        'selectedAnswers': Map<int, int>.from(selectedAnswers),
       },
     );
   }

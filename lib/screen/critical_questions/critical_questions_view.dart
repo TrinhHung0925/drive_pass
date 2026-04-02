@@ -294,28 +294,31 @@ class _CriticalQuestionsViewState extends State<CriticalQuestionsView> {
                         ),
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 8.w,
-                        vertical: 4.h,
-                      ),
-                      decoration: BoxDecoration(
-                        color: index %2==0
-                            ? AppColors.primary.withValues(alpha: 0.1)
-                            : Colors.grey.shade100,
-                        borderRadius: BorderRadius.circular(4.r),
-                      ),
-                      child: Text(
-                        index %2==0?"Đã làm":"Chưa làm",
-                        style: TextStyle(
-                          fontSize: 10.sp,
-                          fontWeight: FontWeight.w800,
-                          color: index %2==0
-                              ? AppColors.primary
-                              : Colors.grey.shade600,
+                    Obx(() {
+                      final isDone = controller.isQuestionDone(itemQuestions.id);
+                      return Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 8.w,
+                          vertical: 4.h,
                         ),
-                      ),
-                    ),
+                        decoration: BoxDecoration(
+                          color: isDone
+                              ? AppColors.primary.withValues(alpha: 0.1)
+                              : Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(4.r),
+                        ),
+                        child: Text(
+                          isDone ? "Đã làm" : "Chưa làm",
+                          style: TextStyle(
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w800,
+                            color: isDone
+                                ? AppColors.primary
+                                : Colors.grey.shade600,
+                          ),
+                        ),
+                      );
+                    }),
                   ],
                 ),
                 SizedBox(height: 12.h),

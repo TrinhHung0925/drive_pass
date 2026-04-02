@@ -28,6 +28,11 @@ class TheoryDetailController extends GetxController {
     categoryKey = args['categoryKey'] ?? '';
     questions = args['questions'] as List<Question>? ?? [];
 
+    final initialIndex = args['initialIndex'] as int? ?? 0;
+    if (initialIndex > 0 && initialIndex < questions.length) {
+      currentIndex.value = initialIndex;
+    }
+
     _loadAnswered();
     _updateBookmarkState();
 

@@ -1,0 +1,309 @@
+{
+  "featured": {
+    "title": "Bí quyết đậu bằng lái B2 ngay lần đầu",
+    "summary": "Tổng hợp kinh nghiệm từ hàng nghìn học viên đã thi đậu, giúp bạn tự tin bước vào phòng thi.",
+    "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1000&auto=format&fit=crop",
+    "readTime": "8 phút đọc",
+    "content": "## 1. Nắm vững 60 câu điểm liệt\nĐây là nhóm câu hỏi quan trọng nhất. Chỉ cần sai 1 câu điểm liệt là TRƯỢT ngay lập tức, bất kể bạn đúng bao nhiêu câu khác.\n\n**Mẹo ghi nhớ:**\n- Câu nào có từ \"NGHIÊM CẤM\", \"KHÔNG ĐƯỢC\" thường là câu điểm liệt\n- Câu liên quan đến nồng độ cồn, ma túy → đáp án luôn là CẤM TUYỆT ĐỐI\n- Câu về tốc độ trong khu dân cư, đường cao tốc → học thuộc con số\n\n## 2. Phương pháp học hiệu quả\n- Học theo chủ đề, không học ngẫu nhiên\n- Làm đề thi thử ít nhất 3 lần/ngày\n- Tập trung vào câu hay sai, đánh dấu để ôn lại\n- Đọc giải thích chi tiết cho mỗi câu\n\n## 3. Ngày thi\n- Đến sớm 30 phút để ổn định tâm lý\n- Đọc kỹ câu hỏi, chú ý từ khóa\n- Làm câu dễ trước, câu khó sau\n- Không bỏ trống câu nào\n- Kiểm tra lại trước khi nộp bài"
+  },
+  "categories": [
+    {
+      "id": "ly_thuyet",
+      "title": "Mẹo lý thuyết",
+      "icon": "menu_book",
+      "color": "#1F89E5",
+      "description": "Bí kíp ghi nhớ nhanh lý thuyết, biển báo và luật giao thông",
+      "tips": [
+        {
+          "id": 1,
+          "title": "Quy tắc nhường đường tại ngã tư",
+          "summary": "Ghi nhớ 4 bước ưu tiên khi gặp ngã tư không đèn tín hiệu",
+          "content": "## Thứ tự ưu tiên tại ngã tư không đèn\n\n**Bước 1:** Xe đi trên đường ưu tiên hoặc đường chính → đi trước\n\n**Bước 2:** Nếu cùng đường → xe bên PHẢI được đi trước\n\n**Bước 3:** Xe đi thẳng và rẽ phải → đi trước xe rẽ trái\n\n**Bước 4:** Xe đã vào ngã tư → đi trước xe chưa vào\n\n### Mẹo nhớ: \"Ưu - Phải - Thẳng - Trong\"\n- **Ưu**: Đường ưu tiên đi trước\n- **Phải**: Bên phải đi trước\n- **Thẳng**: Đi thẳng trước rẽ trái\n- **Trong**: Xe trong ngã tư trước",
+          "icon": "swap_horiz"
+        },
+        {
+          "id": 2,
+          "title": "Tốc độ tối đa cho phép",
+          "summary": "Bảng tốc độ cần nhớ cho từng loại đường, khu vực",
+          "content": "## Tốc độ trong khu dân cư\n| Loại đường | Tốc độ tối đa |\n|---|---|\n| Có dải phân cách | 60 km/h |\n| Không có dải phân cách | 50 km/h |\n\n## Tốc độ ngoài khu dân cư\n| Loại đường | Xe con | Xe tải |\n|---|---|---|\n| Đường đôi (≥2 làn/chiều) | 90 km/h | 80 km/h |\n| Đường 2 chiều | 80 km/h | 70 km/h |\n\n## Đường cao tốc\n| Loại xe | Tốc độ tối đa |\n|---|---|\n| Xe con | 120 km/h |\n| Xe tải | 100 km/h |\n| Xe máy chuyên dùng | 70 km/h |\n\n### Mẹo nhớ: \"6-5, 9-8, 8-7\"\n- Khu dân cư: 60/50\n- Ngoài khu dân cư đường đôi: 90/80\n- Ngoài khu dân cư đường 2 chiều: 80/70",
+          "icon": "speed"
+        },
+        {
+          "id": 3,
+          "title": "Khoảng cách an toàn",
+          "summary": "Cách tính khoảng cách an toàn theo tốc độ",
+          "content": "## Khoảng cách an toàn tối thiểu\n\n| Tốc độ | Khoảng cách (trời tốt) | Khoảng cách (trời xấu) |\n|---|---|---|\n| 60 km/h | 35 m | 70 m |\n| 60-80 km/h | 55 m | 110 m |\n| 80-100 km/h | 70 m | 140 m |\n| 100-120 km/h | 100 m | 200 m |\n\n### Mẹo nhớ nhanh\n- Trời tốt: Khoảng cách ≈ **tốc độ × 0.6** (mét)\n- Trời xấu: **Nhân đôi** khoảng cách trời tốt\n- Đường cao tốc: Luôn giữ khoảng cách tối thiểu 100m\n\n### Quy tắc 3 giây\nChọn một vật cố định bên đường. Khi xe trước đi qua vật đó, bắt đầu đếm \"một nghìn lẻ một, một nghìn lẻ hai, một nghìn lẻ ba\". Nếu xe bạn chưa tới vật đó → an toàn.",
+          "icon": "social_distance"
+        },
+        {
+          "id": 4,
+          "title": "Thứ tự ưu tiên xe",
+          "summary": "Ghi nhớ 5 loại xe ưu tiên theo thứ tự",
+          "content": "## 5 loại xe ưu tiên (theo thứ tự)\n\n1. 🚒 **Xe chữa cháy** đi làm nhiệm vụ\n2. 🪖 **Xe quân sự, công an** đi làm nhiệm vụ khẩn cấp\n3. 🚑 **Xe cứu thương** đang thực hiện nhiệm vụ cấp cứu\n4. 🌊 **Xe hộ đê**, xe đi làm nhiệm vụ khắc phục thiên tai\n5. 🚗 **Đoàn xe tang**, xe chở thương binh nặng\n\n### Mẹo nhớ: \"HỎA - SỰ - CÔNG - THƯƠNG - ĐÊ\"\n- **Hỏa** = Chữa cháy\n- **Sự** = Quân sự\n- **Công** = Công an\n- **Thương** = Cứu thương\n- **Đê** = Hộ đê\n\n### Lưu ý quan trọng\n- Xe ưu tiên PHẢI có tín hiệu còi, đèn khi đi làm nhiệm vụ\n- Tất cả xe phải nhường đường cho xe ưu tiên\n- Xe ưu tiên vẫn phải tuân thủ luật khi KHÔNG làm nhiệm vụ",
+          "icon": "priority_high"
+        },
+        {
+          "id": 5,
+          "title": "Nồng độ cồn và chất kích thích",
+          "summary": "Quy định nghiêm ngặt nhất - SAI LÀ TRƯỢT",
+          "content": "## Quy định về nồng độ cồn (CÂU ĐIỂM LIỆT)\n\n### ❌ NGHIÊM CẤM TUYỆT ĐỐI\n- Điều khiển xe ô tô, mô tô, xe gắn máy khi trong máu hoặc hơi thở có nồng độ cồn\n- Nồng độ cồn bằng 0 (KHÔNG được phép có cồn)\n\n### Mức phạt (cập nhật Nghị định 168/2024)\n| Vi phạm | Mức phạt xe máy | Mức phạt ô tô |\n|---|---|---|\n| >0 đến 0.25 mg/lít | 2-3 triệu | 6-8 triệu |\n| >0.25 đến 0.4 mg/lít | 4-5 triệu | 16-18 triệu |\n| >0.4 mg/lít | 6-8 triệu | 30-40 triệu |\n\n### Mẹo thi\n- Bất kỳ câu nào hỏi \"nồng độ cồn bao nhiêu được lái xe\" → Đáp án: **BẰNG 0**\n- Câu hỏi về ma túy, chất kích thích → **CẤM TUYỆT ĐỐI**\n- Đây là câu điểm liệt, sai = TRƯỢT",
+          "icon": "no_drinks"
+        },
+        {
+          "id": 6,
+          "title": "Phân biệt biển báo cấm",
+          "summary": "Đặc điểm nhận biết nhanh biển cấm theo màu sắc",
+          "content": "## Nhận biết nhanh biển báo cấm\n\n### Đặc điểm chung\n- **Hình tròn**, viền đỏ, nền trắng\n- Hình vẽ bên trong thể hiện điều cấm\n- Gạch chéo đỏ = CẤM\n\n### Mẹo phân biệt nhanh\n\n**1. Biển cấm xe cụ thể:**\n- Nhìn hình xe trên biển → xe nào bị cấm\n- P.103a (cấm ô tô): hình xe ô tô\n- P.104 (cấm xe máy): hình xe máy\n- P.106a (cấm xe tải): hình xe tải\n\n**2. Biển cấm hành vi:**\n- P.123a: mũi tên bẻ trái + gạch → cấm rẽ trái\n- P.123b: mũi tên bẻ phải + gạch → cấm rẽ phải\n- P.124a: mũi tên chữ U + gạch → cấm quay đầu\n- P.125: 2 xe song song → cấm vượt\n\n**3. Biển hạn chế:**\n- P.127: số trên biển = tốc độ tối đa\n- P.115: số trên biển = trọng tải tối đa\n- P.117: số trên biển = chiều cao tối đa\n\n### Lưu ý\n- Cấm rẽ trái ≠ cấm quay đầu (luật mới)\n- Biển cấm ô tô → CẤM CẢ máy kéo\n- Biển cấm máy kéo → KHÔNG cấm ô tô",
+          "icon": "block"
+        },
+        {
+          "id": 7,
+          "title": "Phân biệt biển báo nguy hiểm",
+          "summary": "Hình tam giác, viền đỏ - cảnh báo nguy hiểm phía trước",
+          "content": "## Nhận biết biển báo nguy hiểm\n\n### Đặc điểm chung\n- **Hình tam giác** đều, đỉnh hướng lên\n- Viền đỏ, nền vàng\n- Hình vẽ thể hiện loại nguy hiểm\n\n### Các nhóm biển thường gặp trong đề thi\n\n**1. Đường cong nguy hiểm (W.201):**\n- 201a: cong trái | 201b: cong phải\n- 202a: 2 cong liên tiếp bắt đầu trái\n- 202b: 2 cong liên tiếp bắt đầu phải\n\n**2. Giao nhau (W.205-209):**\n- 205a-e: giao nhau cùng cấp (nhiều biến thể)\n- 207a-l: giao nhau với đường không ưu tiên\n- 208: giao nhau có tín hiệu đèn\n\n**3. Đường sắt (W.210-211):**\n- 210: giao nhau có rào chắn → AN TOÀN HƠN\n- 211: giao nhau KHÔNG rào chắn → NGUY HIỂM HƠN\n\n**4. Dốc (W.219-220):**\n- 219: dốc XUỐNG → số % góc nghiêng\n- 220: dốc LÊN → số % góc nghiêng\n\n### Mẹo thi\n- Biển nguy hiểm = CẢNH BÁO, không phải cấm\n- Khi gặp biển nguy hiểm → giảm tốc độ, chú ý quan sát",
+          "icon": "warning"
+        },
+        {
+          "id": 8,
+          "title": "Biển hiệu lệnh",
+          "summary": "Hình tròn nền xanh - BẮT BUỘC phải tuân theo",
+          "content": "## Nhận biết biển hiệu lệnh\n\n### Đặc điểm chung\n- **Hình tròn**, nền XANH lam\n- Hình vẽ trắng bên trong\n- Biểu thị điều BẮT BUỘC phải chấp hành\n\n### 10 biển hiệu lệnh cần nhớ\n\n1. **R.301a**: Hướng đi phải theo - đi thẳng\n2. **R.301b**: Hướng đi phải theo - rẽ phải\n3. **R.301c**: Hướng đi phải theo - rẽ trái\n4. **R.301d**: Hướng đi phải theo - thẳng và phải\n5. **R.301e**: Hướng đi phải theo - thẳng và trái\n6. **R.302a**: Phải đi vòng sang phải\n7. **R.302b**: Phải đi vòng sang trái\n8. **R.303**: Nơi giao nhau chạy vòng xuyến\n9. **R.304**: Đường dành cho xe thô sơ\n10. **R.305**: Đường dành cho người đi bộ\n\n### Phân biệt với biển cấm\n- Biển cấm: viền ĐỎ, nền trắng → KHÔNG ĐƯỢC làm\n- Biển hiệu lệnh: nền XANH → PHẢI làm theo",
+          "icon": "check_circle"
+        },
+        {
+          "id": 9,
+          "title": "Xử lý tình huống tai nạn",
+          "summary": "Các bước xử lý khi gặp tai nạn giao thông",
+          "content": "## Xử lý khi gặp/gây tai nạn giao thông\n\n### 4 bước bắt buộc\n\n**Bước 1: DỪNG XE ngay lập tức**\n- Tắt máy, bật đèn cảnh báo\n- Đặt biển tam giác cảnh báo cách xe 20-50m\n\n**Bước 2: CỨU NGƯỜI bị nạn**\n- Sơ cứu nạn nhân (nếu biết cách)\n- Gọi cấp cứu 115\n- KHÔNG di chuyển nạn nhân (trừ nguy hiểm tính mạng)\n\n**Bước 3: BÁO cho cơ quan chức năng**\n- Gọi 113 (công an)\n- Giữ nguyên hiện trường\n- Không di chuyển phương tiện\n\n**Bước 4: BẢO VỆ hiện trường**\n- Không xóa dấu vết\n- Ghi nhớ thông tin liên quan\n\n### Mẹo thi (CÂU ĐIỂM LIỆT)\n- Bỏ chạy sau tai nạn → NGHIÊM CẤM\n- Không cứu giúp người bị nạn → VI PHẠM\n- Ưu tiên: CỨU NGƯỜI trước, BẢO VỆ TÀI SẢN sau",
+          "icon": "car_crash"
+        },
+        {
+          "id": 10,
+          "title": "Đèn tín hiệu giao thông",
+          "summary": "Ý nghĩa các loại đèn tín hiệu và cách xử lý",
+          "content": "## Đèn tín hiệu giao thông\n\n### Đèn 3 màu\n- 🟢 **Xanh**: Được đi\n- 🟡 **Vàng**: Phải dừng trước vạch. Nếu đã qua vạch → được đi tiếp\n- 🔴 **Đỏ**: Phải dừng. Được rẽ phải nếu có biển phụ cho phép\n\n### Đèn nhấp nháy\n- 🟡 Vàng nhấp nháy: Được đi nhưng phải **giảm tốc độ, chú ý quan sát**\n- 🔴 Đỏ nhấp nháy: Phải **dừng lại**, quan sát rồi mới đi\n\n### Thứ tự ưu tiên tín hiệu\n1. **Người điều khiển giao thông** (CSGT) → cao nhất\n2. **Đèn tín hiệu**\n3. **Biển báo hiệu**\n4. **Vạch kẻ đường**\n\n### Mẹo thi\n- CSGT giơ tay → ưu tiên hơn đèn đỏ\n- Đèn vàng: dừng lại, KHÔNG phải tăng ga vượt\n- Câu hỏi \"đèn vàng nhấp nháy\" → giảm tốc, quan sát (KHÔNG phải dừng hẳn)\n- Rẽ phải khi đèn đỏ: CHỈ khi có biển phụ cho phép",
+          "icon": "traffic"
+        },
+        {
+          "id": 11,
+          "title": "Các trường hợp không được vượt xe",
+          "summary": "8 trường hợp cấm vượt mà bạn PHẢI nhớ",
+          "content": "## Không được vượt xe trong các trường hợp\n\n### 8 trường hợp cấm vượt\n\n1. ❌ **Không có tín hiệu xin vượt** từ người lái xe\n2. ❌ Xe phía trước đang **xin vượt xe khác**\n3. ❌ Xe phía trước đang **ra tín hiệu rẽ** hoặc chuyển làn\n4. ❌ Trên **cầu hẹp** (1 làn xe)\n5. ❌ Đường **vòng cong** tầm nhìn bị che khuất\n6. ❌ Qua **đường giao nhau**, đường sắt\n7. ❌ Khi gặp **thời tiết xấu**: mưa to, sương mù dày\n8. ❌ Có biển báo **cấm vượt** (P.125)\n\n### Nguyên tắc vượt xe\n- Xin vượt bằng tín hiệu (xi-nhan trái + còi/đèn)\n- Vượt bên TRÁI (trừ trường hợp xe phía trước rẽ trái)\n- Chỉ vượt khi CHẮC CHẮN an toàn\n- Sau khi vượt → xi-nhan phải → trở về làn\n\n### Mẹo nhớ: \"Hiệu-Vượt-Rẽ-Cầu-Cong-Giao-Mưa-Biển\"\nGhép thành câu: **\"Hiểu Vượt Rẽ Cầu Cong Giao Mưa Biển\"**",
+          "icon": "do_not_disturb"
+        },
+        {
+          "id": 12,
+          "title": "Các trường hợp không được dừng, đỗ xe",
+          "summary": "Nắm vững quy tắc dừng đỗ - thi hay hỏi!",
+          "content": "## Không được dừng, đỗ xe\n\n### Nơi CẤM DỪNG VÀ ĐỖ\n- Trên phần đường xe chạy (cả 2 bên đường cao tốc)\n- Trên cầu, gầm cầu vượt\n- Song song với xe khác đang dừng, đỗ\n- Trên đường ray, giao nhau với đường sắt\n- Nơi có biển cấm dừng đỗ (P.130)\n- Trên vạch kẻ đường dành cho người đi bộ\n- Cách ngã ba/tư < 5m\n- Cách trụ nước chữa cháy < 5m\n\n### Nơi CẤM ĐỖ (nhưng được dừng)\n- Cách ngã ba/tư 5m\n- Bên trái đường 1 chiều\n- Cách biển báo xe buýt 20m\n- Nơi có biển cấm đỗ (P.131a)\n\n### Mẹo phân biệt\n- **Dừng**: Xe tạm ngừng di chuyển, lái xe NGỒI TRÊN XE\n- **Đỗ**: Xe ngừng, lái xe RỜI KHỎI XE\n- P.130 (vạch X): cấm cả dừng lẫn đỗ\n- P.131a (vạch \\): chỉ cấm đỗ, được dừng",
+          "icon": "local_parking"
+        },
+        {
+          "id": 13,
+          "title": "Nhận biết biển báo chỉ bằng hình dáng + màu sắc",
+          "summary": "Tròn đỏ = Cấm, Tam giác vàng = Nguy hiểm, Tròn xanh = Hiệu lệnh",
+          "content": "## Nhận biết biển báo trong 2 giây\n\n### 🔴 Tròn + viền ĐỎ = CẤM\n- Nền trắng, viền đỏ, gạch chéo\n\n### 🟡 Tam giác + viền ĐỎ = NGUY HIỂM\n- Nền vàng, đỉnh hướng lên\n- Cảnh báo, không cấm\n\n### 🔵 Tròn + nền XANH = HIỆU LỆNH\n- Bắt buộc tuân theo\n\n### 🟦 Vuông + nền XANH = CHỈ DẪN\n- Thông tin hướng dẫn, không bắt buộc\n\n### Quy tắc CẤM xe\n- **Cấm nhỏ thì cấm to**: Cấm xe con → cấm xe tải → cấm máy kéo → cấm sơ mi rơ moóc\n- **Cấm to KHÔNG cấm nhỏ**: Cấm xe tải → KHÔNG cấm xe con\n\n### Ví dụ\n- Biển cấm ô tô → CẤM CẢ xe tải, máy kéo\n- Biển cấm xe tải → KHÔNG cấm xe con, xe máy",
+          "icon": "palette"
+        }
+      ]
+    },
+    {
+      "id": "sa_hinh",
+      "title": "Mẹo thi sa hình",
+      "icon": "directions_car",
+      "color": "#10B981",
+      "description": "Bí kíp qua 11 bài thi thực hành sa hình dễ dàng",
+      "tips": [
+        {
+          "id": 1,
+          "title": "Ghép xe dọc (Lùi xe vào nơi đỗ)",
+          "summary": "Kỹ thuật canh chuẩn và các bước thực hiện",
+          "content": "## Bài thi ghép xe dọc\n\n### Yêu cầu\n- Lùi xe vào nơi đỗ (song song với lề đường)\n- Không chạm vạch, không tắt máy\n- Thời gian: 2 phút\n\n### Các bước thực hiện\n\n**Bước 1: Tiến xe**\n- Tiến xe sao cho vai người lái ngang với CỘC SỐ 1 (cọc đầu tiên)\n- Dừng xe, bật xi-nhan phải\n\n**Bước 2: Lùi đánh lái**\n- Lùi từ từ, khi gương phải thấy CỌC SỐ 2 → đánh hết lái sang PHẢI\n- Nhìn gương trái, khi đuôi xe ngang CỌC SỐ 3 → trả lái thẳng\n\n**Bước 3: Lùi thẳng vào ô**\n- Lùi thẳng cho đến khi xe vào hoàn toàn trong ô đỗ\n- Bánh xe không chạm vạch\n\n**Bước 4: Tiến ra**\n- Bật xi-nhan trái\n- Tiến từ từ, đánh lái trái để ra khỏi ô\n\n### Mẹo quan trọng\n- Tốc độ: CỰC CHẬM, chỉ nhả côn\n- Quan sát gương thường xuyên\n- Nếu thấy sắp chạm vạch → dừng lại, tiến/lùi điều chỉnh",
+          "icon": "local_parking"
+        },
+        {
+          "id": 2,
+          "title": "Ghép xe ngang",
+          "summary": "Kỹ thuật ghép vuông góc với lề đường",
+          "content": "## Bài thi ghép xe ngang\n\n### Yêu cầu\n- Lùi xe vào ô đỗ vuông góc với lề\n- Không chạm vạch, không tắt máy\n- Thời gian: 2 phút\n\n### Các bước thực hiện\n\n**Bước 1: Tiến xe chuẩn bị**\n- Tiến xe song song cách xe trước 50-80cm\n- Vai người lái ngang với CỘC ĐẦU ô đỗ → dừng\n\n**Bước 2: Lùi chéo**\n- Đánh hết lái PHẢI, lùi từ từ\n- Nhìn gương phải: khi thấy CỘC CUỐI → trả lái thẳng\n\n**Bước 3: Vào ô**\n- Lùi thẳng vào ô cho đến hết\n- Xe phải nằm gọn trong ô\n\n### 3 điểm canh chuẩn\n1. Gương phải ↔ cọc đầu: bắt đầu đánh lái\n2. Gương trái ↔ cọc sau: trả thẳng\n3. Đuôi xe ↔ vạch sau: dừng",
+          "icon": "grid_view"
+        },
+        {
+          "id": 3,
+          "title": "Dừng xe nhường người đi bộ",
+          "summary": "Canh khoảng cách 50cm - điểm chuẩn bệ bước chân",
+          "content": "## Dừng xe nhường đường cho người đi bộ\n\n### Yêu cầu\n- Dừng xe đúng vạch\n- Cản trước cách vạch dừng ≤ 50cm\n- Không tắt máy\n\n### Kỹ thuật canh\n\n**Điểm chuẩn:** Bệ bước chân (gờ xe) ngang với cột biển báo dừng\n\n**Bước 1:** Tiến xe chậm, mắt nhìn cột biển báo\n\n**Bước 2:** Khi bệ bước chân NGANG với cột biển → phanh nhẹ\n\n**Bước 3:** Dừng xe, giữ 3-5 giây (chờ người đi bộ)\n\n**Bước 4:** Tiếp tục đi\n\n### Mẹo\n- Đi CỰC CHẬM khi gần vạch dừng\n- Tập lấy điểm chuẩn riêng cho từng xe (vì xe khác nhau điểm chuẩn khác)\n- Nếu dừng QUÁ vạch → bị trừ điểm nặng\n- Nếu dừng CÁCH XA vạch > 50cm → bị trừ điểm",
+          "icon": "directions_walk"
+        },
+        {
+          "id": 4,
+          "title": "Qua vệt bánh xe (Đi đinh)",
+          "summary": "Bí quyết đi thẳng ổn định trên vệt hẹp",
+          "content": "## Qua vệt bánh xe (Đi đinh)\n\n### Yêu cầu\n- Xe đi thẳng qua vệt hẹp mà bánh xe không lệch ra ngoài\n- Cả 4 bánh đều phải đi trên vệt\n\n### Kỹ thuật\n\n**Điểm chuẩn:** Gạt nước (hoặc 1 điểm trên mũi xe) thẳng với vạch\n\n**Bước 1:** Canh điểm chuẩn thẳng với vệt trước khi vào\n\n**Bước 2:** Đi tốc độ RÙA BÒ (chỉ nhả côn)\n\n**Bước 3:** Giữ CỰC KỲ ỔN ĐỊNH tay lái - KHÔNG chỉnh\n\n**Bước 4:** Mắt nhìn XA (nhìn cuối vệt), không nhìn gần\n\n### Mẹo vàng\n- **Nhìn xa, không nhìn gần** → giữ thẳng tốt hơn\n- Tay lái phải NHẸ NHÀNG, không nắm chặt\n- Nếu lệch → chỉnh nhẹ 1-2cm, KHÔNG đánh lái mạnh\n- Thực hành nhiều để tìm điểm chuẩn phù hợp với xe thi",
+          "icon": "straighten"
+        },
+        {
+          "id": 5,
+          "title": "Dừng xe ngang dốc",
+          "summary": "Kỹ thuật dừng và khởi hành trên dốc không trôi xe",
+          "content": "## Dừng xe và khởi hành ngang dốc\n\n### Yêu cầu\n- Dừng xe đúng vị trí trên dốc\n- Khởi hành không để xe trôi > 50cm\n- Không tắt máy\n\n### Kỹ thuật dừng trên dốc\n\n**Bước 1:** Lên dốc ở số 1, ga vừa phải\n\n**Bước 2:** Khi đến vạch dừng → đạp phanh + côn, kéo phanh tay\n\n**Bước 3:** Giữ 3 giây\n\n### Kỹ thuật khởi hành trên dốc (QUAN TRỌNG NHẤT)\n\n**Bước 1:** Nhả côn TỪ TỪ cho đến khi đầu xe \"rung nhẹ\" (điểm bám)\n\n**Bước 2:** Giữ côn tại điểm bám, RỒI mới thả phanh tay\n\n**Bước 3:** Nhả côn tiếp + thêm ga nhẹ → xe tiến lên\n\n### Mẹo chống trôi xe\n- Tìm \"điểm bám\" côn: xe rung nhẹ, đầu xe hơi nhấc\n- NHẢ CÔN TRƯỚC → THẢ PHANH TAY SAU\n- Nếu xe rung mạnh → thêm ga ngay\n- Tuyệt đối KHÔNG thả côn đột ngột → chết máy",
+          "icon": "terrain"
+        },
+        {
+          "id": 6,
+          "title": "Thay đổi số trên đường thẳng",
+          "summary": "Tăng/giảm số đúng thời điểm và tốc độ",
+          "content": "## Thay đổi số trên đường thẳng\n\n### Yêu cầu\n- Tăng từ số 1 lên số 2 khi qua biển 20 xanh\n- Giảm từ số 2 về số 1 khi qua biển 20 trắng\n- Tốc độ phải đạt >20km/h khi ở số 2\n\n### Kỹ thuật tăng số\n\n**Bước 1:** Đi số 1, tăng ga để đạt tốc độ ~20km/h\n\n**Bước 2:** Trước biển 20 xanh → đạp côn + nhả ga + chuyển số 2\n\n**Bước 3:** Nhả côn từ từ + thêm ga nhẹ\n\n### Kỹ thuật giảm số\n\n**Bước 1:** Khi gần biển 20 trắng → nhả ga, phanh nhẹ\n\n**Bước 2:** Tốc độ giảm dưới 20km/h → đạp côn + về số 1\n\n**Bước 3:** Nhả côn từ từ\n\n### Mẹo\n- Biển XANH → TĂNG số\n- Biển TRẮNG → GIẢM số\n- Không chuyển số khi côn chưa đạp hết → hỏng hộp số\n- Đạp côn NHANH, nhả côn CHẬM",
+          "icon": "swap_vert"
+        },
+        {
+          "id": 7,
+          "title": "Ngã tư có tín hiệu đèn",
+          "summary": "Cách xử lý đúng khi gặp đèn tín hiệu trong sa hình",
+          "content": "## Qua ngã tư có đèn tín hiệu\n\n### Yêu cầu\n- Tuân thủ đèn tín hiệu\n- Dừng đúng vạch khi đèn đỏ\n- Xi-nhan đúng chiều khi rẽ\n\n### Xử lý theo màu đèn\n\n**🟢 Đèn xanh:**\n- Quan sát → đi qua\n- Nếu rẽ → bật xi-nhan trước 30m\n\n**🟡 Đèn vàng:**\n- Chưa qua vạch → DỪNG LẠI\n- Đã qua vạch → đi tiếp NHANH\n\n**🔴 Đèn đỏ:**\n- Dừng trước vạch\n- Không tắt máy, giữ số 1\n- Khi đèn xanh → đi ngay (không chờ lâu)\n\n### Mẹo\n- Khi đến gần ngã tư → GIẢM TỐC ĐỘ\n- Luôn quan sát đèn từ xa\n- Đèn xanh nhấp nháy = sắp chuyển vàng → chuẩn bị dừng\n- Dừng trước vạch 50cm là đẹp nhất",
+          "icon": "traffic"
+        },
+        {
+          "id": 8,
+          "title": "Quy tắc ưu tiên giải sa hình (5 bước)",
+          "summary": "Xét theo 5 bước: Vào - Ưu tiên - Đường - Phải - Hướng",
+          "content": "## Giải sa hình - 5 bước ưu tiên\n\n### Bước 1: Xe đã vào ngã tư trước\n→ Xe nào đã LĂN BÁNH vào ngã tư → đi trước\n\n### Bước 2: Xe ưu tiên\n→ **Hỏa - Sự - An - Thương**\n- 🚒 Xe chữa cháy\n- 🪖 Xe quân sự\n- 👮 Xe công an\n- 🚑 Xe cứu thương\n\n### Bước 3: Đường ưu tiên\n→ Xe trên đường ưu tiên đi trước\n\n### Bước 4: Quyền bên phải\n→ Ngã tư KHÔNG có vòng xuyến:\n- Xe không vướng bên phải → được đi trước\n- Đứng ở vị trí xe, nhìn sang PHẢI: không có xe → đi\n\n### Bước 5: Thứ tự hướng đi\n→ Rẽ trái nhường Đi thẳng nhường Rẽ phải\n\n### Mẹo nhớ: \"Vào - Ưu - Đường - Phải - Hướng\"\n(Nguồn: trungtamthanhcong.net)",
+          "icon": "route"
+        }
+      ]
+    },
+    {
+      "id": "cau_hay_sai",
+      "title": "Câu hỏi hay sai",
+      "icon": "warning_amber",
+      "color": "#EF4444",
+      "description": "Phân tích lỗi phổ biến mà 90% thí sinh mắc phải",
+      "tips": [
+        {
+          "id": 1,
+          "title": "Nhầm lẫn 'Dừng xe' và 'Đỗ xe'",
+          "summary": "Hai khái niệm khác nhau, sai là mất điểm",
+          "content": "## Phân biệt Dừng xe và Đỗ xe\n\n### Dừng xe\n- Xe **tạm thời không di chuyển** trong thời gian ngắn\n- Lái xe **vẫn ngồi trên xe** hoặc đứng gần xe\n- Có thể di chuyển ngay khi cần\n\n### Đỗ xe\n- Xe **không di chuyển** trong thời gian dài\n- Lái xe **rời khỏi xe**\n- Phải đỗ đúng nơi quy định\n\n### Hay nhầm ở đâu?\n\n**Câu hỏi bẫy:** \"Nơi nào cấm dừng xe?\"\n→ Nhiều người chọn nơi chỉ cấm ĐỖ (P.131a)\n\n**Ghi nhớ:**\n- Biển P.130 (gạch chéo X): cấm CẢ dừng lẫn đỗ\n- Biển P.131a (gạch chéo \\): chỉ cấm đỗ, ĐƯỢC dừng\n\n### Ví dụ hay sai\n- \"Trên cầu được dừng xe không?\" → KHÔNG (cấm cả dừng lẫn đỗ)\n- \"Cách ngã tư 6m được dừng xe không?\" → ĐƯỢC (chỉ cấm < 5m)\n- \"Cách ngã tư 4m được dừng xe không?\" → KHÔNG (< 5m)",
+          "icon": "compare_arrows"
+        },
+        {
+          "id": 2,
+          "title": "Nhầm thứ tự ưu tiên qua ngã tư",
+          "summary": "Xe bên phải hay bên trái được đi trước?",
+          "content": "## Sai thứ tự ưu tiên tại ngã tư\n\n### Lỗi phổ biến\n- Nhầm xe bên TRÁI đi trước (sai!)\n- Quên rằng xe đi THẲNG ưu tiên hơn xe rẽ TRÁI\n- Không xác định đúng \"bên phải\" khi ở vòng xuyến\n\n### Quy tắc đúng\n\n**1. Có đèn tín hiệu → theo đèn**\n\n**2. Có CSGT → theo hiệu lệnh CSGT**\n\n**3. Không có đèn, không CSGT:**\n- Đường ưu tiên → đi trước\n- Cùng cấp → xe BÊN PHẢI đi trước\n- Cùng hướng → xe đi THẲNG trước, rẽ PHẢI trước, rẽ TRÁI sau\n\n### Ví dụ hay sai\nTại ngã tư có 3 xe A (đi thẳng), B (từ bên phải rẽ trái), C (từ bên trái đi thẳng):\n→ Thứ tự: **B → A → C**\n(B ở bên phải A → B trước A, A ở bên phải C → A trước C)",
+          "icon": "shuffle"
+        },
+        {
+          "id": 3,
+          "title": "Câu hỏi về tốc độ dễ nhầm",
+          "summary": "Phân biệt tốc độ trong và ngoài khu dân cư",
+          "content": "## Nhầm lẫn tốc độ thường gặp\n\n### Lỗi 1: Nhầm 50 và 60\n- Trong khu dân cư **có dải phân cách**: 60 km/h\n- Trong khu dân cư **không dải phân cách**: 50 km/h\n→ Hay nhầm ngược!\n\n### Lỗi 2: Nhầm tốc độ đường cao tốc\n- Tốc độ TỐI THIỂU trên cao tốc: 60 km/h\n- Tốc độ TỐI ĐA: 120 km/h (xe con)\n→ Hay quên tốc độ TỐI THIỂU!\n\n### Lỗi 3: Tốc độ ban đêm\n- Ngoài khu dân cư, ban đêm → giảm 10 km/h so với ban ngày\n→ Hay quên quy tắc này!\n\n### Mẹo phân biệt\n- Số LẺ (50) → KHÔNG có dải phân cách\n- Số CHẴN (60) → CÓ dải phân cách\n- Cao tốc nhớ: 60 tối thiểu, 120 tối đa",
+          "icon": "speed"
+        },
+        {
+          "id": 4,
+          "title": "Bẫy câu hỏi biển báo phụ",
+          "summary": "Biển phụ thay đổi hoàn toàn ý nghĩa biển chính",
+          "content": "## Cạm bẫy biển báo phụ\n\n### Biển phụ là gì?\n- Đặt phía dưới biển chính\n- Bổ sung, giải thích thêm cho biển chính\n- Có thể thay đổi HOÀN TOÀN ý nghĩa biển chính\n\n### Hay sai ở đâu?\n\n**1. Biển phụ về thời gian:**\n- Biển cấm + biển phụ \"7h-19h\" → chỉ cấm trong giờ đó\n→ Nhiều người nghĩ cấm cả ngày!\n\n**2. Biển phụ về đối tượng:**\n- Biển cấm + biển phụ \"Trừ xe buýt\" → xe buýt ĐƯỢC đi\n→ Hay quên đọc biển phụ!\n\n**3. Biển phụ khoảng cách:**\n- Biển nguy hiểm + \"200m\" → nguy hiểm cách 200m phía trước\n→ Nhầm với khoảng cách hiệu lực!\n\n### Mẹo\n- LUÔN đọc biển phụ trước khi trả lời\n- Biển phụ có thể \"đảo ngược\" ý nghĩa biển chính\n- Trong đề thi, câu có biển phụ thường là câu BẪY",
+          "icon": "info"
+        },
+        {
+          "id": 5,
+          "title": "Nhầm cấm rẽ trái và cấm quay đầu",
+          "summary": "Theo luật mới 2024, cấm rẽ trái KHÔNG cấm quay đầu",
+          "content": "## Cấm rẽ trái ≠ Cấm quay đầu\n\n### Theo luật mới (2024)\n- Biển **cấm rẽ trái** (P.123a): CHỈ cấm rẽ trái\n- **KHÔNG cấm quay đầu** (trừ khi có thêm biển cấm quay đầu)\n\n### Theo luật cũ (nhiều tài liệu cũ)\n- Cấm rẽ trái = cấm cả quay đầu\n→ Đây là điểm HAY NHẦM NHẤT!\n\n### Trong đề thi hiện hành\n- Cần xác định đề thi theo luật nào\n- Phần lớn đề thi mới: cấm rẽ trái ≠ cấm quay đầu\n\n### Ghi nhớ\n- P.123a: Cấm rẽ trái → chỉ cấm rẽ trái\n- P.124a: Cấm quay đầu → chỉ cấm quay đầu  \n- P.124c: Cấm rẽ trái VÀ quay đầu → cấm cả hai\n- Muốn cấm cả hai → phải dùng P.124c",
+          "icon": "u_turn_left"
+        },
+        {
+          "id": 6,
+          "title": "4 nhóm câu hỏi liệt cần đặc biệt lưu ý",
+          "summary": "Sai 1 câu = TRƯỢT. Nhớ 4 nhóm này là an toàn",
+          "content": "## Câu hỏi liệt thường liên quan đến\n\n### 1. 🍺 Uống rượu bia lái xe\n- Nồng độ cồn PHẢI bằng 0\n- Bất kỳ mức nào > 0 → vi phạm\n- Đáp án: \"Không được phép\" / \"Không được uống\"\n\n### 2. 🚦 Vượt đèn đỏ, chạy quá tốc độ\n- Vượt đèn đỏ → NGHIÊM CẤM, không ngoại lệ\n- Chạy quá tốc độ nghiêm trọng (>35 km/h) → câu liệt\n- Học thuộc bảng tốc độ để không nhầm\n\n### 3. 💊 Sử dụng ma túy\n- Cấm TUYỆT ĐỐI, không có ngoại lệ\n- Cả khi lái xe lẫn khi đang trên xe\n- Bị phát hiện → tước bằng + xử lý hình sự\n\n### 4. 🏎️ Đua xe, lạng lách\n- Đua xe trái phép trên đường → NGHIÊM CẤM\n- Lạng lách, đánh võng, chạy bằng 1 bánh\n- Cổ vũ, tổ chức đua xe cũng bị xử phạt\n\n### Mẹo nhận biết nhanh\n- Thấy từ **\"Nghiêm cấm\"** → 90% là câu liệt\n- Liên quan **rượu bia, ma túy** → 100% câu liệt\n- Hành vi **nguy hiểm tính mạng** → câu liệt\n- Không chắc → chọn **\"Cấm\"** / **\"Không được\"**",
+          "icon": "gpp_bad"
+        }
+      ]
+    },
+    {
+      "id": "meo_lam_bai",
+      "title": "Mẹo làm bài thi",
+      "icon": "psychology",
+      "color": "#F59E0B",
+      "description": "Chiến thuật làm bài thi đạt điểm cao nhất",
+      "tips": [
+        {
+          "id": 1,
+          "title": "Chiến thuật làm bài 35 câu",
+          "summary": "Phân bổ thời gian và thứ tự làm bài hợp lý",
+          "content": "## Chiến thuật làm 35 câu trong 22 phút\n\n### Phân bổ thời gian\n- 35 câu / 22 phút ≈ 38 giây/câu\n- Câu dễ: 15-20 giây\n- Câu khó: 60-90 giây\n- Dành 3 phút cuối kiểm tra lại\n\n### Thứ tự làm bài\n\n**Lượt 1 (12 phút):** Làm tất cả câu dễ, câu chắc chắn\n- Đọc lướt → biết ngay đáp án → chọn luôn\n- Câu chưa chắc → đánh dấu, bỏ qua\n\n**Lượt 2 (7 phút):** Quay lại câu đã đánh dấu\n- Suy nghĩ kỹ hơn\n- Loại trừ đáp án sai\n\n**Lượt 3 (3 phút):** Kiểm tra lại\n- Ưu tiên kiểm tra câu ĐIỂM LIỆT\n- Không đổi đáp án trừ khi chắc chắn sai\n\n### Mẹo vàng\n- KHÔNG BAO GIỜ bỏ trống câu nào\n- Câu không biết → chọn đáp án dài nhất\n- Đọc KỸ từ khóa: \"không\", \"ngoại trừ\", \"cấm\"",
+          "icon": "timer"
+        },
+        {
+          "id": 2,
+          "title": "Loại trừ đáp án sai",
+          "summary": "Kỹ thuật loại trừ khi không chắc đáp án đúng",
+          "content": "## Kỹ thuật loại trừ đáp án\n\n### Nguyên tắc\nKhi không biết đáp án đúng → loại bỏ đáp án chắc chắn SAI\n\n### Các dấu hiệu đáp án SAI\n\n**1. Đáp án cực đoan:**\n- \"Tất cả đều được\" → thường SAI\n- \"Không bao giờ\" → thường SAI\n- Ngoại lệ: câu về nồng độ cồn, ma túy\n\n**2. Đáp án trái logic:**\n- Cho phép vượt ở cầu hẹp → SAI\n- Cho phép uống rượu khi lái xe → SAI\n\n**3. Hai đáp án giống nhau:**\n- Nếu A và B gần giống → đáp án đúng thường là 1 trong 2\n- C hoàn toàn khác → có thể loại C\n\n### Mẹo thống kê\n- Đáp án đúng phân bố đều A, B, C, D\n- Nếu chọn 3 câu liên tiếp cùng đáp án → kiểm tra lại\n- Đáp án DÀI NHẤT thường có xác suất đúng cao hơn",
+          "icon": "filter_list"
+        },
+        {
+          "id": 3,
+          "title": "Từ khóa \"bẫy\" trong đề thi",
+          "summary": "Nhận biết câu hỏi có từ khóa dễ gây nhầm",
+          "content": "## Từ khóa bẫy thường gặp\n\n### Từ phủ định\n- \"KHÔNG đúng\" → chọn đáp án SAI\n- \"KHÔNG được phép\" → chọn hành vi bị CẤM\n- \"Trừ trường hợp nào\" → chọn NGOẠI LỆ\n\n### Từ tuyệt đối\n- \"Tất cả\" → kiểm tra có ngoại lệ không\n- \"Luôn luôn\" → thường có trường hợp ngoại lệ\n- \"Nghiêm cấm\" → thường là đáp án đúng (câu điểm liệt)\n\n### Từ so sánh\n- \"Lớn hơn\", \"nhỏ hơn\" → chú ý dấu \"=\"\n- \"Tối đa\", \"tối thiểu\" → hai ý nghĩa ngược nhau\n- \"Ít nhất\", \"nhiều nhất\" → dễ nhầm\n\n### Mẹo\n- Gạch chân từ khóa quan trọng khi đọc\n- Đọc câu hỏi 2 lần nếu có từ phủ định\n- \"KHÔNG\" + \"KHÔNG\" = CÓ (phủ định kép)\n- Cẩn thận câu hỏi dạng \"Câu nào SAI?\"",
+          "icon": "search"
+        },
+        {
+          "id": 4,
+          "title": "Ghi nhớ câu điểm liệt",
+          "summary": "Phân loại 60 câu điểm liệt theo chủ đề để dễ nhớ",
+          "content": "## Phân loại 60 câu điểm liệt\n\n### Nhóm 1: Nồng độ cồn & ma túy (8 câu)\n- Cấm TUYỆT ĐỐI nồng độ cồn khi lái xe\n- Cấm sử dụng ma túy, chất kích thích\n→ Đáp án luôn là CẤM/KHÔNG ĐƯỢC\n\n### Nhóm 2: Tốc độ & khoảng cách (10 câu)\n- Tốc độ trong/ngoài khu dân cư\n- Khoảng cách an toàn\n→ Học THUỘC các con số\n\n### Nhóm 3: Xử lý tai nạn (7 câu)\n- Bỏ chạy sau tai nạn → NGHIÊM CẤM\n- Phải cứu người, báo công an\n→ Ưu tiên CỨU NGƯỜI\n\n### Nhóm 4: Quyền ưu tiên (5 câu)\n- Thứ tự: Hỏa-Sự-Công-Thương-Đê\n→ Học thuộc thứ tự\n\n### Nhóm 5: Luật cơ bản (30 câu)\n- Tuổi lái xe, giấy phép\n- Quy tắc nhường đường\n- Cấm đua xe, lạng lách\n→ Đọc kỹ luật\n\n### Mẹo ôn\n- Làm riêng 60 câu điểm liệt mỗi ngày\n- Câu nào sai → đánh dấu, ôn lại\n- Chắc chắn 100% câu điểm liệt trước khi thi",
+          "icon": "star"
+        },
+        {
+          "id": 5,
+          "title": "Mẹo từ khóa chọn đáp án siêu tốc",
+          "summary": "Chỉ cần nhìn từ khóa trong đáp án là chọn đúng ngay",
+          "content": "## Mẹo từ khóa & đáp án siêu tốc\n\n### Chọn NGAY đáp án chứa từ khóa sau\n- **\"Bị nghiêm cấm\"**, **\"Không được...\"** (phép, mang vác, vượt, quay đầu...)\n- **\"Chấp hành\"**, **\"Giảm tốc độ\"**, **\"Về số thấp\"**\n- **\"Đi bên phải\"**, **\"Dừng thanh nổi\"**, **\"Bật đèn\"**\n- **\"Cơ quan có thẩm quyền\"**, **\"Xe chữa cháy\"**, **\"Xe quân sự/công an\"**\n\n### Đáp án \"Cả ý 1 và ý 2\"\n- Thường ĐÚNG, nhưng cần kiểm tra lại để chắc\n\n### Câu hỏi về CSGT\n- CSGT giơ **1 tay** → chọn **ý 3**\n- CSGT giơ **2 tay** → chọn **ý 4**\n\n### Câu hỏi về độ tuổi lái xe\n| Hạng bằng | Tuổi tối thiểu |\n|---|---|\n| A1, B1 | **18 tuổi** |\n| A2, B2 | **21 tuổi** |\n| C | **24 tuổi** |\n| D | **27 tuổi** |\n\n### Câu hỏi về nồng độ cồn\n→ Chọn đáp án **\"Không được phép\"** hoặc **\"Không được uống\"**\n\n### Câu hỏi về đường cao tốc\n→ **\"Không được\"** đi bộ, quay đầu, lùi xe, đi ngược chiều",
+          "icon": "bolt"
+        }
+      ]
+    },
+    {
+      "id": "meo_sieu_toc",
+      "title": "Mẹo siêu tốc",
+      "icon": "bolt",
+      "color": "#8B5CF6",
+      "description": "Cheat sheet tổng hợp - xem 5 phút trước khi vào phòng thi",
+      "tips": [
+        {
+          "id": 1,
+          "title": "Từ khóa chọn đáp án nhanh",
+          "summary": "Nhìn từ khóa → chọn đáp án đúng ngay lập tức",
+          "content": "## Mẹo từ khóa siêu tốc\n\n### ✅ Chọn NGAY đáp án chứa từ khóa\n- **\"Bị nghiêm cấm\"**, **\"Không được...\"** (phép, mang vác, vượt, quay đầu...)\n- **\"Chấp hành\"**, **\"Giảm tốc độ\"**, **\"Về số thấp\"**\n- **\"Đi bên phải\"**, **\"Dừng thanh nổi\"**, **\"Bật đèn\"**\n- **\"Cơ quan có thẩm quyền\"**, **\"Xe chữa cháy\"**, **\"Xe quân sự/công an\"**\n\n### 🎯 Đáp án \"Cả ý 1 và ý 2\" (hoặc ý 3)\n- Thường ĐÚNG → nhưng vẫn cần kiểm tra nhanh\n\n### 👮 Câu hỏi về CSGT\n- Giơ **1 tay** → chọn **ý 3**\n- Giơ **2 tay** → chọn **ý 4**\n\n### 🎂 Câu hỏi về độ tuổi\n| Hạng | Tuổi |\n|---|---|\n| A1, B1 | 18 |\n| A2, B2 | 21 |\n| C | 24 |\n| D | 27 |\n\n### Mẹo nhớ tuổi: \"18 - 21 - 24 - 27\" (cách nhau 3)\n\n### 🍺 Câu hỏi nồng độ cồn\n→ Luôn chọn **\"Không được phép\"** / **\"Không được uống\"**\n\n### 🛣️ Câu hỏi đường cao tốc\n→ **\"Không được\"**: đi bộ, quay đầu, lùi xe, đi ngược chiều, dừng đỗ",
+          "icon": "bolt"
+        },
+        {
+          "id": 2,
+          "title": "Quy tắc ưu tiên sa hình (5 bước)",
+          "summary": "Hỏa - Sự - An - Thương + 5 bước giải mọi bài sa hình",
+          "content": "## Giải sa hình siêu tốc - 5 bước\n\nKhi gặp bài sa hình, xét theo THỨ TỰ sau:\n\n### Bước 1: Xe đã vào ngã tư trước\n→ Xe nào đã LĂN BÁNH vào ngã tư → đi trước\n\n### Bước 2: Xe ưu tiên\n→ Thứ tự: **Hỏa - Sự - An - Thương**\n- 🚒 **Hỏa** = Xe chữa cháy\n- 🪖 **Sự** = Xe quân sự\n- 👮 **An** = Xe công an\n- 🚑 **Thương** = Xe cứu thương\n\n### Bước 3: Đường ưu tiên\n→ Xe trên **đường ưu tiên** (có biển báo) đi trước\n\n### Bước 4: Quyền bên phải\n→ Ngã tư KHÔNG có vòng xuyến: xe **không vướng bên phải** được đi trước\n→ Cách xét: đứng ở vị trí mỗi xe, nhìn sang PHẢI, nếu không có xe → được đi\n\n### Bước 5: Thứ tự hướng đi\n→ **Rẽ trái** nhường **Đi thẳng** nhường **Rẽ phải**\n\n### Mẹo nhớ: \"Vào - Ưu - Đường - Phải - Hướng\"",
+          "icon": "route"
+        },
+        {
+          "id": 3,
+          "title": "Nhận biết biển báo siêu nhanh",
+          "summary": "Chỉ cần nhìn hình dáng + màu sắc là biết loại biển",
+          "content": "## Nhận biết biển báo trong 2 giây\n\n### 🔴 Biển tròn + viền ĐỎ = CẤM\n- Nền trắng, viền đỏ\n- Hình vẽ bên trong = điều bị cấm\n- Gạch chéo đỏ = cấm tuyệt đối\n\n### 🟡 Biển tam giác + viền ĐỎ = NGUY HIỂM\n- Hình tam giác đều, đỉnh hướng lên\n- Nền vàng, viền đỏ\n- Cảnh báo, không phải cấm\n\n### 🔵 Biển tròn + nền XANH = HIỆU LỆNH\n- Bắt buộc phải tuân theo\n- Mũi tên trắng = hướng phải đi\n\n### 🟦 Biển vuông + nền XANH = CHỈ DẪN\n- Thông tin hướng dẫn\n- Không bắt buộc, chỉ hỗ trợ\n\n### Quy tắc cấm xe\n- **Cấm nhỏ thì cấm to**: Cấm xe con → cấm xe tải → cấm máy kéo → cấm sơ mi rơ moóc\n- **Cấm to KHÔNG cấm nhỏ**: Ngược lại\n\n### Ví dụ\n- Biển cấm ô tô → CẤM CẢ xe tải, máy kéo\n- Biển cấm xe tải → KHÔNG cấm xe con",
+          "icon": "signpost"
+        },
+        {
+          "id": 4,
+          "title": "Câu hỏi điểm liệt - Cheat sheet",
+          "summary": "4 nhóm câu liệt PHẢI nhớ, sai 1 câu = TRƯỢT",
+          "content": "## Câu hỏi điểm liệt - Nhớ nhanh\n\n### ⚠️ Sai 1 câu điểm liệt = TRƯỢT ngay lập tức\n\n### Nhóm 1: 🍺 Rượu bia & Ma túy\n- Nồng độ cồn phải **BẰNG 0**\n- Ma túy, chất kích thích → **CẤM TUYỆT ĐỐI**\n- Đáp án luôn là \"Không được phép\"\n\n### Nhóm 2: 🚦 Vượt đèn đỏ & Tốc độ\n- Vượt đèn đỏ → **NGHIÊM CẤM**\n- Chạy quá tốc độ nghiêm trọng → vi phạm nặng\n- Học thuộc bảng tốc độ: 50/60, 80/90, 120\n\n### Nhóm 3: 💊 Sử dụng ma túy khi lái xe\n- Cấm hoàn toàn, không có ngoại lệ\n- Bị phát hiện → tước bằng, xử lý hình sự\n\n### Nhóm 4: 🏎️ Đua xe, lạng lách\n- Đua xe trái phép → **NGHIÊM CẤM**\n- Lạng lách, đánh võng → vi phạm nghiêm trọng\n- Cổ vũ đua xe cũng bị xử phạt\n\n### Mẹo nhận biết câu liệt\n- Câu có từ **\"Nghiêm cấm\"** → thường là câu liệt\n- Liên quan rượu bia, ma túy → **100% câu liệt**\n- Hành vi nguy hiểm cho tính mạng → câu liệt\n- Nếu không chắc → chọn đáp án \"Cấm\" / \"Không được\"",
+          "icon": "dangerous"
+        }
+      ]
+    }
+  ]
+}
+

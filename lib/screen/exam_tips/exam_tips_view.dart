@@ -1,9 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import '../../model/exam_tip.dart';
 import '../../resource/app_colors.dart';
 import 'exam_tips_controller.dart';
+import 'tip_category_view.dart';
+import 'tip_detail_view.dart';
 
 class ExamTipsView extends StatefulWidget {
   ExamTipsView({super.key}) {
@@ -36,143 +40,75 @@ class _ExamTipsViewState extends State<ExamTipsView> {
         elevation: 0,
         leading: CupertinoButton(
           padding: EdgeInsets.zero,
-          minSize: null,
           onPressed: () => Get.back(),
-          child: Icon(
-            Icons.arrow_back_ios_new_rounded,
-            size: 20.w,
-            color: AppColors.textPrimary,
-          ),
+          child: Icon(Icons.arrow_back_ios_new_rounded, size: 20.w, color: AppColors.textPrimary),
         ),
         title: Text(
           "Mẹo Thi",
-          style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w800,
-            color: AppColors.textPrimary,
-          ),
+          style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w800, color: AppColors.textPrimary),
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildSectionHeader("MẸO HAY HÔM NAY"),
-            SizedBox(height: 12.h),
-            _buildHeroCard(),
-            SizedBox(height: 28.h),
+      body: Obx(() {
+        if (controller.isLoading.value) {
+          return const Center(child: CupertinoActivityIndicator());
+        }
+        return SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 20.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _buildSectionHeader("MẸO HAY HÔM NAY"),
+              SizedBox(height: 12.h),
+              _buildHeroCard(),
+              SizedBox(height: 28.h),
 
-            _buildSectionHeader("DANH MỤC BÍ KÍP"),
-            SizedBox(height: 12.h),
-            _buildCategoryCard(
-              title: "Mẹo lý thuyết",
-              icon: Icons.menu_book_rounded,
-              iconBgColor: AppColors.primary.withValues(alpha: 0.1),
-              iconColor: AppColors.primary,
-              bgColor: AppColors.surface,
-              content: Wrap(
-                spacing: 8.w,
-                runSpacing: 8.h,
-                children: [
-                  _buildTag("Quy tắc 5 giây"),
-                  _buildTag("Ghi nhớ biển báo"),
-                  _buildTag("Thi sa hình"),
-                ],
-              ),
-            ),
-            SizedBox(height: 16.h),
-            _buildCategoryCard(
-              title: "Câu hỏi hay sai",
-              icon: Icons.warning_amber_rounded,
-              iconBgColor: Colors.transparent,
-              iconColor: Colors.red,
-              bgColor: AppColors.errorBackground,
-              arrowColor: Colors.red.withValues(alpha: 0.5),
-              content: Text(
-                "Phân tích sâu các lỗi phổ biến mà 90% thí sinh mắc phải khi làm bài thi",
-                style: TextStyle(fontSize: 13.sp, color: AppColors.error.withValues(alpha: 0.7), height: 1.4, fontWeight: FontWeight.w500),
-              ),
-            ),
-            SizedBox(height: 16.h),
-            _buildCategoryCard(
-              title: "Mẹo thi sa hình",
-              icon: Icons.directions_car_rounded,
-              iconBgColor: Colors.transparent,
-              iconColor: AppColors.primary,
-              bgColor: AppColors.primary.withValues(alpha: 0.05),
-              arrowColor: Colors.transparent, // no arrow requested
-              content: Text(
-                "Làm chủ 11 bài thi sa hình khó nhằn. Ghép xe dọc, ghép xe ngang, dừng xe ngang dốc và các điểm canh chuẩn.",
-                style: TextStyle(fontSize: 13.sp, color: AppColors.textSecondary, height: 1.4, fontWeight: FontWeight.w500),
-              ),
-            ),
-            SizedBox(height: 28.h),
+              _buildSectionHeader("DANH MỤC BÍ KÍP"),
+              SizedBox(height: 12.h),
+              ...controller.categories.asMap().entries.map((entry) {
+                return Padding(
+                  padding: EdgeInsets.only(bottom: 14.h),
+                  child: _buildCategoryCard(entry.value),
+                );
+              }),
+              SizedBox(height: 14.h),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _buildSectionHeader("MẸO NHANH TỪ CHUYÊN GIA"),
-                CupertinoButton(
-                  padding: EdgeInsets.zero,
-                  minSize: null,
-                  onPressed: () {},
-                  child: Text("Xem tất cả", style: TextStyle(fontSize: 13.sp, color: AppColors.primary, fontWeight: FontWeight.w600)),
-                )
-              ],
-            ),
-            SizedBox(height: 12.h),
-            _buildQuickTipItem(
-              icon: Icons.emoji_objects_rounded,
-              iconBgColor: Colors.orange.withValues(alpha: 0.1),
-              iconColor: Colors.orange,
-              title: "Cách nhận biết nhanh biển báo cấm",
-              subtitle: "Chỉ cần nhớ 3 đặc điểm màu sắc và hình dạng...",
-            ),
-            SizedBox(height: 12.h),
-            _buildQuickTipItem(
-              icon: Icons.check_circle_outline_rounded,
-              iconBgColor: Colors.green.withValues(alpha: 0.1),
-              iconColor: Colors.green,
-              title: "5 giây thần thánh khi dừng đèn đỏ",
-              subtitle: "Lưu ý quan trọng để không bị trừ điểm khi thi sa hình.",
-            ),
-            SizedBox(height: 48.h),
-          ],
-        ),
-      ),
+              _buildSectionHeader("MẸO NHANH TỪ CHUYÊN GIA"),
+              SizedBox(height: 12.h),
+              ..._buildQuickTips(),
+              SizedBox(height: 48.h),
+            ],
+          ),
+        );
+      }),
     );
   }
 
   Widget _buildSectionHeader(String title) {
     return Text(
       title,
-      style: TextStyle(
-        fontSize: 12.sp,
-        fontWeight: FontWeight.w700,
-        color: AppColors.textLight,
-        letterSpacing: 0.5,
-      ),
+      style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700, color: AppColors.textLight, letterSpacing: 0.5),
     );
   }
 
+  // ─────────── HERO CARD ─────────────────
   Widget _buildHeroCard() {
+    final f = controller.featured.value;
+    if (f == null) return const SizedBox.shrink();
+
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      minSize: null,
-      onPressed: () {},
+      onPressed: () {
+        final tip = ExamTip(id: 0, title: f.title, summary: f.summary, content: f.content, icon: 'star');
+        Get.to(() => TipDetailView(tip: tip, accentColor: AppColors.primary));
+      },
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.surface,
           borderRadius: BorderRadius.circular(16.r),
           boxShadow: [
-            BoxShadow(
-              color: AppColors.textPrimary.withValues(alpha: 0.03),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
-            )
+            BoxShadow(color: AppColors.textPrimary.withValues(alpha: 0.03), blurRadius: 10, offset: const Offset(0, 4)),
           ],
         ),
         child: Column(
@@ -182,11 +118,21 @@ class _ExamTipsViewState extends State<ExamTipsView> {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.vertical(top: Radius.circular(16.r)),
-                  child: Image.network(
-                    "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1000&auto=format&fit=crop",
+                  child: CachedNetworkImage(
+                    imageUrl: f.image,
                     height: 160.h,
                     width: double.infinity,
                     fit: BoxFit.cover,
+                    placeholder: (_, __) => Container(
+                      height: 160.h,
+                      color: AppColors.border,
+                      child: Center(child: CupertinoActivityIndicator()),
+                    ),
+                    errorWidget: (_, __, ___) => Container(
+                      height: 160.h,
+                      color: AppColors.primary.withValues(alpha: 0.1),
+                      child: Icon(Icons.image_rounded, size: 40.w, color: AppColors.primary),
+                    ),
                   ),
                 ),
                 Positioned(
@@ -198,14 +144,7 @@ class _ExamTipsViewState extends State<ExamTipsView> {
                       color: AppColors.primary,
                       borderRadius: BorderRadius.circular(20.r),
                     ),
-                    child: Text(
-                      "TIN MỚI",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
+                    child: Text("⭐ NỔI BẬT", style: TextStyle(color: Colors.white, fontSize: 10.sp, fontWeight: FontWeight.w700)),
                   ),
                 ),
               ],
@@ -216,81 +155,66 @@ class _ExamTipsViewState extends State<ExamTipsView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Mẹo căn khoảng cách an toàn khi lái xe trong phố",
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.textPrimary,
-                      height: 1.3,
-                    ),
+                    f.title,
+                    style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w800, color: AppColors.textPrimary, height: 1.3),
                   ),
                   SizedBox(height: 8.h),
                   Text(
-                    "Làm thế nào để không \"va chạm\" trong giờ cao điểm? Học ngay quy tắc nhìn bánh xe trước và cách căn lề chuẩn xác nhất...",
-                    style: TextStyle(
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.textSecondary,
-                      height: 1.4,
-                    ),
+                    f.summary,
+                    style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary, height: 1.4),
                   ),
                   SizedBox(height: 16.h),
                   Row(
                     children: [
                       Icon(Icons.schedule_rounded, size: 14.w, color: AppColors.primary),
                       SizedBox(width: 4.w),
-                      Text(
-                        "5 phút đọc",
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          color: AppColors.primary,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      Text(f.readTime, style: TextStyle(fontSize: 12.sp, color: AppColors.primary, fontWeight: FontWeight.w600)),
                       const Spacer(),
-                      Text(
-                        "Xem chi tiết",
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          color: AppColors.primary,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
+                      Text("Xem chi tiết", style: TextStyle(fontSize: 12.sp, color: AppColors.primary, fontWeight: FontWeight.w700)),
                       SizedBox(width: 2.w),
                       Icon(Icons.arrow_forward_rounded, size: 12.w, color: AppColors.primary),
                     ],
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildCategoryCard({
-    required String title,
-    required IconData icon,
-    required Color iconColor,
-    required Color iconBgColor,
-    required Color bgColor,
-    Color? arrowColor,
-    required Widget content,
-  }) {
+  // ─────────── CATEGORY CARD ─────────────────
+  Widget _buildCategoryCard(TipCategory cat) {
+    Color accentColor;
+    try {
+      accentColor = Color(int.parse(cat.color.replaceFirst('#', '0xFF')));
+    } catch (_) {
+      accentColor = AppColors.primary;
+    }
+
+    final iconMap = {
+      'menu_book': Icons.menu_book_rounded,
+      'directions_car': Icons.directions_car_rounded,
+      'warning_amber': Icons.warning_amber_rounded,
+      'psychology': Icons.psychology_rounded,
+      'bolt': Icons.bolt_rounded,
+    };
+
+    final isError = cat.id == 'cau_hay_sai';
+
     return CupertinoButton(
       padding: EdgeInsets.zero,
-      minSize: null,
-      onPressed: () {},
+      onPressed: () => Get.to(() => TipCategoryView(category: cat)),
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.all(16.w),
         decoration: BoxDecoration(
-          color: bgColor,
+          color: isError ? AppColors.errorBackground : accentColor.withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(16.r),
-          boxShadow: bgColor == AppColors.surface
-              ? [BoxShadow(color: AppColors.textPrimary.withValues(alpha: 0.02), blurRadius: 10, offset: const Offset(0, 4))]
-              : null,
+          boxShadow: [
+            BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 8, offset: const Offset(0, 2)),
+          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -300,120 +224,113 @@ class _ExamTipsViewState extends State<ExamTipsView> {
                 Container(
                   padding: EdgeInsets.all(8.w),
                   decoration: BoxDecoration(
-                    color: iconBgColor,
+                    color: accentColor.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(8.r),
                   ),
-                  child: Icon(icon, color: iconColor, size: 20.w),
+                  child: Icon(iconMap[cat.icon] ?? Icons.lightbulb_rounded, color: accentColor, size: 20.w),
                 ),
                 const Spacer(),
-                if (arrowColor != Colors.transparent)
-                  Icon(
-                    Icons.north_east_rounded,
-                    color: arrowColor ?? AppColors.textLight,
-                    size: 20.w,
-                  )
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 3.h),
+                  decoration: BoxDecoration(
+                    color: accentColor.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child: Text(
+                    '${cat.tips.length} mẹo',
+                    style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w600, color: accentColor),
+                  ),
+                ),
+                SizedBox(width: 8.w),
+                Icon(Icons.arrow_forward_ios_rounded, color: accentColor.withValues(alpha: 0.5), size: 16.w),
               ],
             ),
             SizedBox(height: 12.h),
             Text(
-              title,
-              style: TextStyle(
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w800,
-                color: AppColors.textPrimary,
-              ),
+              cat.title,
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w800, color: AppColors.textPrimary),
             ),
-            SizedBox(height: 8.h),
-            content,
+            SizedBox(height: 6.h),
+            Text(
+              cat.description,
+              style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary, height: 1.4),
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildTag(String text) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 6.h),
-      decoration: BoxDecoration(
-        color: AppColors.background,
-        borderRadius: BorderRadius.circular(20.r),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 12.sp,
-          fontWeight: FontWeight.w600,
-          color: AppColors.textSecondary,
-        ),
-      ),
-    );
-  }
+  // ─────────── QUICK TIPS ─────────────────
+  List<Widget> _buildQuickTips() {
+    // Lấy 2 tip đầu từ mỗi category làm quick tips
+    final quickTips = <Map<String, dynamic>>[];
+    for (final cat in controller.categories) {
+      Color c;
+      try {
+        c = Color(int.parse(cat.color.replaceFirst('#', '0xFF')));
+      } catch (_) {
+        c = AppColors.primary;
+      }
+      for (final tip in cat.tips.take(1)) {
+        quickTips.add({'tip': tip, 'color': c, 'category': cat.title});
+      }
+    }
 
-  Widget _buildQuickTipItem({
-    required IconData icon,
-    required Color iconBgColor,
-    required Color iconColor,
-    required String title,
-    required String subtitle,
-  }) {
-    return CupertinoButton(
-      padding: EdgeInsets.zero,
-      minSize: null,
-      onPressed: () {},
-      child: Container(
-        padding: EdgeInsets.all(16.w),
-        decoration: BoxDecoration(
-          color: AppColors.surface,
-          borderRadius: BorderRadius.circular(16.r),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.textPrimary.withValues(alpha: 0.02),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
-            )
-          ],
-        ),
-        child: Row(
-          children: [
-            Container(
-              padding: EdgeInsets.all(10.w),
-              decoration: BoxDecoration(
-                color: iconBgColor,
-                borderRadius: BorderRadius.circular(10.r),
-              ),
-              child: Icon(icon, color: iconColor, size: 20.w),
+    return quickTips.map((item) {
+      final tip = item['tip'] as ExamTip;
+      final color = item['color'] as Color;
+
+      return Padding(
+        padding: EdgeInsets.only(bottom: 12.h),
+        child: CupertinoButton(
+          padding: EdgeInsets.zero,
+          onPressed: () => Get.to(() => TipDetailView(tip: tip, accentColor: color)),
+          child: Container(
+            padding: EdgeInsets.all(16.w),
+            decoration: BoxDecoration(
+              color: AppColors.surface,
+              borderRadius: BorderRadius.circular(16.r),
+              boxShadow: [
+                BoxShadow(color: Colors.black.withValues(alpha: 0.02), blurRadius: 10, offset: const Offset(0, 4)),
+              ],
             ),
-            SizedBox(width: 16.w),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.textPrimary,
-                      height: 1.3,
-                    ),
+            child: Row(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(10.w),
+                  decoration: BoxDecoration(
+                    color: color.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(10.r),
                   ),
-                  SizedBox(height: 4.h),
-                  Text(
-                    subtitle,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.textSecondary,
-                    ),
+                  child: Icon(Icons.emoji_objects_rounded, color: color, size: 20.w),
+                ),
+                SizedBox(width: 16.w),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        tip.title,
+                        style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary, height: 1.3),
+                      ),
+                      SizedBox(height: 4.h),
+                      Text(
+                        tip.summary,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w500, color: AppColors.textSecondary),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(width: 8.w),
+                Icon(Icons.chevron_right_rounded, color: AppColors.textLight, size: 20.w),
+              ],
             ),
-            SizedBox(width: 8.w),
-            Icon(Icons.chevron_right_rounded, color: AppColors.textLight, size: 20.w),
-          ],
+          ),
         ),
-      ),
-    );
+      );
+    }).toList();
   }
 }

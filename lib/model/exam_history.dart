@@ -1,3 +1,5 @@
+import 'package:drive_pass/common/exam_rules.dart';
+
 class ExamHistory {
   final int examNo;
   final int correct;
@@ -5,6 +7,7 @@ class ExamHistory {
   final String timeTaken;
   final String dateTaken;
   final int timestamp; // millisecondsSinceEpoch — unique per attempt
+  final bool criticalFailed; // wrong answer on the critical (điểm liệt) question
 
   ExamHistory({
     required this.examNo,
@@ -13,10 +16,11 @@ class ExamHistory {
     required this.timeTaken,
     required this.dateTaken,
     required this.timestamp,
+    this.criticalFailed = false,
   });
 
-  /// Passed = correct / total >= 80%
-  bool get passed => total > 0 && (correct / total) >= 0.8;
+  /// Passed = at least ExamRules.passingScore correct and no critical question missed
+  bool get passed => total > 0 && ExamRules.isPassed(correct: correct, criticalFailed: criticalFailed);
 
   int get score => total > 0 ? ((correct / total) * 100).round() : 0;
 
@@ -28,6 +32,7 @@ class ExamHistory {
       timeTaken: json['timeTaken'] ?? '00:00',
       dateTaken: json['dateTaken'] ?? '',
       timestamp: json['timestamp'] ?? 0,
+      criticalFailed: json['criticalFailed'] ?? false,
     );
   }
 
@@ -38,6 +43,7 @@ class ExamHistory {
         'timeTaken': timeTaken,
         'dateTaken': dateTaken,
         'timestamp': timestamp,
+        'criticalFailed': criticalFailed,
       };
 }
 

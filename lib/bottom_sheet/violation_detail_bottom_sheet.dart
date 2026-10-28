@@ -90,7 +90,6 @@ class ViolationDetailBottomSheet extends StatelessWidget {
                         color: Colors.orange,
                       ),
 
-
                     // Remedial
                     if (violation.remedial.trim().isNotEmpty)
                       _buildDetailSection(
@@ -98,6 +97,16 @@ class ViolationDetailBottomSheet extends StatelessWidget {
                         title: 'Biện pháp khắc phục',
                         content: violation.remedial,
                         color: AppColors.success,
+                      ),
+
+                    // Legal basis
+                    if (violation.legalBasis.trim().isNotEmpty)
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 8.h),
+                        child: Text(
+                          'Căn cứ: ${violation.legalBasis}',
+                          style: TextStyle(fontSize: 12.sp, color: AppColors.textSecondary, height: 1.5),
+                        ),
                       ),
 
                     SizedBox(height: 16.h),

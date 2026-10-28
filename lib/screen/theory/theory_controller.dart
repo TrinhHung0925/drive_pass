@@ -20,7 +20,7 @@ class TheoryController extends GetxController {
 
   /// Category keys matching the order of categories
   static const List<String> categoryKeys = [
-    'all', 'rule_concept', 'culture', 'technique', 'road_signs', 'solving',
+    'all', 'rule_concept', 'culture', 'technique', 'repair', 'road_signs', 'solving',
   ];
 
   @override
@@ -34,9 +34,9 @@ class TheoryController extends GetxController {
     final catData = <Map<String, dynamic>>[];
     final titles = [
       "Học tổng hợp", "Khái niệm & Quy tắc", "Văn hóa & Đạo đức",
-      "Kỹ thuật lái xe", "Biển báo đường bộ", "Giải thế Sa hình",
+      "Kỹ thuật lái xe", "Cấu tạo & Sửa chữa", "Biển báo đường bộ", "Giải thế Sa hình",
     ];
-    final icons = ["book", "menu_book", "gavel", "tune", "traffic", "alt_route"];
+    final icons = ["book", "menu_book", "gavel", "tune", "settings", "traffic", "alt_route"];
 
     for (int i = 0; i < categoryKeys.length; i++) {
       final questions = _questionsForCategory(i);
@@ -86,8 +86,9 @@ class TheoryController extends GetxController {
       case 1: return DataLocal.listQuestionsRuleConcept;
       case 2: return DataLocal.listQuestionsCulture;
       case 3: return DataLocal.listQuestionsTechnique;
-      case 4: return DataLocal.listQuestionsRoadSigns;
-      case 5: return DataLocal.listQuestionsSolving;
+      case 4: return DataLocal.listQuestionsRepair;
+      case 5: return DataLocal.listQuestionsRoadSigns;
+      case 6: return DataLocal.listQuestionsSolving;
       default: return [];
     }
   }

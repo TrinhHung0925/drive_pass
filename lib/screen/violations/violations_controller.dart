@@ -54,7 +54,8 @@ class ViolationsController extends GetxController {
         return v.violation.toLowerCase().contains(keyword) ||
             v.fines.toLowerCase().contains(keyword) ||
             v.entities.toLowerCase().contains(keyword) ||
-            v.additionalPenalties.toLowerCase().contains(keyword);
+            v.additionalPenalties.toLowerCase().contains(keyword) ||
+            v.keyword.toLowerCase().contains(keyword);
       }).toList();
     }
 

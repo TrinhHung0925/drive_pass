@@ -264,7 +264,6 @@ class _HomeViewState extends State<HomeView> {
           ),
           SizedBox(height: 12.h),
 
-
           _buildWrongQuestionsCard(),
         ],
       ),
@@ -361,7 +360,6 @@ class _HomeViewState extends State<HomeView> {
         ),
         child: Row(
           children: [
-
             Icon(Icons.search_rounded, size: 20.w, color: AppColors.textLight),
             SizedBox(width: 10.w),
             Text(
@@ -440,71 +438,52 @@ class _HomeViewState extends State<HomeView> {
 
   /// Recent Activity
   Widget _buildRecentActivitySection() {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16.w),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Hoạt động gần đây",
-                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
-              ),
-              CupertinoButton(
-                padding: EdgeInsets.zero,
-                minSize: 0,
-                onPressed: controller.goToAllActivities,
-                child: Text(
-                  "Xem tất cả",
-                  style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.primary),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 12.h),
-          Obx(() {
-            if (controller.recentHistory.isEmpty) {
-              return Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 32.h),
-                decoration: BoxDecoration(
-                  color: AppColors.surface,
-                  borderRadius: BorderRadius.circular(12.r),
-                  border: Border.all(color: AppColors.border),
-                ),
-                child: Column(
-                  children: [
-                    Icon(Icons.history_rounded, size: 36.w, color: AppColors.textLight),
-                    SizedBox(height: 8.h),
-                    Text(
-                      'Chưa có hoạt động nào',
-                      style: TextStyle(fontSize: 14.sp, color: AppColors.textSecondary),
-                    ),
-                  ],
-                ),
-              );
-            }
-            return Column(
-              children: controller.recentHistory.map((h) {
-                final isPassed = h.passed;
-                return Padding(
-                  padding: EdgeInsets.only(bottom: 8.h),
-                  child: _buildRecentItem(
-                    "Bộ đề số ${h.examNo}",
-                    "${h.correct}/${h.total} câu đúng • ${h.timeTaken}",
-                    isPassed ? "Đạt" : "Trượt",
-                    isPassed ? AppColors.success : AppColors.error,
-                    isPassed ? AppColors.successBackground : AppColors.errorBackground,
+    return Obx(() {
+      return controller.recentHistory.isNotEmpty
+          ? Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Hoạt động gần đây",
+                        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, color: AppColors.textPrimary),
+                      ),
+                      CupertinoButton(
+                        padding: EdgeInsets.zero,
+                        minSize: 0,
+                        onPressed: controller.goToAllActivities,
+                        child: Text(
+                          "Xem tất cả",
+                          style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.primary),
+                        ),
+                      ),
+                    ],
                   ),
-                );
-              }).toList(),
-            );
-          }),
-          SizedBox(height: 16.h),
-        ],
-      ),
-    );
+                  SizedBox(height: 12.h),
+                  Column(
+                    children: controller.recentHistory.map((h) {
+                      final isPassed = h.passed;
+                      return Padding(
+                        padding: EdgeInsets.only(bottom: 8.h),
+                        child: _buildRecentItem(
+                          "Bộ đề số ${h.examNo}",
+                          "${h.correct}/${h.total} câu đúng • ${h.timeTaken}",
+                          isPassed ? "Đạt" : "Trượt",
+                          isPassed ? AppColors.success : AppColors.error,
+                          isPassed ? AppColors.successBackground : AppColors.errorBackground,
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                  SizedBox(height: 16.h),
+                ],
+              ),
+            )
+          : SizedBox();
+    });
   }
 
   Widget _buildRecentItem(String title, String subtitle, String status, Color statusColor, Color statusBg) {

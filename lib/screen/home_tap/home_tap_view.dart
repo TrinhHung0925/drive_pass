@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resource/app_colors.dart';
@@ -25,12 +26,7 @@ class HomeTapView extends StatefulWidget {
 class _HomeTapViewState extends State<HomeTapView> {
   var controller = Get.find<HomeTapController>();
 
-  final List<Widget> _pages = [
-    HomeView(),
-    ExamView(),
-    TrafficSignView(),
-    SettingView(),
-  ];
+  final List<Widget> _pages = [HomeView(), ExamView(), TrafficSignView(), SettingView()];
 
   // Draggable chat bubble position
   late double _bubbleX;
@@ -74,90 +70,102 @@ class _HomeTapViewState extends State<HomeTapView> {
     final bubbleSize = 56.w;
     final bottomBarHeight = 60.h + MediaQuery.of(context).padding.bottom;
 
-    return Obx(() => Scaffold(
-      body: Stack(
-        children: [
-          IndexedStack(
-            index: controller.selectedIndex.value,
-            children: _pages,
-          ),
-          // Draggable floating chat bubble
-          AnimatedPositioned(
-            duration: _isDragging ? Duration.zero : const Duration(milliseconds: 250),
-            curve: Curves.easeOutCubic,
-            left: _bubbleX,
-            top: _bubbleY,
-            child: GestureDetector(
-              onPanStart: (_) => _isDragging = true,
-              onPanUpdate: (details) {
-                setState(() {
-                  _bubbleX = (_bubbleX + details.delta.dx)
-                      .clamp(0.0, screenWidth - bubbleSize);
-                  _bubbleY = (_bubbleY + details.delta.dy)
-                      .clamp(MediaQuery.of(context).padding.top, screenHeight - bubbleSize - bottomBarHeight);
-                });
-              },
-              onPanEnd: (_) {
-                _isDragging = false;
-                _snapToEdge(context);
-              },
-              onTap: () => Get.toNamed(AppPage.aiChat.routeName),
-              child: AnimatedScale(
-                scale: _isDragging ? 1.1 : 1.0,
-                duration: const Duration(milliseconds: 150),
-                child: Container(
-                  width: bubbleSize,
-                  height: bubbleSize,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Color(0xFF667EEA), Color(0xFF764BA2)],
-                    ),
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFF667EEA).withValues(alpha: 0.4),
-                        blurRadius: 12,
-                        offset: const Offset(0, 4),
+    return Obx(
+      () => Scaffold(
+        body: NotificationListener<UserScrollNotification>(
+          onNotification: (notification) {
+            if (notification.direction == ScrollDirection.reverse) {
+              controller.hideBottomBar();
+            } else if (notification.direction == ScrollDirection.forward) {
+              controller.showBottomBar();
+            }
+            return false;
+          },
+
+          child: Stack(
+            children: [
+              IndexedStack(index: controller.selectedIndex.value, children: _pages),
+              // Draggable floating chat bubble
+              AnimatedPositioned(
+                duration: _isDragging ? Duration.zero : const Duration(milliseconds: 250),
+                curve: Curves.easeOutCubic,
+                left: _bubbleX,
+                top: _bubbleY,
+                child: GestureDetector(
+                  onPanStart: (_) => _isDragging = true,
+                  onPanUpdate: (details) {
+                    setState(() {
+                      _bubbleX = (_bubbleX + details.delta.dx).clamp(0.0, screenWidth - bubbleSize);
+                      _bubbleY = (_bubbleY + details.delta.dy).clamp(
+                        MediaQuery.of(context).padding.top,
+                        screenHeight - bubbleSize - bottomBarHeight,
+                      );
+                    });
+                  },
+                  onPanEnd: (_) {
+                    _isDragging = false;
+                    _snapToEdge(context);
+                  },
+                  onTap: () => Get.toNamed(AppPage.aiChat.routeName),
+                  child: AnimatedScale(
+                    scale: _isDragging ? 1.1 : 1.0,
+                    duration: const Duration(milliseconds: 150),
+                    child: Container(
+                      width: bubbleSize,
+                      height: bubbleSize,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [Color(0xFF667EEA), Color(0xFF764BA2)],
+                        ),
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFF667EEA).withValues(alpha: 0.4),
+                            blurRadius: 12,
+                            offset: const Offset(0, 4),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  child: Icon(
-                    Icons.auto_awesome_rounded,
-                    color: Colors.white,
-                    size: 26.w,
+                      child: Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 26.w),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: AppColors.surface,
-          border: Border(
-            top: BorderSide(color: AppColors.border, width: 1),
+            ],
           ),
         ),
-        child: SafeArea(
-          child: Container(
-            height: 60.h,
-            padding: EdgeInsets.only(top: 8.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _buildNavItem(0, Img.icNavHome, 'Trang chủ'),
-                _buildNavItem(1, Img.icNavExam, 'Thi thử'),
-                _buildNavItem(2, Img.icNavSign, 'Biển báo'),
-                _buildNavItem(3, Img.icNavProfile, 'Cá nhân'),
-              ],
-            ),
+        bottomNavigationBar: AnimatedContainer(
+
+          duration: Duration(milliseconds: 150),
+          height: controller.isBottomBarVisible.value ? 80.h : 0,
+          child: Wrap(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  color: AppColors.surface,
+                  border: Border(top: BorderSide(color: AppColors.border, width: 1)),
+                ),
+                height: 80.h,
+                child: Container(
+                  padding: EdgeInsets.only(bottom: 8.h),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _buildNavItem(0, Img.icNavHome, 'Trang chủ'),
+                      _buildNavItem(1, Img.icNavExam, 'Thi thử'),
+                      _buildNavItem(2, Img.icNavSign, 'Biển báo'),
+                      _buildNavItem(3, Img.icNavProfile, 'Cá nhân'),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
-    ));
+    );
   }
 
   Widget _buildNavItem(int index, String iconPath, String label) {
@@ -173,20 +181,11 @@ class _HomeTapViewState extends State<HomeTapView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              iconPath,
-              width: 20.w,
-              height: 20.w,
-              color: color,
-            ),
+            Image.asset(iconPath, width: 20.w, height: 20.w, color: color),
             SizedBox(height: 4.h),
             Text(
               label,
-              style: TextStyle(
-                fontSize: 11.sp,
-                fontWeight: FontWeight.w500,
-                color: color,
-              ),
+              style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.w500, color: color),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
@@ -195,5 +194,4 @@ class _HomeTapViewState extends State<HomeTapView> {
       ),
     );
   }
-
 }

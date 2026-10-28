@@ -1,52 +1,79 @@
 [
   {
-    "id": "10487",
-    "question": "Thứ tự đi như thế nào là đúng quy tắc giao thông?",
+    "id": "10486",
+    "question": "Theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, xe khách, xe con, mô tô"
+        "text": "Xe khách, xe tải, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe tải, mô tô, xe khách, xe con"
+        "text": "Xe tải, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe khách, xe tải, xe con, mô tô"
+        "text": "Chỉ xe con."
+      }
+    ],
+    "answer": "c",
+    "suggest": "",
+    "images": [
+      "assets/images/questions/cau_486.webp"
+    ]
+  },
+  {
+    "id": "10487",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "options": [
+      {
+        "key": "a",
+        "text": "Xe tải, xe khách, xe con, xe mô tô."
+      },
+      {
+        "key": "b",
+        "text": "Xe tải, xe mô tô, xe khách, xe con."
+      },
+      {
+        "key": "c",
+        "text": "Xe khách, xe tải, xe con, xe mô tô."
+      },
+      {
+        "key": "d",
+        "text": "Xe mô tô, xe khách, xe tải, xe con."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10487a.webp"
+      "assets/images/questions/cau_487.webp"
     ]
   },
   {
     "id": "10488",
-    "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe công an, xe con, xe tải, xe khách"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách."
       },
       {
         "key": "b",
-        "text": "Xe công an, xe khách, xe con, xe tải"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con, xe tải."
       },
       {
         "key": "c",
-        "text": "Xe công an, xe tải, xe khách, xe con"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách, xe con."
       },
       {
         "key": "d",
-        "text": "Xe con, xe công an, xe tải, xe khách"
+        "text": "Xe con, xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10488a.webp"
+      "assets/images/questions/cau_488.webp"
     ]
   },
   {
@@ -55,52 +82,52 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, xe công an, xe khách, xe con"
+        "text": "Xe tải, xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con."
       },
       {
         "key": "b",
-        "text": "Xe công an, xe khách, xe con, xe tải"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe khách, xe con, xe tải."
       },
       {
         "key": "c",
-        "text": "Xe công an, xe con, xe tải, xe khách"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách."
       },
       {
         "key": "d",
-        "text": "Xe công an, xe tải, xe khách, xe con"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe tải, xe khách, xe con."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10489a.webp"
+      "assets/images/questions/cau_489.webp"
     ]
   },
   {
     "id": "10490",
-    "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, xe con, mô tô"
+        "text": "Xe tải, xe con, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe tải, xe con, mô tô"
+        "text": "Xe con, xe tải, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Mô tô, xe con, xe tải"
+        "text": "Xe mô tô, xe con, xe tải."
       },
       {
         "key": "d",
-        "text": "Xe con, mô tô, xe tải"
+        "text": "Xe con, xe mô tô, xe tải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10490a.webp"
+      "assets/images/questions/cau_490.webp"
     ]
   },
   {
@@ -109,17 +136,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10491a.webp"
+      "assets/images/questions/cau_491.webp"
     ]
   },
   {
@@ -128,17 +155,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe con"
+        "text": "Xe con."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10492a.webp"
+      "assets/images/questions/cau_492.webp"
     ]
   },
   {
@@ -147,21 +174,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con (A), xe cứu thương, xe con (B)"
+        "text": "Xe con (A), xe cứu thương đi làm nhiệm vụ cấp cứu, xe con (B)."
       },
       {
         "key": "b",
-        "text": "Xe cứu thương, xe con (B), xe con (A)"
+        "text": "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe con (B), xe con (A)."
       },
       {
         "key": "c",
-        "text": "Xe con (B), xe con (A), xe cứu thương"
+        "text": "Xe con (B), xe con (A), xe cứu thương đi làm nhiệm vụ cấp cứu."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10493a.webp"
+      "assets/images/questions/cau_493.webp"
     ]
   },
   {
@@ -170,21 +197,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe cứu thương, xe cứu hỏa, xe con"
+        "text": "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe chữa cháy đi làm nhiệm vụ chữa cháy, xe con."
       },
       {
         "key": "b",
-        "text": "Xe cứu hỏa, xe cứu thương, xe con"
+        "text": "Xe chữa cháy đi làm nhiệm vụ chữa cháy, xe cứu thương đi làm nhiệm vụ cấp cứu, xe con."
       },
       {
         "key": "c",
-        "text": "Xe cứu thương, xe con, xe cứu hỏa"
+        "text": "Xe cứu thương đi làm nhiệm vụ cấp cứu, xe con, xe chữa cháy đi làm nhiệm vụ chữa cháy."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10494a.webp"
+      "assets/images/questions/cau_494.webp"
     ]
   },
   {
@@ -193,59 +220,59 @@
     "options": [
       {
         "key": "a",
-        "text": "Mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe cứu thương"
+        "text": "Xe cứu thương đi làm nhiệm vụ cấp cứu."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10495a.webp"
+      "assets/images/questions/cau_495.webp"
     ]
   },
   {
     "id": "10496",
-    "question": "Xe nào phải nhường đường đi cuối cùng qua nơi giao nhau này?",
+    "question": "Theo hướng mũi tên, xe nào phải nhường đường đi cuối cùng qua nơi giao nhau này?",
     "options": [
       {
         "key": "a",
-        "text": "Xe khách"
+        "text": "Xe khách."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "c",
-        "text": "Xe con"
+        "text": "Xe con."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10496a.webp"
+      "assets/images/questions/cau_496.webp"
     ]
   },
   {
     "id": "10497",
-    "question": "Xe nào phải nhường đường là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, xe nào phải nhường đường là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10497a.webp"
+      "assets/images/questions/cau_497.webp"
     ]
   },
   {
@@ -254,17 +281,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe công an"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp."
       },
       {
         "key": "b",
-        "text": "Xe chữa cháy"
+        "text": "Xe chữa cháy đi làm nhiệm vụ chữa cháy."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10498a.webp"
+      "assets/images/questions/cau_498.webp"
     ]
   },
   {
@@ -273,40 +300,40 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con và xe khách"
+        "text": "Xe con và xe khách."
       },
       {
         "key": "b",
-        "text": "Mô tô"
+        "text": "Xe mô tô."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10499a.webp"
+      "assets/images/questions/cau_499.webp"
     ]
   },
   {
     "id": "10500",
-    "question": "Theo tín hiệu đèn, xe nào được quyền đi là đúng quy tắc giao thông?",
+    "question": "Theo tín hiệu đèn, xe nào đi là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, mô tô"
+        "text": "Xe khách, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe con, xe tải"
+        "text": "Xe con, xe tải."
       },
       {
         "key": "c",
-        "text": "Xe tải, mô tô"
+        "text": "Xe tải, xe mô tô."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10500a.webp"
+      "assets/images/questions/cau_500.webp"
     ]
   },
   {
@@ -315,17 +342,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe công an"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp."
       },
       {
         "key": "b",
-        "text": "Xe quân sự"
+        "text": "Xe quân sự đi làm nhiệm vụ khẩn cấp."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10501a.webp"
+      "assets/images/questions/cau_501.webp"
     ]
   },
   {
@@ -334,75 +361,75 @@
     "options": [
       {
         "key": "a",
-        "text": "Hướng 2, 3, 4"
+        "text": "Hướng 2, 3, 4."
       },
       {
         "key": "b",
-        "text": "Chỉ hướng 1"
+        "text": "Chỉ hướng 1."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 2"
+        "text": "Hướng 1 và 2."
       },
       {
         "key": "d",
-        "text": "Hướng 3 và 4"
+        "text": "Hướng 3 và 4."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10502a.webp"
+      "assets/images/questions/cau_502.webp"
     ]
   },
   {
     "id": "10503",
-    "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+    "question": "Các xe đi theo hướng mũi tên, những xe nào vi phạm quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, xe tải, mô tô"
+        "text": "Xe khách, xe tải, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe tải, xe con, mô tô"
+        "text": "Xe tải, xe con, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe khách, xe con, mô tô"
+        "text": "Xe khách, xe con, xe mô tô."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10503a.webp"
+      "assets/images/questions/cau_503.webp"
     ]
   },
   {
     "id": "10504",
-    "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, xe tải, mô tô, xe con"
+        "text": "Xe khách, xe tải, xe mô tô, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con, xe khách, xe tải, mô tô"
+        "text": "Xe con, xe khách, xe tải, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Mô tô, xe tải, xe khách, xe con"
+        "text": "Xe mô tô, xe tải, xe khách, xe con."
       },
       {
         "key": "d",
-        "text": "Mô tô, xe tải, xe con, xe khách"
+        "text": "Xe mô tô, xe tải, xe con, xe khách."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10504a.webp"
+      "assets/images/questions/cau_504.webp"
     ]
   },
   {
@@ -411,71 +438,71 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "b",
-        "text": "Xe con và mô tô"
+        "text": "Xe con và mô tô."
       },
       {
         "key": "c",
-        "text": "Cả ba xe"
+        "text": "Cả ba xe."
       },
       {
         "key": "d",
-        "text": "Xe con và xe tải"
+        "text": "Xe con và xe tải."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10505a.webp"
+      "assets/images/questions/cau_505.webp"
     ]
   },
   {
     "id": "10506",
-    "question": "Xe nào được quyền đi trước?",
+    "question": "Theo hướng mũi tên, xe nào được quyền đi trước?",
     "options": [
       {
         "key": "a",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "b",
-        "text": "Xe con (B)"
+        "text": "Xe con (B)."
       },
       {
         "key": "c",
-        "text": "Xe con (A)"
+        "text": "Xe con (A)."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10506a.webp"
+      "assets/images/questions/cau_506.webp"
     ]
   },
   {
     "id": "10507",
-    "question": "Theo hướng mũi tên, những hướng nào xe gắn máy đi được?",
+    "question": "Theo hướng mũi tên, những hướng nào xe gắn máy được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Cả ba hướng"
+        "text": "Cả ba hướng."
       },
       {
         "key": "b",
-        "text": "Chỉ hướng 1 và 3"
+        "text": "Chỉ hướng 1 và 3."
       },
       {
         "key": "c",
-        "text": "Chỉ hướng 1"
+        "text": "Chỉ hướng 1."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10507a.webp"
+      "assets/images/questions/cau_507.webp"
     ]
   },
   {
@@ -484,25 +511,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Cả hai xe"
+        "text": "Cả hai xe."
       },
       {
         "key": "b",
-        "text": "Không xe nào vi phạm"
+        "text": "Không xe nào vi phạm."
       },
       {
         "key": "c",
-        "text": "Chỉ xe mô tô vi phạm"
+        "text": "Chỉ xe mô tô vi phạm."
       },
       {
         "key": "d",
-        "text": "Chỉ xe tải vi phạm"
+        "text": "Chỉ xe tải vi phạm."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10508a.webp"
+      "assets/images/questions/cau_508.webp"
     ]
   },
   {
@@ -511,44 +538,44 @@
     "options": [
       {
         "key": "a",
-        "text": "Chỉ mô tô"
+        "text": "Chỉ xe mô tô."
       },
       {
         "key": "b",
-        "text": "Chỉ xe tải"
+        "text": "Chỉ xe tải."
       },
       {
         "key": "c",
-        "text": "Cả ba xe"
+        "text": "Cả ba xe."
       },
       {
         "key": "d",
-        "text": "Chỉ mô tô và xe tải"
+        "text": "Chỉ xe mô tô và xe tải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10509a.webp"
+      "assets/images/questions/cau_509.webp"
     ]
   },
   {
     "id": "10510",
-    "question": "Xe tải kéo mô tô ba bánh như hình này có đúng quy tắc giao thông không?",
+    "question": "Xe tải kéo xe mô tô ba bánh như hình này có đúng quy tắc giao thông không?",
     "options": [
       {
         "key": "a",
-        "text": "Đúng"
+        "text": "Đúng."
       },
       {
         "key": "b",
-        "text": "Không đúng"
+        "text": "Không đúng."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10510a.webp"
+      "assets/images/questions/cau_510.webp"
     ]
   },
   {
@@ -557,44 +584,44 @@
     "options": [
       {
         "key": "a",
-        "text": "Hướng 2 và 5"
+        "text": "Hướng 2 và 5."
       },
       {
         "key": "b",
-        "text": "Chỉ hướng 1"
+        "text": "Chỉ hướng 1."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10511a.webp"
+      "assets/images/questions/cau_511.webp"
     ]
   },
   {
     "id": "10512",
-    "question": "Theo hướng mũi tên, những hướng nào ô tô không được phép đi?",
+    "question": "Theo hướng mũi tên, những hướng nào xe ô tô không được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Hướng 1 và 2"
+        "text": "Hướng 1 và 2."
       },
       {
         "key": "b",
-        "text": "Hướng 3"
+        "text": "Hướng 3."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 4"
+        "text": "Hướng 1 và 4."
       },
       {
         "key": "d",
-        "text": "Hướng 2 và 3"
+        "text": "Hướng 2 và 3."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10512a.webp"
+      "assets/images/questions/cau_512.webp"
     ]
   },
   {
@@ -603,21 +630,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Cả 2 xe đều đúng"
+        "text": "Cả hai xe đều đúng."
       },
       {
         "key": "b",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "c",
-        "text": "Xe khách"
+        "text": "Xe khách."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10513a.webp"
+      "assets/images/questions/cau_513.webp"
     ]
   },
   {
@@ -626,21 +653,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Hướng 2 và 3"
+        "text": "Hướng 2 và 3."
       },
       {
         "key": "b",
-        "text": "Hướng 1, 2 và 3"
+        "text": "Hướng 1, 2 và 3."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 3"
+        "text": "Hướng 1 và 3."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10514a.webp"
+      "assets/images/questions/cau_514.webp"
     ]
   },
   {
@@ -649,17 +676,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Không"
+        "text": "Không."
       },
       {
         "key": "b",
-        "text": "Vi phạm"
+        "text": "Vi phạm."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10515a.webp"
+      "assets/images/questions/cau_515.webp"
     ]
   },
   {
@@ -668,17 +695,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe khách"
+        "text": "Xe khách."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10516a.webp"
+      "assets/images/questions/cau_516.webp"
     ]
   },
   {
@@ -687,17 +714,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe mô tô"
+        "text": "Xe mô tô."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10517a.webp"
+      "assets/images/questions/cau_517.webp"
     ]
   },
   {
@@ -706,71 +733,71 @@
     "options": [
       {
         "key": "a",
-        "text": "Không đúng"
+        "text": "Không đúng."
       },
       {
         "key": "b",
-        "text": "Đúng"
+        "text": "Đúng."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10518a.webp"
+      "assets/images/questions/cau_518.webp"
     ]
   },
   {
     "id": "10519",
-    "question": "Theo hướng mũi tên, những hướng nào ô tô con được phép đi?",
+    "question": "Theo hướng mũi tên, những hướng nào xe ô tô con được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Hướng 1"
+        "text": "Hướng 1."
       },
       {
         "key": "b",
-        "text": "Hướng 1, 3 và 4"
+        "text": "Hướng 1, 3 và 4."
       },
       {
         "key": "c",
-        "text": "Hướng 2, 3 và 4"
+        "text": "Hướng 2, 3 và 4."
       },
       {
         "key": "d",
-        "text": "Cả bốn hướng"
+        "text": "Cả bốn hướng."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10519a.webp"
+      "assets/images/questions/cau_519.webp"
     ]
   },
   {
     "id": "10520",
-    "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe con (A), mô tô, xe con (B), xe đạp"
+        "text": "Xe con (A), xe mô tô, xe con (B), xe đạp."
       },
       {
         "key": "b",
-        "text": "Xe con (B), xe đạp, mô tô, xe con (A)"
+        "text": "Xe con (B), xe đạp, xe mô tô, xe con (A)."
       },
       {
         "key": "c",
-        "text": "Xe con (A), xe con (B), mô tô + xe đạp"
+        "text": "Xe con (A), xe con (B), xe mô tô + xe đạp."
       },
       {
         "key": "d",
-        "text": "Mô tô + xe đạp, xe con (A), xe con (B)"
+        "text": "Xe mô tô + xe đạp, xe con (A), xe con (B)."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10520a.webp"
+      "assets/images/questions/cau_520.webp"
     ]
   },
   {
@@ -779,25 +806,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Chỉ hướng 1"
+        "text": "Chỉ hướng 1."
       },
       {
         "key": "b",
-        "text": "Hướng 1, 3 và 4"
+        "text": "Hướng 1, 3 và 4."
       },
       {
         "key": "c",
-        "text": "Hướng 1, 2 và 3"
+        "text": "Hướng 1, 2 và 3."
       },
       {
         "key": "d",
-        "text": "Cả bốn hướng"
+        "text": "Cả bốn hướng."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10521a.webp"
+      "assets/images/questions/cau_521.webp"
     ]
   },
   {
@@ -806,71 +833,71 @@
     "options": [
       {
         "key": "a",
-        "text": "Cả ba hướng"
+        "text": "Cả ba hướng."
       },
       {
         "key": "b",
-        "text": "Hướng 2 và 3"
+        "text": "Hướng 2 và 3."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10522a.webp"
+      "assets/images/questions/cau_522.webp"
     ]
   },
   {
     "id": "10523",
-    "question": "Những hướng nào ô tô tải được phép đi?",
+    "question": "Những hướng nào xe ô tô tải được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Chỉ hướng 1"
+        "text": "Chỉ hướng 1."
       },
       {
         "key": "b",
-        "text": "Hướng 1 và 4"
+        "text": "Hướng 1 và 4."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 5"
+        "text": "Hướng 1 và 5."
       },
       {
         "key": "d",
-        "text": "Hướng 1, 4 và 5"
+        "text": "Hướng 1, 4 và 5."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10523a.webp"
+      "assets/images/questions/cau_523.webp"
     ]
   },
   {
     "id": "10524",
-    "question": "Những hướng nào ô tô tải được phép đi?",
+    "question": "Những hướng nào xe ô tô tải được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Cả bốn hướng"
+        "text": "Cả bốn hướng."
       },
       {
         "key": "b",
-        "text": "Trừ hướng 2"
+        "text": "Trừ hướng 2."
       },
       {
         "key": "c",
-        "text": "Hướng 2, 3 và 4"
+        "text": "Hướng 2, 3 và 4."
       },
       {
         "key": "d",
-        "text": "Trừ hướng 4"
+        "text": "Trừ hướng 4."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10524a.webp"
+      "assets/images/questions/cau_524.webp"
     ]
   },
   {
@@ -879,36 +906,36 @@
     "options": [
       {
         "key": "a",
-        "text": "Mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe con"
+        "text": "Xe con."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10525a.webp"
+      "assets/images/questions/cau_525.webp"
     ]
   },
   {
     "id": "10526",
-    "question": "Ô tô con đi theo chiều mũi tên có vi phạm quy tắc giao thông không?",
+    "question": "Xe ô tô con đi theo chiều mũi tên có vi phạm quy tắc giao thông không?",
     "options": [
       {
         "key": "a",
-        "text": "Không vi phạm"
+        "text": "Không vi phạm."
       },
       {
         "key": "b",
-        "text": "Vi phạm"
+        "text": "Vi phạm."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10526a.webp"
+      "assets/images/questions/cau_526.webp"
     ]
   },
   {
@@ -917,25 +944,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe khách"
+        "text": "Xe khách."
       },
       {
         "key": "b",
-        "text": "Mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "d",
-        "text": "Xe con và mô tô"
+        "text": "Xe con và xe mô tô."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10527a.webp"
+      "assets/images/questions/cau_527.webp"
     ]
   },
   {
@@ -944,21 +971,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Các xe ở phía tay phải và tay trái của người điều khiển được phép đi thắng"
+        "text": "Các xe ở phía tay phải và tay trái của người điều khiển được phép đi thẳng."
       },
       {
         "key": "b",
-        "text": "Cho phép các xe ở mọi hướng được rẽ phải"
+        "text": "Cho phép các xe ở mọi hướng được phép rẽ phải."
       },
       {
         "key": "c",
-        "text": "Tất cả các xe phải dừng lại trước ngã tư, trừ những xe đã ở trong ngã tư được phép tiếp tục đi"
+        "text": "Tất cả các xe phải dừng lại trước ngã tư, trừ những xe đã ở trong ngã tư được phép tiếp tục đi."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10528a.webp"
+      "assets/images/questions/cau_528.webp"
     ]
   },
   {
@@ -967,25 +994,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Mô tô, xe con"
+        "text": "Xe mô tô, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con, xe tải"
+        "text": "Xe con, xe tải."
       },
       {
         "key": "c",
-        "text": "Mô tô, xe tải"
+        "text": "Xe mô tô, xe tải."
       },
       {
         "key": "d",
-        "text": "Cả ba xe"
+        "text": "Cả ba xe."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10529a.webp"
+      "assets/images/questions/cau_529.webp"
     ]
   },
   {
@@ -994,17 +1021,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Đúng"
+        "text": "Đúng."
       },
       {
         "key": "b",
-        "text": "Không đúng"
+        "text": "Không đúng."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10530a.webp"
+      "assets/images/questions/cau_530.webp"
     ]
   },
   {
@@ -1017,17 +1044,17 @@
       },
       {
         "key": "b",
-        "text": "Cả hai xe"
+        "text": "Cả hai xe."
       },
       {
         "key": "c",
-        "text": "Xe con"
+        "text": "Xe con."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10531a.webp"
+      "assets/images/questions/cau_531.webp"
     ]
   },
   {
@@ -1036,21 +1063,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe chữa cháy"
+        "text": "Xe chữa cháy đi làm nhiệm vụ chữa cháy."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "c",
-        "text": "Cả hai xe"
+        "text": "Cả hai xe."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10532a.webp"
+      "assets/images/questions/cau_532.webp"
     ]
   },
   {
@@ -1059,67 +1086,67 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, xe tải, xe con"
+        "text": "Xe khách, xe tải, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con và xe tải, xe khách"
+        "text": "Xe con, xe tải, xe khách."
       },
       {
         "key": "c",
-        "text": "Xe tải, xe khách, xe con"
+        "text": "Xe tải, xe khách, xe con."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10533a.webp"
+      "assets/images/questions/cau_533.webp"
     ]
   },
   {
     "id": "10534",
-    "question": "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
+    "question": "Theo hướng mũi tên, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe khách và xe tải, xe con"
+        "text": "Xe khách và xe tải, xe con."
       },
       {
         "key": "b",
-        "text": "Xe tải, xe khách, xe con"
+        "text": "Xe tải, xe khách, xe con."
       },
       {
         "key": "c",
-        "text": "Xe con, xe khách, xe tả"
+        "text": "Xe con, xe khách, xe tải."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10534a.webp"
+      "assets/images/questions/cau_534.webp"
     ]
   },
   {
     "id": "10535",
-    "question": "Những hướng nào ô tô tải được phép đi?",
+    "question": "Những hướng nào xe ô tô tải được phép đi?",
     "options": [
       {
         "key": "a",
-        "text": "Cả bốn hướng"
+        "text": "Cả bốn hướng."
       },
       {
         "key": "b",
-        "text": "Chỉ hướng 1 và 2"
+        "text": "Chỉ hướng 1 và 2."
       },
       {
         "key": "c",
-        "text": "Trừ hướng 4"
+        "text": "Trừ hướng 4."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10535a.webp"
+      "assets/images/questions/cau_535.webp"
     ]
   },
   {
@@ -1128,25 +1155,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe công an, xe con, xe tải, xe khách"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe tải, xe khách."
       },
       {
         "key": "b",
-        "text": "Xe con, xe khách và xe công an, xe tải"
+        "text": "Xe con, xe khách và xe công an đi làm nhiệm vụ khẩn cấp, xe tải."
       },
       {
         "key": "c",
-        "text": "Xe công an, xe con, xe khách, xe tải"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe con, xe khách, xe tải."
       },
       {
         "key": "d",
-        "text": "Xe con, xe tải, xe khách, xe công an"
+        "text": "Xe con, xe tải, xe khách, xe công an đi làm nhiệm vụ khẩn cấp."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10536a.webp"
+      "assets/images/questions/cau_536.webp"
     ]
   },
   {
@@ -1155,25 +1182,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Cả bốn hướng"
+        "text": "Cả bốn hướng."
       },
       {
         "key": "b",
-        "text": "Hướng 1, 2 và 3"
+        "text": "Hướng 1, 2 và 3."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 4"
+        "text": "Hướng 1 và 4."
       },
       {
         "key": "d",
-        "text": "Hướng 1, 3 và 4"
+        "text": "Hướng 1, 3 và 4."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10537a.webp"
+      "assets/images/questions/cau_537.webp"
     ]
   },
   {
@@ -1182,21 +1209,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Chỉ xe khách, mô tô"
+        "text": "Chỉ xe khách, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Tất cả các loại xe trên"
+        "text": "Tất cả các loại xe trên."
       },
       {
         "key": "c",
-        "text": "Không xe nào chấp hành đúng quy tắc giao thông"
+        "text": "Không xe nào chấp hành đúng quy tắc giao thông."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10538a.webp"
+      "assets/images/questions/cau_538.webp"
     ]
   },
   {
@@ -1205,25 +1232,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Cả ba hướng"
+        "text": "Cả ba hướng."
       },
       {
         "key": "b",
-        "text": "Hướng 1 và 2"
+        "text": "Hướng 1 và 2."
       },
       {
         "key": "c",
-        "text": "Hướng 1 và 3"
+        "text": "Hướng 1 và 3."
       },
       {
         "key": "d",
-        "text": "Hướng 2 và 3"
+        "text": "Hướng 2 và 3."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10539a.webp"
+      "assets/images/questions/cau_539.webp"
     ]
   },
   {
@@ -1232,21 +1259,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe công an, xe quân sự, xe con + mô tô"
+        "text": "Xe công an đi làm nhiệm vụ khẩn cấp, xe quân sự đi làm nhiệm vụ khẩn cấp, xe con + xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe quân sự, xe công an, xe con + mô tô"
+        "text": "Xe quân sự đi làm nhiệm vụ khẩn cấp, xe công an đi làm nhiệm vụ khẩn cấp, xe con + xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe mô tô + xe con, xe quân sự, xe công an"
+        "text": "Xe mô tô + xe con, xe quân sự đi làm nhiệm vụ khẩn cấp, xe công an đi làm nhiệm vụ khẩn cấp."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10540a.webp"
+      "assets/images/questions/cau_540.webp"
     ]
   },
   {
@@ -1255,36 +1282,36 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe A"
+        "text": "Xe A."
       },
       {
         "key": "b",
-        "text": "Xe B"
+        "text": "Xe B."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10541a.webp"
+      "assets/images/questions/cau_541.webp"
     ]
   },
   {
     "id": "10542",
-    "question": "Xe con quay đầu đi ngược lại như hình vẽ dưới có vị phạm quy tắc giao thông không?",
+    "question": "Xe con quay đầu đi ngược lại như hình vẽ dưới có vi phạm quy tắc giao thông không?",
     "options": [
       {
         "key": "a",
-        "text": "Không vi phạm"
+        "text": "Không vi phạm."
       },
       {
         "key": "b",
-        "text": "Vi phạm"
+        "text": "Vi phạm."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10542a.webp"
+      "assets/images/questions/cau_542.webp"
     ]
   },
   {
@@ -1293,25 +1320,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con (E), mô tô (c)"
+        "text": "Xe con (E), xe mô tô (C)."
       },
       {
         "key": "b",
-        "text": "Xe tải (A), mô tô (D)"
+        "text": "Xe tải (B), xe mô tô (D)."
       },
       {
         "key": "c",
-        "text": "Xe khách (B), mô tô (C)"
+        "text": "Xe khách (A), xe mô tô (C)."
       },
       {
         "key": "d",
-        "text": "Xe khách (B), mô tô (D)"
+        "text": "Xe khách (A), xe mô tô (D)."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10543a.webp"
+      "assets/images/questions/cau_543.webp"
     ]
   },
   {
@@ -1320,44 +1347,44 @@
     "options": [
       {
         "key": "a",
-        "text": "Nhường xe con rẽ trái trước"
+        "text": "Nhường xe con rẽ trái trước."
       },
       {
         "key": "b",
-        "text": "Đi thẳng không nhường"
+        "text": "Đi thẳng không nhường."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10544a.webp"
+      "assets/images/questions/cau_544.webp"
     ]
   },
   {
     "id": "10545",
-    "question": "Người lái xe điều khiển xe chạy theo hướng nào là đúng quy tắc giao thông?",
+    "question": "Người lái xe điều khiển xe đi theo hướng nào là đúng quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Chỉ hướng 2"
+        "text": "Chỉ hướng 2."
       },
       {
         "key": "b",
-        "text": "Hướng 1 và 2"
+        "text": "Hướng 1 và 2."
       },
       {
         "key": "c",
-        "text": "Tất cả các hướng trừ hướng 3"
+        "text": "Tất cả các hướng trừ hướng 3."
       },
       {
         "key": "d",
-        "text": "Tất cả các hướng trừ hướng 4"
+        "text": "Tất cả các hướng trừ hướng 4."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10545a.webp"
+      "assets/images/questions/cau_545.webp"
     ]
   },
   {
@@ -1366,17 +1393,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con (A)"
+        "text": "Xe con (A)."
       },
       {
         "key": "b",
-        "text": "Xe con (B)"
+        "text": "Xe con (B)."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10546a.webp"
+      "assets/images/questions/cau_546.webp"
     ]
   },
   {
@@ -1385,21 +1412,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Rẽ trái ngay trước xe buýt"
+        "text": "Rẽ trái ngay trước xe buýt."
       },
       {
         "key": "b",
-        "text": "Rẽ trái trước xe tải"
+        "text": "Rẽ trái trước xe tải."
       },
       {
         "key": "c",
-        "text": "Nhường đường cho xe buýt và xe tải"
+        "text": "Nhường đường cho xe buýt và xe tải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10547a.webp"
+      "assets/images/questions/cau_547.webp"
     ]
   },
   {
@@ -1408,25 +1435,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con (B), mô tô (C)"
+        "text": "Xe con (B), xe mô tô (C)."
       },
       {
         "key": "b",
-        "text": "Xe con (A), mô tô (C)"
+        "text": "Xe con (A), xe mô tô (C)."
       },
       {
         "key": "c",
-        "text": "Xe con (E), mô tô (D)"
+        "text": "Xe con (E), xe mô tô (D)."
       },
       {
         "key": "d",
-        "text": "Tất cả các loại xe trên"
+        "text": "Tất cả các loại xe trên."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10548a.webp"
+      "assets/images/questions/cau_548.webp"
     ]
   },
   {
@@ -1435,17 +1462,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10549a.webp"
+      "assets/images/questions/cau_549.webp"
     ]
   },
   {
@@ -1454,21 +1481,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Quay đầu theo hướng A"
+        "text": "Quay đầu theo hướng A."
       },
       {
         "key": "b",
-        "text": "Quay đầu theo hướng B"
+        "text": "Quay đầu theo hướng B."
       },
       {
         "key": "c",
-        "text": "Cấm quay đầu"
+        "text": "Cấm quay đầu."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10550a.webp"
+      "assets/images/questions/cau_550.webp"
     ]
   },
   {
@@ -1477,25 +1504,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con và xe tải, xe của bạn"
+        "text": "Xe con và xe tải, xe của bạn."
       },
       {
         "key": "b",
-        "text": "Xe của bạn, xe tải, xe con"
+        "text": "Xe của bạn, xe tải, xe con."
       },
       {
         "key": "c",
-        "text": "Xe của bạn và xe con, xe tải"
+        "text": "Xe của bạn và xe con, xe tải."
       },
       {
         "key": "d",
-        "text": "Xe của bạn, xe tải + xe con"
+        "text": "Xe của bạn, xe tải + xe con."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10551a.webp"
+      "assets/images/questions/cau_551.webp"
     ]
   },
   {
@@ -1504,21 +1531,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc cho xe chạy vượt qua"
+        "text": "Tăng tốc cho xe chạy vượt qua."
       },
       {
         "key": "b",
-        "text": "Bật tín hiệu báo hiệu bằng đèn hoặc còi, khi đủ điều kiện an toàn, tăng tốc cho xe chạy vượt qua"
+        "text": "Bật tín hiệu báo hiệu bằng đèn hoặc còi, khi đủ điều kiện an toàn, tăng tốc cho xe chạy vượt qua."
       },
       {
         "key": "c",
-        "text": "Đánh lái sang làn bên trái và tăng tốc cho xe chạy vượt qua"
+        "text": "Đánh lái sang làn bên trái và tăng tốc cho xe chạy vượt qua."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10552a.webp"
+      "assets/images/questions/cau_552.webp"
     ]
   },
   {
@@ -1527,63 +1554,63 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, mô tô"
+        "text": "Xe khách, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe tải, mô tô"
+        "text": "Xe tải, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe con, xe tải"
+        "text": "Xe con, xe tải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10553a.webp"
+      "assets/images/questions/cau_553.webp"
     ]
   },
   {
     "id": "10554",
-    "question": "Xe nào phải nhường đường là đúng quy tắc giao thông?",
+    "question": "Trong hình dưới, những xe nào chấp hành quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe tải"
+        "text": "Xe tải ( D), xe con (B)."
       },
       {
         "key": "b",
-        "text": "Xe khách"
+        "text": "Xe con (A), xe con (C), xe con (E), xe buýt (G)."
       },
       {
         "key": "c",
-        "text": "Xe con"
+        "text": "Xe con (A), xe con (B), xe tải (D)."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10554a.webp"
+      "assets/images/questions/cau_554.webp"
     ]
   },
   {
     "id": "10555",
-    "question": "Người lái xe có được vượt xe tải để đi thẳng trong trường hợp này không?",
+    "question": "Người lái xe có được phép vượt xe tải để đi thẳng trong trường hợp này không?",
     "options": [
       {
         "key": "a",
-        "text": "Được vượt"
+        "text": "Được vượt."
       },
       {
         "key": "b",
-        "text": "Cấm vượt"
+        "text": "Cấm vượt."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10555a.webp"
+      "assets/images/questions/cau_555.webp"
     ]
   },
   {
@@ -1592,17 +1619,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Cho phép"
+        "text": "Cho phép."
       },
       {
         "key": "b",
-        "text": "Không được vượt"
+        "text": "Không được vượt."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10556a.webp"
+      "assets/images/questions/cau_556.webp"
     ]
   },
   {
@@ -1611,25 +1638,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Vị trí A và B"
+        "text": "Vị trí A và B."
       },
       {
         "key": "b",
-        "text": "Vị trí A và C"
+        "text": "Vị trí A và C."
       },
       {
         "key": "c",
-        "text": "Vị trí B và C"
+        "text": "Vị trí B và C."
       },
       {
         "key": "d",
-        "text": "Cả ba vị trí A, B, C"
+        "text": "Cả ba vị trí A, B, C."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10557a.webp"
+      "assets/images/questions/cau_557.webp"
     ]
   },
   {
@@ -1638,25 +1665,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Được phép dừng ở vị trí A"
+        "text": "Được phép dừng ở vị trí A."
       },
       {
         "key": "b",
-        "text": "Được phép dừng ở vị trí B"
+        "text": "Được phép dừng ở vị trí B."
       },
       {
         "key": "c",
-        "text": "Được phép dừng ở vị trí A và B"
+        "text": "Được phép dừng ở vị trí A và B."
       },
       {
         "key": "d",
-        "text": "Không được dùng"
+        "text": "Không được dừng."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10558a.webp"
+      "assets/images/questions/cau_558.webp"
     ]
   },
   {
@@ -1665,25 +1692,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe ô tô con"
+        "text": "Xe ô tô con."
       },
       {
         "key": "c",
-        "text": "Không xe nào vi phạm"
+        "text": "Không xe nào vi phạm."
       },
       {
         "key": "d",
-        "text": "Cả hai xe"
+        "text": "Cả hai xe."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10559a.webp"
+      "assets/images/questions/cau_559.webp"
     ]
   },
   {
@@ -1692,44 +1719,44 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "c",
-        "text": "Xe con, xe tải"
+        "text": "Xe con, xe tải."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10560a.webp"
+      "assets/images/questions/cau_560.webp"
     ]
   },
   {
     "id": "10561",
-    "question": "Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?",
+    "question": "Các xe đi theo hướng mũi tên, những xe nào vi phạm quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, xe con"
+        "text": "Xe tải, xe con."
       },
       {
         "key": "b",
-        "text": "Xe khách, xe con"
+        "text": "Xe khách, xe con."
       },
       {
         "key": "c",
-        "text": "Xe khách, xe tải"
+        "text": "Xe khách, xe tải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10561a.webp"
+      "assets/images/questions/cau_561.webp"
     ]
   },
   {
@@ -1738,25 +1765,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con, xe tải, xe khách"
+        "text": "Xe con, xe tải, xe khách."
       },
       {
         "key": "b",
-        "text": "Xe tải, xe khách, xe mô tô"
+        "text": "Xe tải, xe khách, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Xe khách, xe mô tô, xe con"
+        "text": "Xe khách, xe mô tô, xe con."
       },
       {
         "key": "d",
-        "text": "Cả bốn xe"
+        "text": "Cả bốn xe."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10562a.webp"
+      "assets/images/questions/cau_562.webp"
     ]
   },
   {
@@ -1765,25 +1792,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe khách, xe tải"
+        "text": "Xe khách, xe tải."
       },
       {
         "key": "b",
-        "text": "Xe khách, xe con"
+        "text": "Xe khách, xe con."
       },
       {
         "key": "c",
-        "text": "Xe con, xe tải"
+        "text": "Xe con, xe tải."
       },
       {
         "key": "d",
-        "text": "Xe khách, xe tải, xe con"
+        "text": "Xe khách, xe tải, xe con."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10563a.webp"
+      "assets/images/questions/cau_563.webp"
     ]
   },
   {
@@ -1792,21 +1819,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Đánh lái sang trái cho xe vượt qua"
+        "text": "Đánh lái sang trái cho xe vượt qua."
       },
       {
         "key": "b",
-        "text": "Quan sát phía trước, phía sau, khi đủ điều kiện an toàn, bật tín hiệu bằng đèn hoặc Còi rồi cho xe chạy vượt qua"
+        "text": "Quan sát phía trước, phía sau, khi đủ điều kiện an toàn, bật tín hiệu bằng đèn hoặc còi rồi cho xe chạy vượt qua."
       },
       {
         "key": "c",
-        "text": "Cấm vượt"
+        "text": "Cấm vượt."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10564a.webp"
+      "assets/images/questions/cau_564.webp"
     ]
   },
   {
@@ -1815,11 +1842,11 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, mô tô"
+        "text": "Xe tải, xe mô tô."
       },
       {
         "key": "b",
-        "text": "Xe khách, mô tô"
+        "text": "Xe khách, xe mô tô."
       },
       {
         "key": "c",
@@ -1827,13 +1854,13 @@
       },
       {
         "key": "d",
-        "text": "Mô tô, xe con"
+        "text": "Xe mô tô, xe con."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10565a.webp"
+      "assets/images/questions/cau_565.webp"
     ]
   },
   {
@@ -1842,25 +1869,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con (A), xe con (B), xe tải (D)"
+        "text": "Xe con (A), xe con (B), xe tải (D)."
       },
       {
         "key": "b",
-        "text": "Xe tải (D), xe con (E), xe buýt (G)"
+        "text": "Xe tải (D), xe con (E), xe buýt (G)."
       },
       {
         "key": "c",
-        "text": "Xe tải (D), xe con (B)"
+        "text": "Xe tải ( D), xe con (B)."
       },
       {
         "key": "d",
-        "text": "Xe con (B), xe con (C)"
+        "text": "Xe con (B), xe con (C)."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10566a.webp"
+      "assets/images/questions/cau_566.webp"
     ]
   },
   {
@@ -1869,21 +1896,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn, mô tô, xe con"
+        "text": "Xe của bạn, xe mô tô, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con, xe của bạn, mô tô"
+        "text": "Xe con, xe của bạn, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Mô tô, xe con, xe của bạn"
+        "text": "Xe mô tô, xe con, xe của bạn."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10567a.webp"
+      "assets/images/questions/cau_567.webp"
     ]
   },
   {
@@ -1892,21 +1919,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn, mô tô, xe con"
+        "text": "Xe của bạn, xe mô tô, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con, xe của bạn, mô tô"
+        "text": "Xe con, xe của bạn, xe mô tô."
       },
       {
         "key": "c",
-        "text": "Mô tô, xe con, xe của bạn"
+        "text": "Xe mô tô, xe con, xe của bạn."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10568a.webp"
+      "assets/images/questions/cau_568.webp"
     ]
   },
   {
@@ -1915,21 +1942,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       },
       {
         "key": "c",
-        "text": "Cả hai xe"
+        "text": "Cả hai xe."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10569a.webp"
+      "assets/images/questions/cau_569.webp"
     ]
   },
   {
@@ -1938,25 +1965,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Đi thẳng, rẽ trái"
+        "text": "Đi thẳng, rẽ trái."
       },
       {
         "key": "b",
-        "text": "Đi thẳng, rẽ phải"
+        "text": "Đi thẳng, rẽ phải."
       },
       {
         "key": "c",
-        "text": "Rẽ trái"
+        "text": "Rẽ trái."
       },
       {
         "key": "d",
-        "text": "Đi thẳng, rẽ phải, rẽ trái"
+        "text": "Đi thẳng, rẽ phải, rẽ trái."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10570a.webp"
+      "assets/images/questions/cau_570.webp"
     ]
   },
   {
@@ -1965,21 +1992,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Chuyển sang làn đường bên phải và rẽ phải"
+        "text": "Chuyển sang làn đường bên phải và rẽ phải."
       },
       {
         "key": "b",
-        "text": "Dừng lại trước vạch dừng và rẽ phải khi đèn xanh"
+        "text": "Dừng lại trước vạch dừng và rẽ phải khi đèn xanh."
       },
       {
         "key": "c",
-        "text": "Dừng lại trước vạch dừng và đi thẳng hoặc rẽ trái khi đèn xanh"
+        "text": "Dừng lại trước vạch dừng và đi thẳng hoặc rẽ trái khi đèn xanh."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10571a.webp"
+      "assets/images/questions/cau_571.webp"
     ]
   },
   {
@@ -1988,21 +2015,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ, rẽ phải trước xe tải và xe đạp"
+        "text": "Tăng tốc độ, rẽ phải trước xe tải và xe đạp."
       },
       {
         "key": "b",
-        "text": "Giảm tốc độ, rẽ phải sau xe tải và xe đạp"
+        "text": "Giảm tốc độ, rẽ phải sau xe tải và xe đạp."
       },
       {
         "key": "c",
-        "text": "Tăng tốc độ, rẽ phải trước xe đạp"
+        "text": "Tăng tốc độ, rẽ phải trước xe đạp."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10572a.webp"
+      "assets/images/questions/cau_572.webp"
     ]
   },
   {
@@ -2011,21 +2038,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ, rẽ phải trước xe con màu xanh phía trước và người đi bộ"
+        "text": "Tăng tốc độ, rẽ phải trước xe con màu xanh phía trước và người đi bộ."
       },
       {
         "key": "b",
-        "text": "Giảm tốc độ, để người đi bộ qua đường và rẽ phải trước xe con màu xanh"
+        "text": "Giảm tốc độ, để người đi bộ qua đường và rẽ phải trước xe con màu xanh."
       },
       {
         "key": "c",
-        "text": "Giảm tốc độ, để người đi bộ qua đường và rẽ phải sau xe con màu xanh"
+        "text": "Giảm tốc độ, để người đi bộ qua đường và rẽ phải sau xe con màu xanh."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10573a.webp"
+      "assets/images/questions/cau_573.webp"
     ]
   },
   {
@@ -2034,21 +2061,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Nhường đường cho xe khách và đi trước xe đạp"
+        "text": "Nhường đường cho xe khách và đi trước xe đạp."
       },
       {
         "key": "b",
-        "text": "Nhường đường cho xe đạp và đi trước xe khách"
+        "text": "Nhường đường cho xe đạp và đi trước xe khách."
       },
       {
         "key": "c",
-        "text": "Nhường đường cho xe đạp và xe khách"
+        "text": "Nhường đường cho xe đạp và xe khách."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10574a.webp"
+      "assets/images/questions/cau_574.webp"
     ]
   },
   {
@@ -2057,21 +2084,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "c",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10575a.webp"
+      "assets/images/questions/cau_575.webp"
     ]
   },
   {
@@ -2080,17 +2107,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe đi ngược chiều"
+        "text": "Xe đi ngược chiều."
       },
       {
         "key": "b",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10576a.webp"
+      "assets/images/questions/cau_576.webp"
     ]
   },
   {
@@ -2099,17 +2126,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ, chuyển sang làn đường bên trái để vượt"
+        "text": "Tăng tốc độ, chuyển sang làn đường bên trái để vượt."
       },
       {
         "key": "b",
-        "text": "Không được vượt những người đi xe đạp"
+        "text": "Không được vượt những người đi xe đạp."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10577a.webp"
+      "assets/images/questions/cau_577.webp"
     ]
   },
   {
@@ -2118,25 +2145,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Nếu phía sau không có xe xin vượt, chuyển sang làn đường bên trái"
+        "text": "Nếu phía sau không có xe xin vượt, chuyển sang làn đường bên trái."
       },
       {
         "key": "b",
-        "text": "Nếu phía sau có xe xin vượt, thì giảm tốc độ, ở lại làn đường, dừng lại khi cần thiết"
+        "text": "Nếu phía sau có xe xin vượt, thì giảm tốc độ, ở lại làn đường, dừng lại khi cần thiết."
       },
       {
         "key": "c",
-        "text": "Tăng tốc độ trên làn đường của mình và vượt xe con"
+        "text": "Tăng tốc độ trên làn đường của mình và vượt xe con."
       },
       {
         "key": "d",
-        "text": "Cả ý a và ý b"
+        "text": "Ý 1 và ý 2."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10578a.webp"
+      "assets/images/questions/cau_578.webp"
     ]
   },
   {
@@ -2145,21 +2172,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Chuyển sang nửa đường bên trái để đi tiếp"
+        "text": "Chuyển sang nửa đường bên trái để đi tiếp."
       },
       {
         "key": "b",
-        "text": "Bấm còi, nháy đèn báo hiệu và đi tiếp"
+        "text": "Bấm còi, nháy đèn báo hiệu và đi tiếp."
       },
       {
         "key": "c",
-        "text": "Giảm tốc độ, dừng lại nhường đường"
+        "text": "Giảm tốc độ, dừng lại nhường đường."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10579a.webp"
+      "assets/images/questions/cau_579.webp"
     ]
   },
   {
@@ -2168,21 +2195,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Phanh xe giảm tốc độ và đi sát lề đường bên phải"
+        "text": "Phanh xe giảm tốc độ và đi sát lề đường bên phải."
       },
       {
         "key": "b",
-        "text": "Bấm còi, nháy đèn báo hiệu, giữ nguyên tốc độ và đi tiếp"
+        "text": "Bấm còi, nháy đèn báo hiệu, giữ nguyên tốc độ và đi tiếp."
       },
       {
         "key": "c",
-        "text": "Phanh xe giảm tốc độ và đi sát lề đường bên trái"
+        "text": "Phanh xe giảm tốc độ và đi sát vào lề đường bên trái."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10580a.webp"
+      "assets/images/questions/cau_580.webp"
     ]
   },
   {
@@ -2191,21 +2218,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải phía trước có tín hiệu xin chuyển làn đường, bạn xử lý như thế nào trong trường hợp này?"
+        "text": "Bật tín hiệu xin chuyển làn đường sang trái để vượt xe tải."
       },
       {
         "key": "b",
-        "text": "Phanh xe giảm tốc độ chờ xe tải phía trước chuyển làn đường"
+        "text": "Phanh xe giảm tốc độ chờ xe tải phía trước chuyển làn đường."
       },
       {
         "key": "c",
-        "text": "Bấm còi báo hiệu và vượt qua xe tải trên làn đường của mình"
+        "text": "Bấm còi báo hiệu và vượt qua xe tải trên làn đường của mình."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10581a.webp"
+      "assets/images/questions/cau_581.webp"
     ]
   },
   {
@@ -2214,21 +2241,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ và đi thẳng qua ngã tư"
+        "text": "Tăng tốc độ và đi thẳng qua ngã tư."
       },
       {
         "key": "b",
-        "text": "Dừng xe trước vạch dừng"
+        "text": "Dừng xe trước vạch dừng."
       },
       {
         "key": "c",
-        "text": "Giảm tốc độ và đi thẳng qua ngã tư"
+        "text": "Giảm tốc độ và đi thẳng qua ngã tư."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10582a.webp"
+      "assets/images/questions/cau_582.webp"
     ]
   },
   {
@@ -2237,21 +2264,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn, mô tô, xe đạp"
+        "text": "Xe của bạn, xe mô tô, xe đạp."
       },
       {
         "key": "b",
-        "text": "Xe mô tô, xe đạp, xe của bạn"
+        "text": "Xe mô tô, xe đạp, xe của bạn."
       },
       {
         "key": "c",
-        "text": "Xe đạp, xe mô tô, xe của bạn"
+        "text": "Xe đạp, xe mô tô, xe của bạn."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10583a.webp"
+      "assets/images/questions/cau_583.webp"
     ]
   },
   {
@@ -2260,25 +2287,25 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn, xe tải, xe con"
+        "text": "Xe của bạn, xe tải, xe con."
       },
       {
         "key": "b",
-        "text": "Xe con, xe tải, xe của bạn"
+        "text": "Xe con, xe tải, xe của bạn."
       },
       {
         "key": "c",
-        "text": "Xe tải, xe của bạn, xe con"
+        "text": "Xe tải, xe của bạn, xe con."
       },
       {
         "key": "d",
-        "text": "Xe của bạn, xe con, xe tải"
+        "text": "Xe của bạn, xe con, xe tải."
       }
     ],
     "answer": "d",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10584a.webp"
+      "assets/images/questions/cau_584.webp"
     ]
   },
   {
@@ -2287,17 +2314,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       },
       {
         "key": "b",
-        "text": "Xe con"
+        "text": "Xe con."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10585a.webp"
+      "assets/images/questions/cau_585.webp"
     ]
   },
   {
@@ -2306,17 +2333,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10586a.webp"
+      "assets/images/questions/cau_586.webp"
     ]
   },
   {
@@ -2325,21 +2352,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau"
+        "text": "Tăng tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau."
       },
       {
         "key": "b",
-        "text": "Giảm tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau"
+        "text": "Giảm tốc độ, đi qua vạch người đi bộ sang đường, để người đi bộ sang đường sau."
       },
       {
         "key": "c",
-        "text": "Giảm tốc độ, để người đi bộ sang đường trước, sau đó cho xe đi qua vạch người đi bộ sang đường"
+        "text": "Giảm tốc độ, để người đi bộ sang đường trước, sau đó cho xe đi qua vạch người đi bộ sang đường."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10587a.webp"
+      "assets/images/questions/cau_587.webp"
     ]
   },
   {
@@ -2348,17 +2375,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10588a.webp"
+      "assets/images/questions/cau_588.webp"
     ]
   },
   {
@@ -2367,21 +2394,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe con, xe tải, xe của bạn"
+        "text": "Xe con, xe tải, xe của bạn."
       },
       {
         "key": "b",
-        "text": "Xe tải, xe con, xe của bạn"
+        "text": "Xe tải, xe con, xe của bạn."
       },
       {
         "key": "c",
-        "text": "Xe tải, xe của bạn, xe con"
+        "text": "Xe tải, xe của bạn, xe con."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10589a.webp"
+      "assets/images/questions/cau_589.webp"
     ]
   },
   {
@@ -2390,21 +2417,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Tăng tốc độ cho xe lấn sang phần đường bên trái"
+        "text": "Tăng tốc độ cho xe lấn sang phần đường bên trái."
       },
       {
         "key": "b",
-        "text": "Giảm tốc độ cho xe lấn sang phần đường bên trái"
+        "text": "Giảm tốc độ cho xe lấn sang phần đường bên trái."
       },
       {
         "key": "c",
-        "text": "Giảm tốc độ cho xe đi sát phần đường bên phải"
+        "text": "Giảm tốc độ cho xe đi sát phần đường bên phải."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10590a.webp"
+      "assets/images/questions/cau_590.webp"
     ]
   },
   {
@@ -2413,40 +2440,40 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải"
+        "text": "Xe tải."
       },
       {
         "key": "b",
-        "text": "Xe của bạn"
+        "text": "Xe của bạn."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10591a.webp"
+      "assets/images/questions/cau_591.webp"
     ]
   },
   {
     "id": "10592",
-    "question": "Xe nào dùng đúng theo quy tắc giao thông?",
+    "question": "Xe nào dừng đúng theo quy tắc giao thông?",
     "options": [
       {
         "key": "a",
-        "text": "Xe con"
+        "text": "Xe con."
       },
       {
         "key": "b",
-        "text": "Xe mô tô"
+        "text": "Xe mô tô."
       },
       {
         "key": "c",
-        "text": "Cả 2 xe đều đúng"
+        "text": "Cả 2 xe đều đúng."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10592a.webp"
+      "assets/images/questions/cau_592.webp"
     ]
   },
   {
@@ -2455,21 +2482,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Xe tải, xe đạp, xe của bạn"
+        "text": "Xe tải, xe đạp, xe của bạn."
       },
       {
         "key": "b",
-        "text": "Xe của bạn, xe đạp, xe tải"
+        "text": "Xe của bạn, xe đạp, xe tải."
       },
       {
         "key": "c",
-        "text": "Xe của bạn, xe tải, xe đạp"
+        "text": "Xe của bạn, xe tải, xe đạp."
       }
     ],
     "answer": "c",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10593a.webp"
+      "assets/images/questions/cau_593.webp"
     ]
   },
   {
@@ -2478,44 +2505,44 @@
     "options": [
       {
         "key": "a",
-        "text": "Hướng 1"
+        "text": "Hướng 1."
       },
       {
         "key": "b",
-        "text": "Hướng 2"
+        "text": "Hướng 2."
       },
       {
         "key": "c",
-        "text": "Cả 2 hướng đều được"
+        "text": "Cả hai hướng đều được."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10594a.webp"
+      "assets/images/questions/cau_594.webp"
     ]
   },
   {
     "id": "10595",
-    "question": "Khi gặp xe ngược chiều bật đèn pha trong tình huống dưới đây, bạn xử lý như thế nào?",
+    "question": "Khi gặp xe ngược chiều bật đèn pha trong tình huống dưới dây, bạn xử lý như thế nào?",
     "options": [
       {
         "key": "a",
-        "text": "Bật đèn chiếu xa, tăng tốc độ vượt xe cùng chiều"
+        "text": "Bật đèn chiếu xa, tăng tốc độ vượt xe cùng chiều."
       },
       {
         "key": "b",
-        "text": "Giữ nguyên đèn chiếu gần, giảm tốc độ, đi sau xe phía trước"
+        "text": "Giữ nguyên đèn chiếu gần, giảm tốc độ, đi sau xe phía trước."
       },
       {
         "key": "c",
-        "text": "Giữ nguyên đèn chiếu gần, tăng tốc độ vượt xe cùng chiều"
+        "text": "Giữ nguyên đèn chiếu gần, tăng tốc độ vượt xe cùng chiều."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10595a.webp"
+      "assets/images/questions/cau_595.webp"
     ]
   },
   {
@@ -2524,21 +2551,21 @@
     "options": [
       {
         "key": "a",
-        "text": "Quan sát nếu thấy không có tầu thì tăng tốc cho xe vượt qua đường sắt"
+        "text": "Quan sát nếu thấy không có tàu thì tăng tốc cho xe vượt qua đường sắt."
       },
       {
         "key": "b",
-        "text": "Dừng lại trước rào chắn một khoảng cách an toàn"
+        "text": "Dừng lại trước rào chắn một khoảng cách an toàn."
       },
       {
         "key": "c",
-        "text": "Ra tín hiệu, yêu cầu người gác chắn tàu kéo chậm Barie để xe bạn qua"
+        "text": "Ra tín hiệu, yêu cầu người gác chắn tàu kéo chậm barie để xe bạn qua."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10596a.webp"
+      "assets/images/questions/cau_596.webp"
     ]
   },
   {
@@ -2547,17 +2574,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Đúng"
+        "text": "Đúng."
       },
       {
         "key": "b",
-        "text": "Sai"
+        "text": "Sai."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10597a.webp"
+      "assets/images/questions/cau_597.webp"
     ]
   },
   {
@@ -2566,17 +2593,17 @@
     "options": [
       {
         "key": "a",
-        "text": "Được vượt"
+        "text": "Được vượt."
       },
       {
         "key": "b",
-        "text": "Không được vượt"
+        "text": "Không được vượt."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10598a.webp"
+      "assets/images/questions/cau_598.webp"
     ]
   },
   {
@@ -2585,40 +2612,40 @@
     "options": [
       {
         "key": "a",
-        "text": "Đúng"
+        "text": "Đúng."
       },
       {
         "key": "b",
-        "text": "Không đúng"
+        "text": "Không đúng."
       }
     ],
     "answer": "a",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10599a.webp"
+      "assets/images/questions/cau_599.webp"
     ]
   },
   {
     "id": "10600",
-    "question": "Trong tình huống dưới đây, xe đầu kéo kéo rơ moóc (xe container) đang rẽ phải, xe con màu xanh và xe máy phía sau xe container đi như thế nào để đảm bảo an toàn?",
+    "question": "Trong tình huống dưới đây, xe đầu kéo kéo rơ moóc (xe container) đang rẽ phải, xe con màu xanh và xe máy phía sau xe container đi như thế nào để bảo đảm an toàn?",
     "options": [
       {
         "key": "a",
-        "text": "Vượt về phía bên phải để đi tiếp"
+        "text": "Vượt về phía bên phải để đi tiếp."
       },
       {
         "key": "b",
-        "text": "Giảm tốc độ chờ xe container rẽ xong rồi tiếp tục đi"
+        "text": "Giảm tốc độ chờ xe container rẽ xong rồi tiếp tục đi."
       },
       {
         "key": "c",
-        "text": "Vượt về phía bên trái để đi tiếp"
+        "text": "Vượt về phía bên trái để đi tiếp."
       }
     ],
     "answer": "b",
-    "suggest": null,
+    "suggest": "",
     "images": [
-      "https://thantrieu.com/resources/driver/images/10600a.webp"
+      "assets/images/questions/cau_600.webp"
     ]
   }
 ]

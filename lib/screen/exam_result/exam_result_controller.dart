@@ -1,3 +1,4 @@
+import 'package:drive_pass/common/exam_rules.dart';
 import 'package:get/get.dart';
 import 'package:drive_pass/route.dart';
 import '../../service/local_service.dart';
@@ -12,6 +13,8 @@ class ExamResultController extends GetxController {
   late final int incorrect;
   late final int skipped;
   late final String timeTaken;
+  late final bool criticalFailed;
+  bool get isPassed => ExamRules.isPassed(correct: correct, criticalFailed: criticalFailed);
   late final String dateTaken;
   late final Map<int, int> selectedAnswers;
 
@@ -25,6 +28,7 @@ class ExamResultController extends GetxController {
     incorrect= args['incorrect'] ?? 0;
     skipped  = args['skipped']   ?? 0;
     timeTaken= args['timeTaken'] ?? '00:00';
+    criticalFailed = args['criticalFailed'] ?? false;
 
     // Store selectedAnswers for explanation screen
     final raw = args['selectedAnswers'];
@@ -54,6 +58,7 @@ class ExamResultController extends GetxController {
       total:     total,
       timeTaken: timeTaken,
       dateTaken: dateTaken,
+      criticalFailed: criticalFailed,
     );
     if (Get.isRegistered<ExamController>()) {
       Get.find<ExamController>().loadHistory();

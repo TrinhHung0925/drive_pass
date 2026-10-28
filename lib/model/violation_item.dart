@@ -7,6 +7,9 @@ class ViolationItem {
   final String remedial;
   final int code;
   final int topicCode;
+  final int pointsDeducted;
+  final String legalBasis;
+  final String keyword;
 
   ViolationItem({
     required this.no,
@@ -17,6 +20,9 @@ class ViolationItem {
     required this.remedial,
     required this.code,
     required this.topicCode,
+    this.pointsDeducted = 0,
+    this.legalBasis = '',
+    this.keyword = '',
   });
 
   factory ViolationItem.fromJson(Map<String, dynamic> json) {
@@ -29,6 +35,9 @@ class ViolationItem {
       remedial: json['remedial'] ?? '',
       code: json['code'] ?? 0,
       topicCode: json['topicCode'] ?? 0,
+      pointsDeducted: json['pointsDeducted'] ?? 0,
+      legalBasis: json['legalBasis'] ?? '',
+      keyword: json['keyword'] ?? '',
     );
   }
 

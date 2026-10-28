@@ -22,6 +22,7 @@ class SplashController extends GetxController {
       DataLocal.getListQuestionsRuleConcept(),
       DataLocal.getListQuestionsTechnique(),
       DataLocal.getListQuestionsCulture(),
+      DataLocal.getListQuestionsRepair(),
       DataLocal.getListExamItem(),
       DataLocal.getListTrafficSigns(),
       DataLocal.getListViolations(),

@@ -11,7 +11,6 @@ void main() async {
   await Get.putAsync(() => GeminiService().init());
   runApp(const MyApp());
 }
-///
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

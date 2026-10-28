@@ -56,6 +56,7 @@ class LocalService extends GetxService {
     required int total,
     required String timeTaken,
     required String dateTaken,
+    bool criticalFailed = false,
   }) async {
     final ts = DateTime.now().millisecondsSinceEpoch;
     final record = {
@@ -65,6 +66,7 @@ class LocalService extends GetxService {
       'timeTaken': timeTaken,
       'dateTaken': dateTaken,
       'timestamp': ts,
+      'criticalFailed': criticalFailed,
     };
 
     // ── 1. Per-exam latest (for exam list screen) ──

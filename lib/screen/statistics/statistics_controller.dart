@@ -55,11 +55,12 @@ class StatisticsController extends GetxController {
     theoryTotal.value = DataLocal.listQuestionsAll.length;
     theoryDone.value = localService.getTheoryAllUniqueIds().length;
 
-    final keys = ['rule_concept', 'culture', 'technique', 'road_signs', 'solving'];
+    final keys = ['rule_concept', 'culture', 'technique', 'repair', 'road_signs', 'solving'];
     final titles = [
       'Khái niệm & Quy tắc',
       'Văn hóa & Đạo đức',
       'Kỹ thuật lái xe',
+      'Cấu tạo & Sửa chữa',
       'Biển báo đường bộ',
       'Giải thế Sa hình',
     ];
@@ -67,6 +68,7 @@ class StatisticsController extends GetxController {
       DataLocal.listQuestionsRuleConcept,
       DataLocal.listQuestionsCulture,
       DataLocal.listQuestionsTechnique,
+      DataLocal.listQuestionsRepair,
       DataLocal.listQuestionsRoadSigns,
       DataLocal.listQuestionsSolving,
     ];

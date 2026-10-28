@@ -162,15 +162,13 @@ class _ViolationsViewState extends State<ViolationsView> {
                       color: isSelected ? AppColors.primary : AppColors.border,
                       width: isSelected ? 1.5 : 1,
                     ),
-                    boxShadow: isSelected
-                        ? [BoxShadow(color: AppColors.primary.withValues(alpha: 0.3), blurRadius: 6, offset: const Offset(0, 2))]
-                        : [],
+
                   ),
                   child: Text(
                     ViolationItem.topicName(code),
                     style: TextStyle(
                       fontSize: 12.sp,
-                      fontWeight: isSelected ? FontWeight.w700 : FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       color: isSelected ? Colors.white : AppColors.textSecondary,
                     ),
                   ),

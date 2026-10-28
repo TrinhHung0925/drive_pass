@@ -1,3 +1,4 @@
+import 'package:drive_pass/common/exam_rules.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class ExamResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.find<ExamResultController>();
-    final isPassed = controller.score >= 80;
+    final isPassed = controller.isPassed;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -128,7 +129,9 @@ class ExamResultView extends StatelessWidget {
           Text(
             isPassed
                 ? 'Chúc mừng! Bạn đã hoàn thành bài thi.'
-                : 'Rất tiếc! Bạn chưa đạt yêu cầu bài thi.',
+                : controller.criticalFailed
+                    ? 'Bạn đã trả lời sai câu điểm liệt nên bài thi không đạt.'
+                    : 'Rất tiếc! Cần đúng tối thiểu ${ExamRules.passingScore}/${ExamRules.questionCount} câu.',
             style: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w400,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:drive_pass/common/question_image.dart';
 import '../../resource/app_colors.dart';
 import 'random_practice_controller.dart';
 
@@ -162,17 +162,7 @@ class _RandomPracticeViewState extends State<RandomPracticeView> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (q.images.isNotEmpty) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12.r),
-                child: CachedNetworkImage(
-                  imageUrl: q.images.first,
-                  width: double.infinity,
-                  height: 160.h,
-                  fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(height: 160.h, color: AppColors.border, child: const Center(child: CircularProgressIndicator(strokeWidth: 2))),
-                  errorWidget: (_, __, ___) => Container(height: 160.h, color: AppColors.border, child: Icon(Icons.broken_image_outlined, size: 40.w, color: AppColors.textLight)),
-                ),
-              ),
+              QuestionImage(path: q.images.first),
               SizedBox(height: 16.h),
             ],
             Text(q.question, style: TextStyle(fontSize: 15.sp, fontWeight: FontWeight.w600, color: AppColors.textPrimary, height: 1.5)),

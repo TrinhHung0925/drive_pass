@@ -92,11 +92,17 @@ class _TrafficSignDetailViewState extends State<TrafficSignDetailView> {
                     ),
                     clipBehavior: Clip.antiAlias,
                     child: sign.image != null && sign.image!.isNotEmpty
-                        ? Image.network(
-                            sign.image!,
-                            fit: BoxFit.contain,
-                            errorBuilder: (_, __, ___) => _buildSignPlaceholder(sign.id),
-                          )
+                        ? (sign.image!.startsWith('http')
+                            ? Image.network(
+                                sign.image!,
+                                fit: BoxFit.contain,
+                                errorBuilder: (_, __, ___) => _buildSignPlaceholder(sign.id),
+                              )
+                            : Image.asset(
+                                sign.image!,
+                                fit: BoxFit.contain,
+                                errorBuilder: (_, __, ___) => _buildSignPlaceholder(sign.id),
+                              ))
                         : _buildSignPlaceholder(sign.id),
                   ),
                   SizedBox(width: 16.w),

@@ -1,3 +1,4 @@
+import 'package:drive_pass/common/exam_rules.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,7 @@ class ExamDetailController extends GetxController {
 
   var currentIndex = 0.obs;
   var selectedAnswers = <int, int>{}.obs;
-  var secondsLeft = (20 * 60).obs;
+  var secondsLeft = (ExamRules.durationMinutes * 60).obs;
   var isSubmitted = false.obs;
 
   final ScrollController scrollController = ScrollController();
@@ -40,7 +41,7 @@ class ExamDetailController extends GetxController {
   void refreshExams() {
     currentIndex.value = 0;
     selectedAnswers.clear();
-    secondsLeft.value = 20 * 60;
+    secondsLeft.value = ExamRules.durationMinutes * 60;
     isSubmitted.value = false;
     _startTimer();
   }
@@ -151,12 +152,16 @@ class ExamDetailController extends GetxController {
     return chosen != null && chosen == correctAnswerIndex(e.key);
   }).length;
 
+  /// A critical (điểm liệt) question answered wrongly or left blank fails the whole exam.
+  bool get criticalFailed => questions.asMap().entries.any((e) =>
+      DataLocal.isCritical(e.value.id) && selectedAnswers[e.key] != correctAnswerIndex(e.key));
+
   void submitExam() {
     _timer?.cancel();
     final answered = selectedAnswers.length;
     final skipped = questions.length - answered;
     final incorrect = answered - correctCount;
-    final secondsUsed = (20 * 60) - secondsLeft.value;
+    final secondsUsed = (ExamRules.durationMinutes * 60) - secondsLeft.value;
     final timeTaken =
         '${(secondsUsed ~/ 60).toString().padLeft(2, '0')}:'
         '${(secondsUsed % 60).toString().padLeft(2, '0')}';
@@ -173,6 +178,7 @@ class ExamDetailController extends GetxController {
         'incorrect': incorrect,
         'skipped': skipped,
         'timeTaken': timeTaken,
+        'criticalFailed': criticalFailed,
         'selectedAnswers': Map<int, int>.from(selectedAnswers),
       },
     );

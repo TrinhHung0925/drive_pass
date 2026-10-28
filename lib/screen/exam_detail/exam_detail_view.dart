@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:drive_pass/common/question_image.dart';
 import '../../resource/app_colors.dart';
 import 'exam_detail_controller.dart';
 
@@ -249,35 +249,7 @@ class _ExamDetailViewState extends State<ExamDetailView> {
           children: [
             // Show image only when question has images
             if (q.images.isNotEmpty) ...[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12.r),
-                child: CachedNetworkImage(
-                  imageUrl: q.images.first,
-                  width: double.infinity,
-                  height: 160.h,
-                  fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(
-                    height: 160.h,
-                    color: AppColors.border,
-                    child: Center(
-                      child: SizedBox(
-                        width: 24.w,
-                        height: 24.w,
-                        child: const CircularProgressIndicator(strokeWidth: 2),
-                      ),
-                    ),
-                  ),
-                  errorWidget: (_, __, ___) => Container(
-                    height: 160.h,
-                    color: AppColors.border,
-                    child: Icon(
-                      Icons.broken_image_outlined,
-                      size: 40.w,
-                      color: AppColors.textLight,
-                    ),
-                  ),
-                ),
-              ),
+              QuestionImage(path: q.images.first),
               SizedBox(height: 16.h),
             ],
             // Question text
